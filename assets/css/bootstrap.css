@@ -4164,9 +4164,9 @@ a.badge:hover {
   color: #ffffff;
 }
 .hero-unit {
-  padding: 60px;
+  padding: 30px;
   margin-bottom: 30px;
-  background-color: #131517;
+  background-color: #1B1B1C;
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
   border-radius: 6px;
@@ -4766,7 +4766,7 @@ pre {
 }
 .well,
 .hero-unit {
-  background-color: #131517;
+  background-color: #1B1B1C;
   border-top: solid 1px #353535;
   -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
   -moz-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
