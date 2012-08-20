@@ -1,0 +1,13 @@
+body {
+  padding-top: 60px;
+  padding-bottom: 40px;
+}
+th.left {
+  text-align:left;
+}
+th.top {
+  vertical-align:top;
+}
+li.pad {
+  padding-bottom:5px;
+}
