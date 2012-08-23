@@ -188,7 +188,7 @@ Quotation[36] = "If you only read the books that everyone else is reading, \
                  you can only think what everyone else is thinking.";
 Author[36] = "Haruki Murakami";
 
-Quotation[37] = "And above all, watch will glittering eyes the whole world around \
+Quotation[37] = "And above all, watch with glittering eyes the whole world around \
                  you because the greatest secrets are always hidden in the most unlikely \
                  places. Those who don't believe in magic will never find it.";
 Author[37] = "Roald Dahl";
