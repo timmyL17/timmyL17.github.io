@@ -221,6 +221,51 @@ Quotation[44] = "When I was 5 yeard old, my mother always told me that happiness
                  assignment, and I told them they didn't understand life.";
 Author[44] = "John Lennon";
 
+Quotation[45] = "There are two ways of constructing a software design: One way is to make it so \
+                 simple that there are obviously no deficiencies, and the other way is to make it \
+                 so complicated that there are no obvious deficiencies. The first method is far \
+                 more difficult.";
+Author[45] = "C. A. R. Hoare";
+
+Quotation[46] = "Perfection is achieved, not when there is nothing more to add, but when \
+                 there is nothing left to take away.";
+Author[46] = "Antoine de Saint Exupery";
+
+Quotation[47] = "If women didn't exist, all the money in the world would have no meaning.";
+Author[47] = "Aristotle Onassis";
+
+Quotation[48] = "I am not young enough to know everything.";
+Author[48] = "Oscar Wilde";
+
+Quotation[49] = "I never miss a chance to have sex or appear on television.";
+Author[49] = "Gore Vidal";
+
+Quotation[50] = "The average person thinks he isn't.";
+Author[50] = "Father Larry Lorenzoni";
+
+Quotation[51] = "Well done is better than well said.";
+Author[51] = "Benjamin Franklin";
+
+Quotation[52] = "Sometimes it is not enough that we do our best; we must do what is required.";
+Author[52] = "Sir Winston Churchill";
+
+Quotation[53] = "After I'm dead I'd rather have people ask why I have no monument than why I have one.";
+Author[53] = "Cato the Elder (aka Marcus Porcius Cato)";
+
+Quotation[54] = "It's not the size of the dog in the fight, it's the size of the fight in the dog.";
+Author[54] = "Mark Twain";
+
+Quotation[55] = "Pray, v.: To ask that the laws of the universe be annulled on behalf of a single \
+                 petitioner confessedly unworthy.";
+Author[55] = "Ambrose Bierce";
+
+Quotation[56] = "Research is what I'm doing when I don't know what I'm doing.";
+Author[56] = "Wernher Von Braun";
+
+Quotation[57] = "There are only two ways to live your life. One is as though nothing is a miracle. The \
+                 other is as though everything is a miracle.";
+Author[57] = "Albert Einstein";
+
 // Write to the document
 function showQuotation()
 {
