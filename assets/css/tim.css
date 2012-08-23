@@ -11,6 +11,13 @@ th.top {
 li.pad {
   padding-bottom:5px;
 }
+.hero-unit {
+  padding: 30px;
+  background-color: #202021;
+}
+/*.page-header {*/
+  /*margin: 20px;*/
+/*}*/
 body {
   font-size: 15px;
 }
