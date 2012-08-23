@@ -2,6 +2,21 @@ body {
   padding-top: 60px;
   padding-bottom: 40px;
 }
+/* change fonts */
+/*
+body {
+  font-family:sans-serif;
+}
+input,button,select,textarea {
+  font-family:sans-serif;
+}
+.navbar-search .search-query {
+  font-family:sans-serif;
+}
+.navbar .search-query::-webkit-input-placeholder {
+  font-family:sans-serif;
+}
+*/
 th.left {
   text-align:left;
 }
