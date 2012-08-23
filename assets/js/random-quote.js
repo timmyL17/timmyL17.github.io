@@ -111,7 +111,7 @@ Quotation[15] = "Here's to the crazy ones. The misfits. The rebels. The troublem
                  change the world, are the ones who do.";
 Author[15] = "Apple Inc.";
 
-Quotation[16] = "We are all in the gutter, but some of us are looking at the start.";
+Quotation[16] = "We are all in the gutter, but some of us are looking at the stars.";
 Author[16] = "Oscar Wilde";
 
 Quotation[17] = "Life is what happens to you while you're busy making other plans.";
