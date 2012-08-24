@@ -215,7 +215,7 @@ Quotation[43] = "If we knew what it was we were doing, it would not be called re
                  would it?";
 Author[43] = "Albert Einstein";
 
-Quotation[44] = "When I was 5 yeard old, my mother always told me that happiness was the \
+Quotation[44] = "When I was 5 years old, my mother always told me that happiness was the \
                  key to life. When I went to school, they asked me what I wanted to be when I \
                  grew up. I wrote down 'happy'. They told me I didn't understand the \
                  assignment, and I told them they didn't understand life.";
