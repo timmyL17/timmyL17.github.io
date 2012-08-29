@@ -331,6 +331,18 @@ Q[71] = "Everyone, at some point in their lives, wakes up in the middle of the \
          in these circumstances is to wake somebody else up, so that they can feel this way, too.";
 A[71] = "Lemony Snicket";
 
+Q[72] = "There are three types of lies -- lies, damn lies, and statistics.";
+A[72] = "Benjamin Disraeli";
+
+Q[73] = "Some people feel the rain. Others just get wet.";
+A[73] = "Bob Marley";
+
+Q[74] = "Life can only be understood backwards; but it must be lived forwards.";
+A[74] = "S&oslash;ren Kierkegaard";
+
+Q[75] = "The worst enemy to creativity is self-doubt.";
+A[75] = "Sylvia Plath";
+
 // Write to the document
 var sz = Q.length;
 var ind=Math.round(Math.random()*(sz-1));
