@@ -33,252 +33,313 @@
 // Free for all; but please leave in this header.
 // ==============================================
 
-var Quotation=new Array() // do not change this!
-var Author=new Array()
+var Q=new Array() // do not change this!
+var A=new Array()
 
 // Set up the quotations to be shown, below.
 // To add more quotations, continue with the
 // pattern, adding to the array.  Remember
-// to increment the Quotation[x] index!
+// to increment the Q[x] index!
 //
 // To get quotes in the string, escape them like \"
 
-Quotation[0] = "Great minds have purposes, others have wishes.";
-Author[0] = "Washington Irving";
+Q[0] = "Great minds have purposes, others have wishes.";
+A[0] = "Washington Irving";
 
-Quotation[1] = "Try not to become a man of success, \
-                but rather try to become a man of value.";
-Author[1] = "Albert Einstein";
+Q[1] = "Try not to become a man of success, \
+        but rather try to become a man of value.";
+A[1] = "Albert Einstein";
 
-Quotation[2] = "Lose one friend. Lose all friends. Lose yourself.";
-Author[2] = "Plays With Squirrels";
+Q[2] = "Lose one friend. Lose all friends. Lose yourself.";
+A[2] = "Plays With Squirrels";
 
-Quotation[3] = "Everyone is a genius. But if you judge a fish by \
-                its ability to climb a tree, it will live its whole \
-                life believing that it is stupid.";
-Author[3] = "Albert Einstein";
+Q[3] = "Everyone is a genius. But if you judge a fish by \
+        its ability to climb a tree, it will live its whole \
+        life believing that it is stupid.";
+A[3] = "Albert Einstein";
 
-Quotation[4] = "THERE ARE FOUR LIGHTS!";
-Author[4] = "Captain Jean-Luc Picard";
+Q[4] = "THERE ARE FOUR LIGHTS!";
+A[4] = "Captain Jean-Luc Picard";
 
-Quotation[5] = "All those who wander are not lost.";
-Author[5] = "J.R.R. Tolkien";
+Q[5] = "All those who wander are not lost.";
+A[5] = "J.R.R. Tolkien";
 
-Quotation[6] = "It is not until we are truly lost that we begin \
-                to find ourselves.";
-Author[6] = "Henry David Thoreau";
+Q[6] = "It is not until we are truly lost that we begin \
+        to find ourselves.";
+A[6] = "Henry David Thoreau";
 
-Quotation[7] = "Why did they call it a motherboard and not a fatherboard? \
-                Because if it was a fatherboard nothing would get done.";
-Author[7] = "";
+Q[7] = "Why did they call it a motherboard and not a fatherboard? \
+        Because if it was a fatherboard nothing would get done.";
+A[7] = "";
 
-Quotation[8] = "Life is a process of becoming, a combination of states \
-                we have to go through. Where people fail is that they wish \
-                to elect a state and remain in it. This is a kind of death.";
-Author[8] = "An&iuml;as Nin";
+Q[8] = "Life is a process of becoming, a combination of states \
+        we have to go through. Where people fail is that they wish \
+        to elect a state and remain in it. This is a kind of death.";
+A[8] = "An&iuml;as Nin";
 
-Quotation[9] = "Each contact with a human being is so rare, so precious, \
-                one should preserve it.";
-Author[9] = "An&iuml;as Nin";
+Q[9] = "Each contact with a human being is so rare, so precious, \
+        one should preserve it.";
+A[9] = "An&iuml;as Nin";
 
-Quotation[10] = "To the world you may be one person, but to one person you may \
-                 be the world.";
-Author[10] = "";
+Q[10] = "To the world you may be one person, but to one person you may \
+         be the world.";
+A[10] = "";
 
-Quotation[11] = "You know you're in love when you can't fall asleep because reality \
-                 is finally better than your dreams.";
-Author[11] = "Dr. Seuss";
+Q[11] = "You know you're in love when you can't fall asleep because reality \
+         is finally better than your dreams.";
+A[11] = "Dr. Seuss";
 
-Quotation[12] = "Be yourself; everyone else is already taken.";
-Author[12] = "Oscar Wilde";
+Q[12] = "Be yourself; everyone else is already taken.";
+A[12] = "Oscar Wilde";
 
-Quotation[13] = "Live as if you were to die tomorrow. Learn as if you \
-                 were to live forever.";
-Author[13] = "Mahatma Gandhi";
+Q[13] = "Live as if you were to die tomorrow. Learn as if you \
+         were to live forever.";
+A[13] = "Mahatma Gandhi";
 
-Quotation[14] = "I've learned that people will forget what you said, people will \
-                 forget what you did, but people will never forget how you made \
-                 them feel.";
-Author[14] = "Maya Angelou";
+Q[14] = "I've learned that people will forget what you said, people will \
+         forget what you did, but people will never forget how you made \
+         them feel.";
+A[14] = "Maya Angelou";
 
-Quotation[15] = "Here's to the crazy ones. The misfits. The rebels. The troublemakers. \
-                 The round pegs in the square holes. The ones who see things differently. \
-                 They're not fond of rules. And they have no respect for the status quo. \
-                 You can quote them, disagree with them, glorify or vilify them. \
-                 About the only thing you can't do is ignore them. Because they change things. \
-                 They push the human race forward. While some may see them as the crazy ones, \
-                 we see genius. Because the people who are crazy enough to think they can \
-                 change the world, are the ones who do.";
-Author[15] = "Apple Inc.";
+Q[15] = "Here's to the crazy ones. The misfits. The rebels. The troublemakers. \
+         The round pegs in the square holes. The ones who see things differently. \
+         They're not fond of rules. And they have no respect for the status quo. \
+         You can quote them, disagree with them, glorify or vilify them. \
+         About the only thing you can't do is ignore them. Because they change things. \
+         They push the human race forward. While some may see them as the crazy ones, \
+         we see genius. Because the people who are crazy enough to think they can \
+         change the world, are the ones who do.";
+A[15] = "Apple Inc.";
 
-Quotation[16] = "We are all in the gutter, but some of us are looking at the stars.";
-Author[16] = "Oscar Wilde";
+Q[16] = "We are all in the gutter, but some of us are looking at the stars.";
+A[16] = "Oscar Wilde";
 
-Quotation[17] = "Life is what happens to you while you're busy making other plans.";
-Author[17] = "John Lennon";
+Q[17] = "Life is what happens to you while you're busy making other plans.";
+A[17] = "John Lennon";
 
-Quotation[18] = "I have not failed. I've just found 10,000 ways that won't work.";
-Author[18] = "Thomas A. Edison";
+Q[18] = "I have not failed. I've just found 10,000 ways that won't work.";
+A[18] = "Thomas A. Edison";
 
-Quotation[19] = "You don't have a soul. You are a soul. You have a body.";
-Author[19] = "C.S. Lewis";
+Q[19] = "You don't have a soul. You are a soul. You have a body.";
+A[19] = "C.S. Lewis";
 
-Quotation[20] = "For every minute you are angry you lose sixty seconds of happiness.";
-Author[20] = "Ralph Waldo Emerson";
+Q[20] = "For every minute you are angry you lose sixty seconds of happiness.";
+A[20] = "Ralph Waldo Emerson";
 
-Quotation[21] = "Love is that condition in which the happiness of another person is \
-                 essential to your own.";
-Author[21] = "Robert A. Heinlein";
+Q[21] = "Love is that condition in which the happiness of another person is \
+         essential to your own.";
+A[21] = "Robert A. Heinlein";
 
-Quotation[22] = "Not all of us can do great things. But we can do small things \
-                 with great love.";
-Author[22] = "Mother Theresa";
+Q[22] = "Not all of us can do great things. But we can do small things \
+         with great love.";
+A[22] = "Mother Theresa";
 
-Quotation[23] = "Be nice to nerds. You may end up working for them. We all could.";
-Author[23] = "Charles J. Sykes";
+Q[23] = "Be nice to nerds. You may end up working for them. We all could.";
+A[23] = "Charles J. Sykes";
 
-Quotation[24] = "I'm not afraid of death; I just don't want to be there when it happens.";
-Author[24] = "Woody Allen";
+Q[24] = "I'm not afraid of death; I just don't want to be there when it happens.";
+A[24] = "Woody Allen";
 
-Quotation[25] = "Listen to the mustn'ts, child. Listen to the don'ts. Listen to the \
-                 shouldn'ts, the impossibles, the won'ts. Listen to the never haves, then \
-                 listen close to me... Anything can happen, child. Anything can be.";
-Author[25] = "Shel Silverstein";
+Q[25] = "Listen to the mustn'ts, child. Listen to the don'ts. Listen to the \
+         shouldn'ts, the impossibles, the won'ts. Listen to the never haves, then \
+         listen close to me... Anything can happen, child. Anything can be.";
+A[25] = "Shel Silverstein";
 
-Quotation[26] = "Piglet sidled up to Pooh from behind. \"Pooh?\" he whispered. <br> \
-                 \"Yes, Piglet?\"<br> \
-                 \"Nothing,\" said Piglet, taking Pooh's hand. \"I just wanted to be \
-                 sure of you.";
-Author[26] = "A. A. Milne";
+Q[26] = "Piglet sidled up to Pooh from behind. 'Pooh?' he whispered. <br> \
+         'Yes, Piglet?'<br> \
+         'Nothing,' said Piglet, taking Pooh's hand. 'I just wanted to be \
+         sure of you.'";
+A[26] = "A. A. Milne";
 
-Quotation[27] = "The question isn't who is going to let me; it's who is going \
-                 to stop me.";
-Author[27] = "Ayn Rand";
+Q[27] = "The question isn't who is going to let me; it's who is going \
+         to stop me.";
+A[27] = "Ayn Rand";
 
-Quotation[28] = "It is what you read when you don't have to that determines \
-                 what you will be when you can't help it.";
-Author[28] = "Oscar Wilde";
+Q[28] = "It is what you read when you don't have to that determines \
+         what you will be when you can't help it.";
+A[28] = "Oscar Wilde";
 
-Quotation[29] = "I have never let my schooling interfere with my education.";
-Author[29] = "Mark Twain";
+Q[29] = "I have never let my schooling interfere with my education.";
+A[29] = "Mark Twain";
 
-Quotation[30] = "Go to heaven for the climate and hell for the company.";
-Author[30] = "Mark Twain";
+Q[30] = "Go to heaven for the climate and hell for the company.";
+A[30] = "Mark Twain";
 
-Quotation[31] = "If you don't like something, change it. If you can't change it, change \
-                 your attitude. Don't complain.";
-Author[31] = "Maya Angelou";
+Q[31] = "If you don't like something, change it. If you can't change it, change \
+         your attitude. Don't complain.";
+A[31] = "Maya Angelou";
 
-Quotation[32] = "Keep away from people who try to belittle your ambitions. Small \
-                 people always do that, but the really great make you feel that you, too, \
-                 can become great.";
-Author[32] = "Mark Twain";
+Q[32] = "Keep away from people who try to belittle your ambitions. Small \
+         people always do that, but the really great make you feel that you, too, \
+         can become great.";
+A[32] = "Mark Twain";
 
-Quotation[33] = "The truth is, everyone is going to hurt you. You just got to \
-                 find the ones worth suffering for.";
-Author[33] = "Bob Marley";
+Q[33] = "The truth is, everyone is going to hurt you. You just got to \
+         find the ones worth suffering for.";
+A[33] = "Bob Marley";
 
-Quotation[34] = "An eye for an eye will only make the whole world blind.";
-Author[34] = "Mahatma Gandhi";
+Q[34] = "An eye for an eye will only make the whole world blind.";
+A[34] = "Mahatma Gandhi";
 
-Quotation[35] = "Life isn't about finding yourself. Life is about creating yourself.";
-Author[35] = "George Bernard Shaw";
+Q[35] = "Life isn't about finding yourself. Life is about creating yourself.";
+A[35] = "George Bernard Shaw";
 
-Quotation[36] = "If you only read the books that everyone else is reading, \
-                 you can only think what everyone else is thinking.";
-Author[36] = "Haruki Murakami";
+Q[36] = "If you only read the books that everyone else is reading, \
+         you can only think what everyone else is thinking.";
+A[36] = "Haruki Murakami";
 
-Quotation[37] = "And above all, watch with glittering eyes the whole world around \
-                 you because the greatest secrets are always hidden in the most unlikely \
-                 places. Those who don't believe in magic will never find it.";
-Author[37] = "Roald Dahl";
+Q[37] = "And above all, watch with glittering eyes the whole world around \
+         you because the greatest secrets are always hidden in the most unlikely \
+         places. Those who don't believe in magic will never find it.";
+A[37] = "Roald Dahl";
 
-Quotation[38] = "How wonderful it is that nobody need wait a single moment before \
-                 starting to improve the world.";
-Author[38] = "Anne Frank";
+Q[38] = "How wonderful it is that nobody need wait a single moment before \
+         starting to improve the world.";
+A[38] = "Anne Frank";
 
-Quotation[39] = "We should all start to live before we get too old. Fear is stupid. So are \
-                 regrets.";
-Author[39] = "Marilyn Monroe";
+Q[39] = "We should all start to live before we get too old. Fear is stupid. So are \
+         regrets.";
+A[39] = "Marilyn Monroe";
 
-Quotation[40] = "When you're in jail, a good friend will be trying to bail you out. A \
-                 best friend will be in the cell next to you saying, 'Damn, that was fun'.";
-Author[40] = "Groucho Marx";
+Q[40] = "When you're in jail, a good friend will be trying to bail you out. A \
+         best friend will be in the cell next to you saying, 'Damn, that was fun'.";
+A[40] = "Groucho Marx";
 
-Quotation[41] = "I would rather walk with a friend in the dark, than alone in the light.";
-Author[41] = "Helen Keller";
+Q[41] = "I would rather walk with a friend in the dark, than alone in the light.";
+A[41] = "Helen Keller";
 
-Quotation[42] = "Whatever you are, be a good one.";
-Author[42] = "Abraham Lincoln";
+Q[42] = "Whatever you are, be a good one.";
+A[42] = "Abraham Lincoln";
 
-Quotation[43] = "If we knew what it was we were doing, it would not be called research, \
-                 would it?";
-Author[43] = "Albert Einstein";
+Q[43] = "If we knew what it was we were doing, it would not be called research, \
+         would it?";
+A[43] = "Albert Einstein";
 
-Quotation[44] = "When I was 5 years old, my mother always told me that happiness was the \
-                 key to life. When I went to school, they asked me what I wanted to be when I \
-                 grew up. I wrote down 'happy'. They told me I didn't understand the \
-                 assignment, and I told them they didn't understand life.";
-Author[44] = "John Lennon";
+Q[44] = "When I was 5 years old, my mother always told me that happiness was the \
+         key to life. When I went to school, they asked me what I wanted to be when I \
+         grew up. I wrote down 'happy'. They told me I didn't understand the \
+         assignment, and I told them they didn't understand life.";
+A[44] = "John Lennon";
 
-Quotation[45] = "There are two ways of constructing a software design: One way is to make it so \
-                 simple that there are obviously no deficiencies, and the other way is to make it \
-                 so complicated that there are no obvious deficiencies. The first method is far \
-                 more difficult.";
-Author[45] = "C. A. R. Hoare";
+Q[45] = "There are two ways of constructing a software design: One way is to make it so \
+         simple that there are obviously no deficiencies, and the other way is to make it \
+         so complicated that there are no obvious deficiencies. The first method is far \
+         more difficult.";
+A[45] = "C. A. R. Hoare";
 
-Quotation[46] = "Perfection is achieved, not when there is nothing more to add, but when \
-                 there is nothing left to take away.";
-Author[46] = "Antoine de Saint Exupery";
+Q[46] = "Perfection is achieved, not when there is nothing more to add, but when \
+         there is nothing left to take away.";
+A[46] = "Antoine de Saint Exupery";
 
-Quotation[47] = "If women didn't exist, all the money in the world would have no meaning.";
-Author[47] = "Aristotle Onassis";
+Q[47] = "If women didn't exist, all the money in the world would have no meaning.";
+A[47] = "Aristotle Onassis";
 
-Quotation[48] = "I am not young enough to know everything.";
-Author[48] = "Oscar Wilde";
+Q[48] = "I am not young enough to know everything.";
+A[48] = "Oscar Wilde";
 
-Quotation[49] = "I never miss a chance to have sex or appear on television.";
-Author[49] = "Gore Vidal";
+Q[49] = "I never miss a chance to have sex or appear on television.";
+A[49] = "Gore Vidal";
 
-Quotation[50] = "The average person thinks he isn't.";
-Author[50] = "Father Larry Lorenzoni";
+Q[50] = "The average person thinks he isn't.";
+A[50] = "Father Larry Lorenzoni";
 
-Quotation[51] = "Well done is better than well said.";
-Author[51] = "Benjamin Franklin";
+Q[51] = "Well done is better than well said.";
+A[51] = "Benjamin Franklin";
 
-Quotation[52] = "Sometimes it is not enough that we do our best; we must do what is required.";
-Author[52] = "Sir Winston Churchill";
+Q[52] = "Sometimes it is not enough that we do our best; we must do what is required.";
+A[52] = "Sir Winston Churchill";
 
-Quotation[53] = "After I'm dead I'd rather have people ask why I have no monument than why I have one.";
-Author[53] = "Cato the Elder (aka Marcus Porcius Cato)";
+Q[53] = "After I'm dead I'd rather have people ask why I have no monument than why I have one.";
+A[53] = "Cato the Elder (aka Marcus Porcius Cato)";
 
-Quotation[54] = "It's not the size of the dog in the fight, it's the size of the fight in the dog.";
-Author[54] = "Mark Twain";
+Q[54] = "It's not the size of the dog in the fight, it's the size of the fight in the dog.";
+A[54] = "Mark Twain";
 
-Quotation[55] = "Pray, v.: To ask that the laws of the universe be annulled on behalf of a single \
-                 petitioner confessedly unworthy.";
-Author[55] = "Ambrose Bierce";
+Q[55] = "Pray, v.: To ask that the laws of the universe be annulled on behalf of a single \
+         petitioner confessedly unworthy.";
+A[55] = "Ambrose Bierce";
 
-Quotation[56] = "Research is what I'm doing when I don't know what I'm doing.";
-Author[56] = "Wernher Von Braun";
+Q[56] = "Research is what I'm doing when I don't know what I'm doing.";
+A[56] = "Wernher Von Braun";
 
-Quotation[57] = "There are only two ways to live your life. One is as though nothing is a miracle. The \
-                 other is as though everything is a miracle.";
-Author[57] = "Albert Einstein";
+Q[57] = "There are only two ways to live your life. One is as though nothing is a miracle. The \
+         other is as though everything is a miracle.";
+A[57] = "Albert Einstein";
+
+Q[58] = "If you were plowing a field, which would you rather use? Two strong oxen or \
+         1024 chickens?";
+A[58] = "Seymour Cray";
+
+Q[59] = "Write drunk; edit sober.";
+A[59] = "Ernest Hemingway";
+
+Q[60] = "There is only one nature - the division into science and engineering is a human \
+         imposition, not a natural one. Indeed, the division is a human failure; it reflects our \
+         limited capacity to comprehend the whole.";
+A[60] = "Bill Wulf";
+
+Q[61] = "The difference between fiction and reality? Fiction has to make sense.";
+A[61] = "Tom Clancy";
+
+Q[62] = "The concept is interesting and well-formed, but in order to earn better than a 'C', \
+         the idea must be feasible.";
+A[62] = "A Yale University management professor in response to student Fred Smith's paper proposing \
+         reliable overnight delivery service (Smith went on to found Federal Express Corp.)";
+
+Q[63] = "Always do what you are afraid to do.";
+A[63] = "Ralph Waldo Emerson";
+
+Q[64] = "Let us read, and let us dance; these two amusements will never do any harm \
+         to the world.";
+A[64] = "Voltaire";
+
+Q[65] = "You have enemies? Good. That means you've stood up for something, sometime \
+         in your life.";
+A[65] = "Winston Churchill";
+
+Q[66] = "May you live every day of your life.";
+A[66] = "Jonathan Swift";
+
+Q[67] = "Never memorize something that you can look up.";
+A[67] = "Albert Einstein";
+
+Q[68] = "A life spent making mistakes is not only more honorable, but more useful \
+         than a life spent doing nothing.";
+A[68] = "George Bernard Shaw";
+
+Q[69] = "I like your Christ. I do not like your Christians. Your Christians are so \
+         unlike your Christ.";
+A[69] = "Mahatma Gandhi";
+
+Q[70] = "I can be changed by what happens to me. But I refuse to be reduced by it.";
+A[70] = "Maya Angelou";
+
+Q[70] = "Do not let your fire go out, spark by irreplaceable spark in the hopeless \
+         swaps of the not-quite, the not-yet, and the not-at-all. Do not let the hero \
+         in your soul perish in the lonely frustration for the life you deserved \
+         and have never been able to reach. The world you desire can be won. It \
+         exists.. it is real.. it is possible.. it's yours.";
+A[70] = "Ayn Rand";
+
+Q[71] = "Everyone, at some point in their lives, wakes up in the middle of the \
+         night with the feeling that they are all alone in the world, and that \
+         nobody loves them now and that nobody will ever love them, and that \
+         they will never have a decent night's sleep again and will spend their \
+         lives wandering blearily around a loveless landscape, hoping desperately \
+         that their circumstances will improve, but suspecting, in their heart \
+         of hearts, that they will remain unloved forever. The best thing to do \
+         in these circumstances is to wake somebody else up, so that they can feel this way, too.";
+A[71] = "Lemony Snicket";
 
 // Write to the document
-function showQuotation()
+var sz = Q.length;
+var ind=Math.round(Math.random()*(sz-1));
+document.write("<dl>\n");
+document.write("<dt>" + "\"" + Q[ind] + "\"</dt>\n");
+if(A[ind] !== "")
 {
-  var Q = Quotation.length;
-  var whichQuotation=Math.round(Math.random()*(Q-1));
-  document.write("<dl>\n");
-  document.write("<dt>" + "\"" + Quotation[whichQuotation] + "\"</dt>\n");
-  if(Author[whichQuotation] !== "")
-  {
-    document.write("<dd>" + "--" + Author[whichQuotation] + "</dd>\n");
-  }
-  document.write("</dl>");
+  document.write("<dd>" + "--" + A[ind] + "</dd>\n");
 }
-showQuotation();
+document.write("</dl>");
 
 
