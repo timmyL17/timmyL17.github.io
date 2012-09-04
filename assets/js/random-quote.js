@@ -343,6 +343,9 @@ A[74] = "S&oslash;ren Kierkegaard";
 Q[75] = "The worst enemy to creativity is self-doubt.";
 A[75] = "Sylvia Plath";
 
+Q[76] = "It is hard to fail, but it is worse never to have tried to succeed.";
+A[76] = "Theodore Roosevelt";
+
 // Write to the document
 var sz = Q.length;
 var ind=Math.round(Math.random()*(sz-1));
