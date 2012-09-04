@@ -346,6 +346,10 @@ A[75] = "Sylvia Plath";
 Q[76] = "It is hard to fail, but it is worse never to have tried to succeed.";
 A[76] = "Theodore Roosevelt";
 
+Q[77] = "To confess your fallibility and then do nothing about it is not humble; it is \
+         boasting of your modesty.";
+A[77] = "Eliezer Yudkowsky";
+
 // Write to the document
 var sz = Q.length;
 var ind=Math.round(Math.random()*(sz-1));
