@@ -1,33 +1,3 @@
-//============================================================
-//Script:     Random Quote
-//
-//Functions:  This simple script allows you to print random
-//            quotations in the page.  Any number of quotes
-//            may be used.
-//
-//Browsers:   All
-//
-//Author:     etLux
-//============================================================
-//
-//INSTRUCTIONS:
-//
-//Put the following script in the <body> of your page,
-//wherever you want the quotes to appear.  Simply set up the
-//quotations in the Quotations[] array, then paste in the
-//whole block of code.  To format the text, wrap the usual
-//font tags around the script (view source on our demo on this
-//page for an example.)
-//
-//TECH NOTE:
-//
-//In quotation 8, note the text, \"beauty\" -- if you need
-//to use double-quote " marks, you *must* precede each
-//double-quote with a backslash \... otherwise the script
-//will break.
-//
-//THE CODE:
-
 // ==============================================
 // Copyright 2004 by CodeLifter.com
 // Free for all; but please leave in this header.
@@ -418,6 +388,19 @@ A[94] = "J. R. R. Tolkien";
 Q[95] = "Never mistake activity for achievement.";
 A[95] = "John Wooden";
 
+Q[96] = "If you think you are too small to make a difference, try sleeping \
+         with a mosquito.";
+A[96] = "Dalai Lama XIV";
+
+Q[97] = "Right or wrong, it's very pleasant to break something from time to time.";
+A[97] = "Fyodor Dostoyevsky";
+
+Q[98] = "Every man's life ends the same way. It is only the details of how he lived \
+         and how he died that distinguish one man from another.";
+A[98] = "Ernest Hemingway";
+
+Q[99] = "Stop worrying about the world ending today. It's already tomorrow in Australia.";
+A[99] = "Charles M. Schultz";
 
 // Write to the document
 var sz = Q.length;
