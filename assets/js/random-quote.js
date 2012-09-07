@@ -383,7 +383,7 @@ A[93] = "Albert Szent-Gyorgyi";
 Q[94] = "Well, here at last, dear friends, on the shores of the Sea comes the \
          end of our fellowship in Middle-earth. Go in peace! I will not \
          say: do not weep; for not all tears are an evil.";
-A[94] = "J. R. R. Tolkien";
+A[94] = "J.R.R. Tolkien";
 
 Q[95] = "Never mistake activity for achievement.";
 A[95] = "John Wooden";
@@ -401,6 +401,19 @@ A[98] = "Ernest Hemingway";
 
 Q[99] = "Stop worrying about the world ending today. It's already tomorrow in Australia.";
 A[99] = "Charles M. Schultz";
+
+Q[100] = "Children must be taught how to think, not what to think.";
+A[100] = "Margaret Mead";
+
+Q[101] = "You can only come to the morning through the shadows.";
+A[101] = "J.R.R. Tolkien";
+
+Q[102] = "If we don't believe in freedom of expression for people we despise, we don't \
+          believe in it at all.";
+A[102] = "Noam Chomsky";
+
+Q[103] = "Sex is the most fun you can have without laughing.";
+A[103] = "Woody Allen";
 
 // Write to the document
 var sz = Q.length;
