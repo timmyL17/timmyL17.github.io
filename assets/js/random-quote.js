@@ -350,6 +350,75 @@ Q[77] = "To confess your fallibility and then do nothing about it is not humble;
          boasting of your modesty.";
 A[77] = "Eliezer Yudkowsky";
 
+Q[78] = "If you always win, then you're probably doing something wrong.";
+A[78] = "Scott Aaronson";
+
+Q[79] = "Life is a long lesson in humility.";
+A[79] = "James M. Barrie";
+
+Q[80] = "To live in the past is to die in the present.";
+A[80] = "Bill Belichick";
+
+Q[81] = "Essentially, all models are wrong, but some are useful.";
+A[81] = "George Box";
+
+Q[82] = "Any fool can criticize, condemn, and complain and most fools do. But it \
+         takes character and self-control to be understanding and forgiving.";
+A[82] = "Dale Carnegie";
+
+Q[83] = "If you can dream it, you can do it.";
+A[83] = "Walt Disney";
+
+Q[84] = "Every man I meet is in some way my superior. In that I learn of him.";
+A[84] = "Ralph Waldo Emerson";
+
+Q[85] = "In science one tries to tell people, in such a way as to be understood \
+         by everyone, something that no one ever knew before. But in poetry, \
+         it's the exact opposite.";
+A[85] = "Paul Dirac";
+
+Q[86] = "It is not enough to have a good mind. The main thing is to use it well.";
+A[86] = "Rene Descartes";
+
+Q[87] = "The stone age did not end for lack of stone, and the oil age will end \
+         long before the world runs out of oil.";
+A[87] = "Sheikh Zaki Yamani";
+
+Q[88] = "As far as the laws of mathematics refer to reality, they are not certain, \
+         and as far as they are certain, they do not refer to reality.";
+A[88] = "Albert Einstein";
+
+Q[89] = "Clouds are not spheres, mountains are not cones, coastlines are not circles, \
+         and bark is not smooth, nor does lightning travel in a straight line.";
+A[89] = "Beno&icirc;t Mandelbrot";
+
+Q[90] = "It is of interest to note that while some dolphins are reported to have learned \
+         English -- up to fifty words used in correct context -- no human being has \
+         been reported to have learned dolphinese.";
+A[90] = "Carl Sagan";
+
+Q[91] = "The most exciting phrase to hear in science, the one that heralds the most \
+         discoveries, is not \"Eureka\" but \"That's funny...\"";
+A[91] = "Isaac Asimov";
+
+Q[92] = "Poets say science takes away from the beauty of the stars - mere globs of gas \
+         atoms. I, too, can see the stars on a desert night, \
+         and feel them. But do I see less or more?";
+A[92] = "Richard Feynman";
+
+Q[93] = "Discovery consists of seeing what everybody has seen and \
+         thinking what nobody has thought.";
+A[93] = "Albert Szent-Gyorgyi";
+
+Q[94] = "Well, here at last, dear friends, on the shores of the Sea comes the \
+         end of our fellowship in Middle-earth. Go in peace! I will not \
+         say: do not weep; for not all tears are an evil.";
+A[94] = "J. R. R. Tolkien";
+
+Q[95] = "Never mistake activity for achievement.";
+A[95] = "John Wooden";
+
+
 // Write to the document
 var sz = Q.length;
 var ind=Math.round(Math.random()*(sz-1));
