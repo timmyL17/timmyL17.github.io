@@ -415,6 +415,9 @@ A[102] = "Noam Chomsky";
 Q[103] = "Sex is the most fun you can have without laughing.";
 A[103] = "Woody Allen";
 
+Q[104] = "Rudeness is the weak person's imitation of strength.";
+A[104] = "Eric Hoffer";
+
 // Write to the document
 var sz = Q.length;
 var ind=Math.round(Math.random()*(sz-1));
