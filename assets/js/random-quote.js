@@ -418,6 +418,9 @@ A[103] = "Woody Allen";
 Q[104] = "Rudeness is the weak person's imitation of strength.";
 A[104] = "Eric Hoffer";
 
+Q[105] = "Education is not the filling of a bucket, but the lighting of a fire.";
+A[105] = "W.B. Yeats";
+
 // Write to the document
 var sz = Q.length;
 var ind=Math.round(Math.random()*(sz-1));
