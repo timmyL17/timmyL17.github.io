@@ -426,6 +426,10 @@ Q[106] = "Happiness is like a butterfly. The more you chase it, the more it will
           shoulder.";
 A[106] = "Henry David Thoreau";
 
+Q[107] = "Be happy for no reason, like a child. If you are happy for a reason, \
+          you're in trouble, because that reason can be taken from you.";
+A[107] = "Deepak Chopra";
+
 // Write to the document
 var sz = Q.length;
 var ind=Math.round(Math.random()*(sz-1));
