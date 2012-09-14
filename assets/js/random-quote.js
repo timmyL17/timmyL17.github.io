@@ -421,6 +421,11 @@ A[104] = "Eric Hoffer";
 Q[105] = "Education is not the filling of a bucket, but the lighting of a fire.";
 A[105] = "W.B. Yeats";
 
+Q[106] = "Happiness is like a butterfly. The more you chase it, the more it will elude you. \
+          But if you turn your attention to other things, it will come and sit softly on your \
+          shoulder.";
+A[106] = "Henry David Thoreau";
+
 // Write to the document
 var sz = Q.length;
 var ind=Math.round(Math.random()*(sz-1));
