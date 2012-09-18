@@ -430,6 +430,10 @@ Q[107] = "Be happy for no reason, like a child. If you are happy for a reason, \
           you're in trouble, because that reason can be taken from you.";
 A[107] = "Deepak Chopra";
 
+Q[108] = "Character cannot be developed in ease and quiet. Only through experience of \
+          trial and suffering can the soul be strengthened, ambition inspired, and success achieved.";
+A[108] = "Helen Keller";
+
 // Write to the document
 var sz = Q.length;
 var ind=Math.round(Math.random()*(sz-1));
