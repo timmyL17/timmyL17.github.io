@@ -434,6 +434,12 @@ Q[108] = "Character cannot be developed in ease and quiet. Only through experien
           trial and suffering can the soul be strengthened, ambition inspired, and success achieved.";
 A[108] = "Helen Keller";
 
+Q[109] = "If you have made mistakes, there is always another chance \
+          for you. You may have a fresh start any moment you choose, \
+          for this thing we call 'failure' is not the falling down, \
+          but the staying down.";
+A[109] = "Mary Pickford";
+
 // Write to the document
 var sz = Q.length;
 var ind=Math.round(Math.random()*(sz-1));
