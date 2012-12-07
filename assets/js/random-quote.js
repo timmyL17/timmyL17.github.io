@@ -440,6 +440,9 @@ Q[109] = "If you have made mistakes, there is always another chance \
           but the staying down.";
 A[109] = "Mary Pickford";
 
+Q[110] = "You miss 100% of the shots you don't take.";
+A[110] = "Wayne Gretzky";
+
 // Write to the document
 var sz = Q.length;
 var ind=Math.round(Math.random()*(sz-1));
