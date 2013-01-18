@@ -443,6 +443,10 @@ A[109] = "Mary Pickford";
 Q[110] = "You miss 100% of the shots you don't take.";
 A[110] = "Wayne Gretzky";
 
+Q[111] = "It is better to risk starving to death then surrender. If you give up \
+          on your dreams, what's left?";
+A[111] = "Jim Carrey";
+
 // Write to the document
 var sz = Q.length;
 var ind=Math.round(Math.random()*(sz-1));
