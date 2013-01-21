@@ -446,6 +446,9 @@ A[110] = "Wayne Gretzky";
 Q[111] = "It is better to risk starving to death then surrender. If you give up \
           on your dreams, what's left?";
 A[111] = "Jim Carrey";
+Q[112] = "Aaron's unique quality was that he was marvelously and vigorously different. \
+          There is a scarcity of that. Perhaps we can be all a little more different too.";
+A[112] = "Edward Tufte, during Aaron Swartz's memorial Jan. 19, 2013";
 
 // Write to the document
 var sz = Q.length;
