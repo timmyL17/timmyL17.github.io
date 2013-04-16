@@ -449,6 +449,9 @@ A[111] = "Jim Carrey";
 Q[112] = "Aaron's unique quality was that he was marvelously and vigorously different. \
           There is a scarcity of that. Perhaps we can be all a little more different too.";
 A[112] = "Edward Tufte, during Aaron Swartz's memorial Jan. 19, 2013";
+Q[113] = "When I was a boy and I would see scary things in the news, my mother would \
+          say to me, 'Look for the helpers. You will always find people who are helping.'";
+A[113] = "Fred Rogers";
 
 // Write to the document
 var sz = Q.length;
