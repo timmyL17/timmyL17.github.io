@@ -18,6 +18,19 @@
             .btn-tim {text-shadow: 1px 1px;}
         </style>
 
+        <script>
+            function setUpImage()
+            {
+                var img = document.getElementById('myImg');
+
+                img.onload = function () {
+                    //document.getElementById('contact-table-div').style.width = img.clientWidth.toString() + "px"
+                }
+
+                img.src = 'assets/img/me.jpg'
+            }
+        </script>
+
         <link href="assets/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
 
         <!-- javascript
@@ -46,31 +59,32 @@
                 <div class="span3" align="center">
                     <h2> Timothy Langlois </h2>
                     <h5> Computer Science Ph.D. Student @ Cornell University<br> </h5>
-                    <img src="assets/img/me.jpg" alt="Timothy Langlois"/>
-                    <!--<p><br></p>-->
-                    <table class="table-condensed table-hover">
-                        <tbody>
-                            <tr>
-                                <td class="top"><i class="icon-map-marker icon-white"></i></td>
-                                <td class="left">5154 Upson Hall <br>
-                                    Ithaca, NY 14853 </td>
-                            </tr>
-                            <tr>
-                                <td><i class="icon-envelope icon-white"></i></td>
-                                <td class="left">
-                                    &lt;my_last_name&gt; <em>at</em> cs
-                                    <em>dot</em> cornell <em>dot</em> edu </td>
-                            </tr>
-                            <tr>
-                                <td><i class="icon-globe icon-white"></i></td>
-                                <td class="left"><a href="https://bitbucket.org/timmyl17">Bitbucket</a></td>
-                            </tr>
-                            <tr>
-                                <td> <i class="icon-globe icon-white"></i></td>
-                                <td class="left"> <a href="https://github.com/timmyL17">Github</a></td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <img id="myImg" src="#" alt="Timothy Langlois"/>
+                    <script> setUpImage() </script>
+                    <h3>Contact</h3>
+                    <div align="center" id="contact-table-div">
+                        <table class="table-condensed table-hover">
+                            <tbody>
+                                <tr>
+                                    <td class="top"><i class="icon-map-marker icon-white"></i></td>
+                                    <td class="left">5154 Upson Hall <br>
+                                        Ithaca, NY 14853 </td>
+                                </tr>
+                                <tr>
+                                    <td><i class="icon-envelope icon-white"></i></td>
+                                    <td class="left"> <a href="mailto:#">langlois@cs.cornell.edu</a></td>
+                                </tr>
+                                <tr>
+                                    <td><i class="icon-globe icon-white"></i></td>
+                                    <td class="left"><a href="https://bitbucket.org/timmyl17">Bitbucket</a></td>
+                                </tr>
+                                <tr>
+                                    <td> <i class="icon-globe icon-white"></i></td>
+                                    <td class="left"> <a href="https://github.com/timmyL17">Github</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
                 <div class="span9">
                     <h3>About me</h3>
