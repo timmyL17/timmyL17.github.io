@@ -449,6 +449,29 @@ Q[112] = "When I was a boy and I would see scary things in the news, my mother w
           say to me, 'Look for the helpers. You will always find people who are helping.'";
 A[112] = "Fred Rogers";
 
+Q[113] = "You can never cross the ocean until you have the courage to lose sight of the shore.";
+A[113] = "Christopher Columbus";
+
+Q[114] = "There is only one way to avoid criticism: do nothing, say nothing, and be nothing.";
+A[114] = "Aristotle";
+
+Q[115] = "Obstacles are those frightful things you see when you take your eyes off the goal.";
+A[115] = "Henry Ford";
+
+Q[116] = "We can easily forgive a child who is afraid of the dark; the real tragedy of life is when \
+          men are afraid of the light.";
+A[116] = "Plato";
+
+Q[117] = "Everything has beauty, but not everyone can see.";
+A[117] = "Confucious";
+
+Q[118] = "If the wind will not serve, take to the oars.";
+A[118] = "Latin Proverb";
+
+Q[119] = "When everything seems to be going against you, remember that the airplane takes off against \
+          the wind, not with it.";
+A[119] = "Henry Ford";
+
 // Write to the document
 var sz = Q.length;
 var ind=Math.round(Math.random()*(sz-1));
