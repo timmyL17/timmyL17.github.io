@@ -207,82 +207,79 @@ A[47] = "Aristotle Onassis";
 Q[48] = "I am not young enough to know everything.";
 A[48] = "Oscar Wilde";
 
-Q[49] = "I never miss a chance to have sex or appear on television.";
-A[49] = "Gore Vidal";
+Q[49] = "The average person thinks he isn't.";
+A[49] = "Father Larry Lorenzoni";
 
-Q[50] = "The average person thinks he isn't.";
-A[50] = "Father Larry Lorenzoni";
+Q[50] = "Well done is better than well said.";
+A[50] = "Benjamin Franklin";
 
-Q[51] = "Well done is better than well said.";
-A[51] = "Benjamin Franklin";
+Q[51] = "Sometimes it is not enough that we do our best; we must do what is required.";
+A[51] = "Sir Winston Churchill";
 
-Q[52] = "Sometimes it is not enough that we do our best; we must do what is required.";
-A[52] = "Sir Winston Churchill";
+Q[52] = "After I'm dead I'd rather have people ask why I have no monument than why I have one.";
+A[52] = "Cato the Elder (aka Marcus Porcius Cato)";
 
-Q[53] = "After I'm dead I'd rather have people ask why I have no monument than why I have one.";
-A[53] = "Cato the Elder (aka Marcus Porcius Cato)";
+Q[53] = "It's not the size of the dog in the fight, it's the size of the fight in the dog.";
+A[53] = "Mark Twain";
 
-Q[54] = "It's not the size of the dog in the fight, it's the size of the fight in the dog.";
-A[54] = "Mark Twain";
-
-Q[55] = "Pray, v.: To ask that the laws of the universe be annulled on behalf of a single \
+Q[54] = "Pray, v.: To ask that the laws of the universe be annulled on behalf of a single \
          petitioner confessedly unworthy.";
-A[55] = "Ambrose Bierce";
+A[54] = "Ambrose Bierce";
 
-Q[56] = "Research is what I'm doing when I don't know what I'm doing.";
-A[56] = "Wernher Von Braun";
+Q[55] = "Research is what I'm doing when I don't know what I'm doing.";
+A[55] = "Wernher Von Braun";
 
-Q[57] = "There are only two ways to live your life. One is as though nothing is a miracle. The \
+Q[56] = "There are only two ways to live your life. One is as though nothing is a miracle. The \
          other is as though everything is a miracle.";
-A[57] = "Albert Einstein";
+A[56] = "Albert Einstein";
 
-Q[58] = "If you were plowing a field, which would you rather use? Two strong oxen or \
+Q[57] = "If you were plowing a field, which would you rather use? Two strong oxen or \
          1024 chickens?";
-A[58] = "Seymour Cray";
+A[57] = "Seymour Cray";
 
-Q[59] = "Write drunk; edit sober.";
-A[59] = "Ernest Hemingway";
+Q[58] = "Write drunk; edit sober.";
+A[58] = "Ernest Hemingway";
 
-Q[60] = "There is only one nature - the division into science and engineering is a human \
+Q[59] = "There is only one nature - the division into science and engineering is a human \
          imposition, not a natural one. Indeed, the division is a human failure; it reflects our \
          limited capacity to comprehend the whole.";
-A[60] = "Bill Wulf";
+A[59] = "Bill Wulf";
 
-Q[61] = "The difference between fiction and reality? Fiction has to make sense.";
-A[61] = "Tom Clancy";
+Q[60] = "The difference between fiction and reality? Fiction has to make sense.";
+A[60] = "Tom Clancy";
 
-Q[62] = "The concept is interesting and well-formed, but in order to earn better than a 'C', \
+Q[61] = "The concept is interesting and well-formed, but in order to earn better than a 'C', \
          the idea must be feasible.";
-A[62] = "A Yale University management professor in response to student Fred Smith's paper proposing \
+A[61] = "A Yale University management professor in response to student Fred Smith's paper proposing \
          reliable overnight delivery service (Smith went on to found Federal Express Corp.)";
 
-Q[63] = "Always do what you are afraid to do.";
-A[63] = "Ralph Waldo Emerson";
+Q[62] = "Always do what you are afraid to do.";
+A[62] = "Ralph Waldo Emerson";
 
-Q[64] = "Let us read, and let us dance; these two amusements will never do any harm \
+Q[63] = "Let us read, and let us dance; these two amusements will never do any harm \
          to the world.";
-A[64] = "Voltaire";
+A[63] = "Voltaire";
 
-Q[65] = "You have enemies? Good. That means you've stood up for something, sometime \
+Q[64] = "You have enemies? Good. That means you've stood up for something, sometime \
          in your life.";
-A[65] = "Winston Churchill";
+A[64] = "Winston Churchill";
 
-Q[66] = "May you live every day of your life.";
-A[66] = "Jonathan Swift";
+Q[65] = "May you live every day of your life.";
+A[65] = "Jonathan Swift";
 
-Q[67] = "Never memorize something that you can look up.";
-A[67] = "Albert Einstein";
+Q[66] = "Never memorize something that you can look up.";
+A[66] = "Albert Einstein";
 
-Q[68] = "A life spent making mistakes is not only more honorable, but more useful \
+Q[67] = "A life spent making mistakes is not only more honorable, but more useful \
          than a life spent doing nothing.";
-A[68] = "George Bernard Shaw";
+A[67] = "George Bernard Shaw";
 
-Q[69] = "I like your Christ. I do not like your Christians. Your Christians are so \
+Q[68] = "I like your Christ. I do not like your Christians. Your Christians are so \
          unlike your Christ.";
-A[69] = "Mahatma Gandhi";
+A[68] = "Mahatma Gandhi";
 
-Q[70] = "I can be changed by what happens to me. But I refuse to be reduced by it.";
-A[70] = "Maya Angelou";
+Q[69] = "I can be changed by what happens to me. But I refuse to be reduced by it.";
+A[69] = "Maya Angelou";
 
 Q[70] = "Do not let your fire go out, spark by irreplaceable spark in the hopeless \
          swaps of the not-quite, the not-yet, and the not-at-all. Do not let the hero \
@@ -412,46 +409,45 @@ Q[102] = "If we don't believe in freedom of expression for people we despise, we
           believe in it at all.";
 A[102] = "Noam Chomsky";
 
-Q[103] = "Sex is the most fun you can have without laughing.";
-A[103] = "Woody Allen";
+Q[103] = "Rudeness is the weak person's imitation of strength.";
+A[103] = "Eric Hoffer";
 
-Q[104] = "Rudeness is the weak person's imitation of strength.";
-A[104] = "Eric Hoffer";
+Q[104] = "Education is not the filling of a bucket, but the lighting of a fire.";
+A[104] = "W.B. Yeats";
 
-Q[105] = "Education is not the filling of a bucket, but the lighting of a fire.";
-A[105] = "W.B. Yeats";
-
-Q[106] = "Happiness is like a butterfly. The more you chase it, the more it will elude you. \
+Q[105] = "Happiness is like a butterfly. The more you chase it, the more it will elude you. \
           But if you turn your attention to other things, it will come and sit softly on your \
           shoulder.";
-A[106] = "Henry David Thoreau";
+A[105] = "Henry David Thoreau";
 
-Q[107] = "Be happy for no reason, like a child. If you are happy for a reason, \
+Q[106] = "Be happy for no reason, like a child. If you are happy for a reason, \
           you're in trouble, because that reason can be taken from you.";
-A[107] = "Deepak Chopra";
+A[106] = "Deepak Chopra";
 
-Q[108] = "Character cannot be developed in ease and quiet. Only through experience of \
+Q[107] = "Character cannot be developed in ease and quiet. Only through experience of \
           trial and suffering can the soul be strengthened, ambition inspired, and success achieved.";
-A[108] = "Helen Keller";
+A[107] = "Helen Keller";
 
-Q[109] = "If you have made mistakes, there is always another chance \
+Q[108] = "If you have made mistakes, there is always another chance \
           for you. You may have a fresh start any moment you choose, \
           for this thing we call 'failure' is not the falling down, \
           but the staying down.";
-A[109] = "Mary Pickford";
+A[108] = "Mary Pickford";
 
-Q[110] = "You miss 100% of the shots you don't take.";
-A[110] = "Wayne Gretzky";
+Q[109] = "You miss 100% of the shots you don't take.";
+A[109] = "Wayne Gretzky";
 
-Q[111] = "It is better to risk starving to death then surrender. If you give up \
+Q[110] = "It is better to risk starving to death then surrender. If you give up \
           on your dreams, what's left?";
-A[111] = "Jim Carrey";
-Q[112] = "Aaron's unique quality was that he was marvelously and vigorously different. \
+A[110] = "Jim Carrey";
+
+Q[111] = "Aaron's unique quality was that he was marvelously and vigorously different. \
           There is a scarcity of that. Perhaps we can be all a little more different too.";
-A[112] = "Edward Tufte, during Aaron Swartz's memorial Jan. 19, 2013";
-Q[113] = "When I was a boy and I would see scary things in the news, my mother would \
+A[111] = "Edward Tufte, during Aaron Swartz's memorial Jan. 19, 2013";
+
+Q[112] = "When I was a boy and I would see scary things in the news, my mother would \
           say to me, 'Look for the helpers. You will always find people who are helping.'";
-A[113] = "Fred Rogers";
+A[112] = "Fred Rogers";
 
 // Write to the document
 var sz = Q.length;
