@@ -472,6 +472,9 @@ Q[119] = "When everything seems to be going against you, remember that the airpl
           the wind, not with it.";
 A[119] = "Henry Ford";
 
+Q[120] = "I hate meshes. I cannot believe how hard this is. Geometry is hard.";
+A[120] = "David Baraff";
+
 // Write to the document
 var sz = Q.length;
 var ind=Math.round(Math.random()*(sz-1));
