@@ -475,6 +475,9 @@ A[119] = "Henry Ford";
 Q[120] = "I hate meshes. I cannot believe how hard this is. Geometry is hard.";
 A[120] = "David Baraff";
 
+Q[121] = "Nature is not mute; it is Man that is deaf.";
+A[121] = "Terence McKenna";
+
 // Write to the document
 var sz = Q.length;
 var ind=Math.round(Math.random()*(sz-1));
