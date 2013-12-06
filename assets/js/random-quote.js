@@ -478,6 +478,10 @@ A[120] = "David Baraff";
 Q[121] = "Nature is not mute; it is Man that is deaf.";
 A[121] = "Terence McKenna";
 
+Q[122] = "Why are numbers beautiful? It's like asking why is Beethoven's Ninth Symphony beautiful. \
+         If you don't see why, someone can't tell you. I know numbers are beautiful. If they aren't beautiful, nothing is.";
+A[122] = "Paul Erd&#337;s";
+
 // Write to the document
 var sz = Q.length;
 var ind=Math.round(Math.random()*(sz-1));
