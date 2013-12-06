@@ -481,6 +481,10 @@ A[121] = "Terence McKenna";
 Q[122] = "Always be on the lookout for the presence of wonder.";
 A[122] = "E. B. White";
 
+Q[123] = "Why are numbers beautiful? It's like asking why is Beethoven's Ninth Symphony beautiful. \
+         If you don't see why, someone can't tell you. I know numbers are beautiful. If they aren't beautiful, nothing is.";
+A[123] = "Paul Erd&#337;s";
+
 // Write to the document
 var sz = Q.length;
 var ind=Math.round(Math.random()*(sz-1));
