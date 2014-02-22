@@ -485,6 +485,10 @@ Q[123] = "Why are numbers beautiful? It's like asking why is Beethoven's Ninth S
          If you don't see why, someone can't tell you. I know numbers are beautiful. If they aren't beautiful, nothing is.";
 A[123] = "Paul Erd&#337;s";
 
+Q[124] = "When we try to pick out anything by itself, we find it hitched to \
+          everything else in the universe.";
+A[124] = "John Muir";
+
 // Write to the document
 var sz = Q.length;
 var ind=Math.round(Math.random()*(sz-1));
