@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Timothy Langlois</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Timothy Langlois">
+        <meta name="author" content="Timothy Langlois">
+
+        <!-- Ubuntu font -->
+        <link href='http://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
+
+        <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+        <style>
+            body {padding-top: 40px}
+        </style>
+
+        <link href="assets/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
+
+        <!-- javascript
+    ================================================== -->
+        <script src="assets.js/jquery.min.js"></script>
+        <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+
+        <!-- Google Analytics -->
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-42927866-1', 'cornell.edu');
+          ga('send', 'pageview');
+
+        </script>
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-fixed-top navbar-inverse">
+            <div class="navbar-inner">
+                <div class="container">
+                    <ul class="nav">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="research.html">Research</a></li>
+                        <li class="active"><a href="experience.html">Experience</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="span12">
+                    <iframe src="https://www.google.com/calendar/embed?showTitle=0&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=langlois.timothy%40gmail.com&amp;color=%232952A3&amp;ctz=America%2FNew_York" style=" border-width:0 " width="800" height="600" frameborder="0" scrolling="no"></iframe>
+                </div><!--/span-->
+            </div><!--/row-->
+
+            <footer>
+                <noscript>&lt;--JavaScript here--&gt;<br></noscript>
+                <script src="assets/js/random-quote.js"></script>
+                Created with
+                <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap</a>
+            </footer>
+
+        </div><!--/.container-->
+    </body>
+</html>
