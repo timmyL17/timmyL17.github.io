@@ -489,6 +489,9 @@ Q[124] = "When we try to pick out anything by itself, we find it hitched to \
           everything else in the universe.";
 A[124] = "John Muir";
 
+Q[125] = "There is not problem so bad that you cannot make it worse.";
+A[125] = "Chris Hadfield";
+
 // Write to the document
 var sz = Q.length;
 var ind=Math.round(Math.random()*(sz-1));
