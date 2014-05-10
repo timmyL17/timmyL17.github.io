@@ -1,0 +1,12 @@
+@article{Langlois:2014:EMC,
+    author = {Timothy R. Langlois and Steven S. An and Kelvin K. Jin and Doug L. James},
+    title  = {Eigenmode Compression for Modal Sound Models},
+    journal = {ACM Transactions on Graphics (Proceedings of SIGGRAPH 2014)},
+    year = {2014},
+    volume = {33},
+    number = {4},
+    month  = Aug,
+    doi = {10.1145/2601097.2601177}
+    url = {http://www.cs.cornell.edu/projects/Sound/modec}
+}
+
