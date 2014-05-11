@@ -24,6 +24,7 @@
             .pub-title {font-weight: bold; font-size: 16pt; margin-bottom: 0.5cm;}
             .venue {font-style: italic; margin-bottom: 0.2cm;}
             .btn-margin {margin-left: 0.1cm; margin-right: 0.1cm;}
+            .self-pic {margin-bottom: 0.5cm;}
         </style>
 
         <!--<link href="assets/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">-->
@@ -81,8 +82,8 @@
             <div class="row" id="about">
                 <div class="col-lg-3" align="center">
                 <!--<div class="col-lg-3">-->
-                    <img id="myImg" class="img-responsive" src="assets/img/me.jpg" alt="Timothy Langlois"/>
-                    <h3>Contact</h3>
+                    <img class="img-responsive self-pic" src="assets/img/me_bw.jpg" alt="Timothy Langlois"/>
+                    <!--<h3>Contact</h3>-->
                     <div align="center" id="contact-table-div">
                         <table class="table-condensed">
                             <tbody>
@@ -198,7 +199,9 @@
                     <hr>
                     <div class="row row-pad">
                         <div class="col-sm-2" align="center">
-                            <img class="pubImg img-responsive" src="publications/modec/thumb.png" alt="Eigenmode Compression"/>
+                            <a href="http://www.cs.cornell.edu/projects/Sound/modec">
+                                <img class="pubImg img-responsive" src="publications/modec/thumb.png" alt="Eigenmode Compression"/>
+                            </a>
                         </div>
                         <div class="col-sm-10">
                             <div class="pub-title">Eigenmode Compression for Modal Sound Models</div>
@@ -210,14 +213,17 @@
 
                             <a href="http://www.cs.cornell.edu/projects/Sound/modec/modec.pdf" class="btn btn-default btn-margin">PDF</a>
                             <a href="http://www.cs.cornell.edu/projects/Sound/modec" class="btn btn-default btn-margin">Project page</a>
-                            <!--<button type="button" class="btn btn-default btn-margin" data-trigger="click" data-container="body" data-toggle="popover" data-placement="auto bottom" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">-->
-                                  <!--Popover on left-->
-                              <!--</button>-->
+                            <!--<button type="button" class="btn btn-default btn-margin popover-btn"-->
+                                    <!--data-content="We propose and evaluate a method for significantly compressing modal sound models, thereby making them far more practical for audiovisual applications. The dense eigenmode matrix, needed to compute the sound model's response to contact forces, can consume tens to thousands of megabytes depending on mesh resolution and mode count. Our eigenmode compression pipeline is based on nonlinear optimization of Moving Least Squares (MLS) approximations. Enhanced compression is achieved by exploiting symmetry both within and between eigenmodes, and by adaptively assigning per-mode error levels based on human perception of the far-field pressure amplitudes. Our method provides smooth eigenmode approximations, and efficient random access. We demonstrate that, in many cases, hundredfold compression ratios can be achieved without audible degradation of the rendered sound.">-->
+                                  <!--Abstract-->
+                            <!--</button>-->
                         </div>
                     </div>
                     <div class="row row-pad">
                         <div class="col-sm-2" align="center">
-                            <img class="pubImg img-responsive" src="publications/ifa/thumb.jpg" alt="Inverse-Foley Animation"/>
+                            <a href="http://www.cs.cornell.edu/projects/Sound/ifa">
+                                <img class="pubImg img-responsive" src="publications/ifa/thumb.jpg" alt="Inverse-Foley Animation"/>
+                            </a>
                         </div>
                         <div class="col-sm-10">
                             <div class="pub-title">Inverse-Foley Animation: Synchronizing rigid-body motions to sound</div>
@@ -277,10 +283,62 @@
             </div>
 
 
-            <script>$(function ()
-               { $("[data-toggle='popover']").popover();
-               });
-            </script>
+            <!--<script>$(function ()-->
+               <!--{ $("[data-toggle='popover']").popover();-->
+               <!--});-->
+            <!--</script>-->
+
+            <!--<script>-->
+                <!--function enableThumbPopover() {-->
+                    <!--var counter;-->
+
+                    <!--$('.popover-btn').popover({-->
+                        <!--trigger: 'manual',-->
+                        <!--animation: false,-->
+                        <!--html: false,-->
+                        <!--content: function () {-->
+                            <!--return $(this).data('content');-->
+                        <!--},-->
+                        <!--container: 'body',-->
+                        <!--placement: 'bottom'-->
+                    <!--}).on("mouseenter",function () {-->
+                        <!--var _this = this; // thumbcontainer-->
+
+                        <!--console.log('popover-btn mouseenter')-->
+                        <!--// clear the counter-->
+                        <!--clearTimeout(counter);-->
+                        <!--// Close all other Popovers-->
+                        <!--$('.popover-btn').not(_this).popover('hide');-->
+
+                        <!--// start new timeout to show popover-->
+                        <!--counter = setTimeout(function(){-->
+                            <!--if($(_this).is(':hover'))-->
+                            <!--{-->
+                                <!--$(_this).popover("show");-->
+                            <!--}-->
+                            <!--$(".popover").on("mouseleave", function () {-->
+                                <!--console.log('popover mouseleave')-->
+                                <!--$('.popover-btn').popover('hide');-->
+                            <!--});-->
+                        <!--}, 10);-->
+
+                    <!--}).on("mouseleave", function () {-->
+                        <!--var _this = this;-->
+                        <!--console.log('popover-btn mouseleave')-->
+
+                        <!--setTimeout(function () {-->
+                            <!--if (!$(".popover:hover").length) {-->
+                                <!--if(!$(".popover").is(':hover'))-->
+                                <!--{-->
+                                    <!--$(_this).popover('hide');-->
+                                <!--}-->
+                            <!--}-->
+                        <!--}, 400);-->
+                    <!--});-->
+                <!--}-->
+
+                <!--enableThumbPopover();-->
+            <!--</script>-->
 
 
         </div><!--/.container-->
