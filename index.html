@@ -12,20 +12,21 @@
 
         <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-        <style>
-            body {padding-top: 40px;}
-            .body {padding-top: 10px;}
+        <link href="assets/css/typography.css" rel="stylesheet">
+        <!--<style>-->
+            <!--body {padding-top: 40px;}-->
+            <!--.body {padding-top: 10px;}-->
 
-            .row-pad {padding-bottom: 1cm;}
-            .btn-tim {text-shadow: 1px 1px;}
-            .pubImg {width: 200px; border-style: solid; border-width: 1px; border-color: #ffffff}
-            .teaser-column {width: 220px; vertical-align: top;}
-            .pub-info {vertical-align: top;}
-            .pub-title {font-weight: bold; font-size: 16pt; margin-bottom: 0.5cm;}
-            .venue {font-style: italic; margin-bottom: 0.2cm;}
-            .btn-margin {margin-left: 0.1cm; margin-right: 0.1cm;}
-            .self-pic {margin-bottom: 0.5cm;}
-        </style>
+            <!--.row-pad {padding-bottom: 1cm;}-->
+            <!--.btn-tim {text-shadow: 1px 1px;}-->
+            <!--.pubImg {width: 200px; border-style: solid; border-width: 1px; border-color: #ffffff}-->
+            <!--.teaser-column {width: 220px; vertical-align: top;}-->
+            <!--.pub-info {vertical-align: top;}-->
+            <!--.pub-title {font-weight: bold; font-size: 16pt; margin-bottom: 0.5cm;}-->
+            <!--.venue {font-style: italic; margin-bottom: 0.2cm;}-->
+            <!--.btn-margin {margin-left: 0.1cm; margin-right: 0.1cm;}-->
+            <!--.self-pic {margin-bottom: 0.5cm;}-->
+        <!--</style>-->
 
         <!--<link href="assets/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">-->
 
@@ -211,12 +212,50 @@
                             </div>
                             <div class="venue">ACM Transactions on Graphics (SIGGRAPH 2014)</div>
 
+                            <div class="abstractBox">
+                                <button type="button" class="btn btn-default btn-margin">
+                                    Abstract
+                                </button>
+                                <div class="abstract">
+                                    We propose and evaluate a method for significantly compressing modal sound models, thereby making them far more practical for audiovisual applications.
+                                    The dense eigenmode matrix, needed to compute the sound model's response to contact forces, can consume tens to thousands of megabytes
+                                    depending on mesh resolution and mode count. Our eigenmode compression pipeline is based on nonlinear optimization of Moving
+                                    Least Squares (MLS) approximations. Enhanced compression is achieved by exploiting symmetry both within and between eigenmodes,
+                                    and by adaptively assigning per-mode error levels based on human perception of the far-field pressure amplitudes. Our method provides
+                                    smooth eigenmode approximations, and efficient random access. We demonstrate that, in many cases, hundredfold compression ratios can
+                                    be achieved without audible degradation of the rendered sound.
+                                </div>
+                            </div>
+                            <div class="bibtexBox">
+                                <button type="button" class="btn btn-default btn-margin">
+                                    Bibtex
+                                </button>
+                                <div class="bibtex">
+                                    @article{Langlois:2014:EMC,
+                                    <br>
+                                        author = {Timothy R. Langlois and Steven S. An and Kelvin K. Jin and Doug L. James},
+                                        <br>
+                                        title  = {Eigenmode Compression for Modal Sound Models},
+                                        <br>
+                                        journal = {ACM Transactions on Graphics (Proceedings of SIGGRAPH 2014)},
+                                        <br>
+                                        year = {2014},
+                                        <br>
+                                        volume = {33},
+                                        <br>
+                                        number = {4},
+                                        <br>
+                                        month  = Aug,
+                                        <br>
+                                        doi = {10.1145/2601097.2601177}
+                                        <br>
+                                        url = {http://www.cs.cornell.edu/projects/Sound/modec}
+                                        <br>
+                                    }
+                                </div>
+                            </div>
                             <a href="http://www.cs.cornell.edu/projects/Sound/modec/modec.pdf" class="btn btn-default btn-margin">PDF</a>
                             <a href="http://www.cs.cornell.edu/projects/Sound/modec" class="btn btn-default btn-margin">Project page</a>
-                            <!--<button type="button" class="btn btn-default btn-margin popover-btn"-->
-                                    <!--data-content="We propose and evaluate a method for significantly compressing modal sound models, thereby making them far more practical for audiovisual applications. The dense eigenmode matrix, needed to compute the sound model's response to contact forces, can consume tens to thousands of megabytes depending on mesh resolution and mode count. Our eigenmode compression pipeline is based on nonlinear optimization of Moving Least Squares (MLS) approximations. Enhanced compression is achieved by exploiting symmetry both within and between eigenmodes, and by adaptively assigning per-mode error levels based on human perception of the far-field pressure amplitudes. Our method provides smooth eigenmode approximations, and efficient random access. We demonstrate that, in many cases, hundredfold compression ratios can be achieved without audible degradation of the rendered sound.">-->
-                                  <!--Abstract-->
-                            <!--</button>-->
                         </div>
                     </div>
                     <div class="row row-pad">
@@ -233,13 +272,56 @@
                             </div>
                             <div class="venue">ACM Transactions on Graphics (SIGGRAPH 2014)</div>
 
+                            <div class="abstractBox">
+                                <button type="button" class="btn btn-default btn-margin">
+                                    Abstract
+                                </button>
+                                <div class="abstract">
+                                    In this paper, we introduce Inverse-Foley Animation, a technique for optimizing rigid-body animations so that contact
+                                    events are synchronized with input sound events. A precomputed database of randomly sampled rigid-body contact events
+                                    is used to build a contact-event graph, which can be searched to determine a plausible sequence of contact events synchronized
+                                    with the input sound's events. To more easily find motions with matching contact times, we allow transitions between simulated
+                                    contact events using a motion blending formulation based on modified contact impulses. We fine tune synchronization
+                                    by slightly retiming ballistic motions. Given a sound, our system can synthesize synchronized motions using graphs
+                                    built with hundreds of thousands of precomputed motions, and millions of contact events. Our system is easy to use, and
+                                    has been used to plan motions for hundreds of sounds, and dozens of rigid-body models.
+                                </div>
+                            </div>
+                            <div class="bibtexBox">
+                                <button type="button" class="btn btn-default btn-margin">
+                                    Bibtex
+                                </button>
+                                <div class="bibtex">
+                                    @article{Langlois:2014:IFA,
+                                    <br>
+                                        author = {Timothy R. Langlois and Doug L. James},
+                                        <br>
+                                        title  = {Inverse-Foley Animation: Synchronizing rigid-body motions to sound},
+                                        <br>
+                                        journal = {ACM Transactions on Graphics (Proceedings of SIGGRAPH 2014)},
+                                        <br>
+                                        year = {2014},
+                                        <br>
+                                        volume = {33},
+                                        <br>
+                                        number = {4},
+                                        <br>
+                                        month  = Aug,
+                                        <br>
+                                        doi = {10.1145/2601097.2601178}
+                                        <br>
+                                        url = {http://www.cs.cornell.edu/projects/Sound/ifa}
+                                        <br>
+                                    }
+                                </div>
+                            </div>
                             <a href="http://www.cs.cornell.edu/projects/Sound/ifa/ifa.pdf" class="btn btn-default btn-margin">PDF</a>
                             <a href="http://www.cs.cornell.edu/projects/Sound/ifa" class="btn btn-default btn-margin">Project page</a>
                         </div>
                     </div>
                     <div class="row row-pad">
                         <div class="col-sm-2" align="center">
-                            <!--<img class="pubImg img-responsive" src="publications/ifa/thumb.jpg" alt="Inverse-Foley Animation"/>-->
+                            <img class="pubImg img-responsive" src="publications/proteins/thumb.png" alt="Receptor Arrays"/>
                         </div>
                         <div class="col-sm-10">
                             <div class="pub-title">Protein Identification using Receptor Arrays and Mass Spectrometry</div>
@@ -249,7 +331,65 @@
                             </div>
                             <div class="venue">Advances in Computational Biology (2010)</div>
 
-                            <a href="http://link.springer.com/chapter/10.1007%2F978-1-4419-5913-3_39#" class="btn btn-default btn-margin">Project page</a>
+                            <div class="abstractBox">
+                                <button type="button" class="btn btn-default btn-margin">
+                                    Abstract
+                                </button>
+                                <div class="abstract">
+                                    Mass spectrometry is one of the main tools for protein identification in
+                                    complex mixtures. When the sequence of the protein is known, we can check to see
+                                    if the known mass distribution of peptides for a given protein is present in the recorded
+                                    mass distribution of the mixture being analyzed. Unfortunately, this general approach
+                                    suffers from high false-positive rates, since in a complex mixture, the likelihood that
+                                    we will observe any particular mass distribution is high, whether or not the protein
+                                    of interest is in the mixture. In this paper, we propose a scoring methodology
+                                    and algorithm for protein identification that make use of a new experimental tech-
+                                    nique, which we call <em>receptor arrays</em>, for separating a mixture based on another
+                                    differentiating property of peptides called <em>isoelectric point (pI)</em>. We perform extensive
+                                    simulation experiments on several genomes and show that additional information
+                                    about peptides can achieve an average 30% reduction in false-positive rates over
+                                    existing methods, while achieving very high true-positive identification rates.
+                                </div>
+                            </div>
+                            <div class="bibtexBox">
+                                <button type="button" class="btn btn-default btn-margin">
+                                    Bibtex
+                                </button>
+                                <div class="bibtex">
+                                    @incollection{
+                                    <br>
+                                        year={2010},
+                                        <br>
+                                        isbn={978-1-4419-5912-6},
+                                        <br>
+                                        booktitle={Advances in Computational Biology},
+                                        <br>
+                                        volume={680},
+                                        <br>
+                                        series={Advances in Experimental Medicine and Biology},
+                                        <br>
+                                        editor={Arabnia, Hamid R.},
+                                        <br>
+                                        doi={10.1007/978-1-4419-5913-3_39},
+                                        <br>
+                                        title={Protein Identification Using Receptor Arrays and Mass Spectrometry},
+                                        <br>
+                                        url={http://dx.doi.org/10.1007/978-1-4419-5913-3_39},
+                                        <br>
+                                        publisher={Springer New York},
+                                        <br>
+                                        keywords={Receptor; Array; Mass; Spectrometry; Protein; Identification; Isoelectric; Point},
+                                        <br>
+                                        author={Langlois, Timothy R. and Vachet, Richard W. and Mettu, Ramgopal R.},
+                                        <br>
+                                        pages={343-351},
+                                        <br>
+                                        language={English}
+                                        <br>
+                                    }
+                                </div>
+                            </div>
+                            <a href="http://dx.doi.org/10.1007/978-1-4419-5913-3_39" class="btn btn-default btn-margin">Project page</a>
                         </div>
                     </div>
                 </div>

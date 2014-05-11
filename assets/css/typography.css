@@ -1,0 +1,114 @@
+body {padding-top: 40px;}
+.body {padding-top: 10px;}
+
+.row-pad {padding-bottom: 1cm;}
+.btn-tim {text-shadow: 1px 1px;}
+.pubImg {width: 200px; border-style: solid; border-width: 1px; border-color: #ffffff}
+.teaser-column {width: 220px; vertical-align: top;}
+.pub-info {vertical-align: top;}
+.pub-title {font-weight: bold; font-size: 16pt; margin-bottom: 0.5cm;}
+.venue {font-style: italic; margin-bottom: 0.2cm;}
+.btn-margin {margin-left: 0.1cm; margin-right: 0.1cm;}
+.self-pic {margin-bottom: 0.5cm;}
+
+
+/* Abstract and bibtex code CSS code shamelessly lifted from Wenzel Jakob & Keenan Crane's pages .. */
+.abstractBox {
+   display: inline-block;
+   position: relative;
+}
+.abstractBox .abstract {
+   display: inline-block;
+   position:absolute;
+   top:15px;
+   left:0px;
+   padding: 0px;
+   margin: 0px;
+   height: auto;
+   color: #ddd;
+   padding: 10px;
+   background: rgba(0, 0, 0, .8);
+   box-shadow: 10px 10px 10px rgba(0,0,0,.4);
+   border-radius: 6pt;
+   z-index: 200;
+   width:400px;
+   /*width:inherit;*/
+   line-height: 125%;
+   visibility: hidden;
+   opacity: .0001;
+   transition: .3s;
+   -o-transition: .3s;
+   -ms-transition: .3s;
+   -moz-transition: .3s;
+   -webkit-transition: .3s;
+}
+
+.abstractBox .abstract:before {
+   content: "Abstract: ";
+   font-weight: bold;
+   font-style: italic;
+}
+
+
+.abstractBox:hover .abstract, .abstract .hover {
+   visibility: visible;
+   opacity: 1.0;
+   transition: .5s;
+   -o-transition: .5s;
+   -ms-transition: .5s;
+   -moz-transition: .5s;
+   -webkit-transition: .5s;
+}
+
+.bibtexBox {
+   display: inline-block;
+   position: relative;
+}
+
+.bibtexBox .bibtex {
+   display: inline-block;
+   position:absolute;
+   top:15px;
+   left:0px;
+   padding: 0px;
+   margin: 0px;
+   width:200px;
+   height: auto;
+   color: #ddd;
+   padding: 10px;
+   background: rgba(0, 0, 0, .8);
+   box-shadow: 10px 10px 10px rgba(0,0,0,.4);
+   border-radius: 6pt;
+   z-index: 200;
+   line-height: 125%;
+   visibility: hidden;
+   opacity: .0001;
+   transition: .3s;
+   -o-transition: .3s;
+   -ms-transition: .3s;
+   -moz-transition: .3s;
+   -webkit-transition: .3s;
+   font-family: monospace;
+   word-wrap: break-word;
+}
+
+.bibtexBox:hover .bibtex, .bibtex .hover {
+   visibility: visible;
+   opacity: 1.0;
+   transition: .5s;
+   -o-transition: .5s;
+   -ms-transition: .5s;
+   -moz-transition: .5s;
+   -webkit-transition: .5s;
+}
+
+@media only screen and (min-width: 481px) {
+    .abstractBox .abstract { width: 384px; }
+    .bibtexBox .bibtex { width: 384px; }
+}
+
+@media only screen and (min-width: 769px) {
+    .abstractBox .abstract { width: 615px; }
+    .bibtexBox .bibtex { width: 680px; }
+}
+
