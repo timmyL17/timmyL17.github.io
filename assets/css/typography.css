@@ -8,8 +8,11 @@ body {padding-top: 40px;}
 .pub-info {vertical-align: top;}
 .pub-title {font-weight: bold; font-size: 16pt; margin-bottom: 0.5cm;}
 .venue {font-style: italic; margin-bottom: 0.2cm;}
-.btn-margin {margin-left: 0.1cm; margin-right: 0.1cm;}
+.btn-margin {margin: 0.1cm;}
+/*margin-left: 0.1cm; margin-right: 0.1cm;}*/
 .self-pic {margin-bottom: 0.5cm;}
+.sec-header {margin-bottom: 0cm; padding-bottom: 0cm;}
+.sec-div {margin-top: 0.0cm;}
 
 
 /* Abstract and bibtex code CSS code shamelessly lifted from Wenzel Jakob & Keenan Crane's pages .. */
@@ -27,15 +30,17 @@ body {padding-top: 40px;}
    height: auto;
    color: #ddd;
    padding: 10px;
-   background: rgba(0, 0, 0, .8);
+   background: rgba(60, 60, 60, 1);
    box-shadow: 10px 10px 10px rgba(0,0,0,.4);
    border-radius: 6pt;
+   border-style: solid;
+   border-width: 1px;
+   border-color: #ffffff;
    z-index: 200;
    width:400px;
-   /*width:inherit;*/
    line-height: 125%;
    visibility: hidden;
-   opacity: .0001;
+   opacity: 1;
    transition: .3s;
    -o-transition: .3s;
    -ms-transition: .3s;
@@ -76,13 +81,16 @@ body {padding-top: 40px;}
    height: auto;
    color: #ddd;
    padding: 10px;
-   background: rgba(0, 0, 0, .8);
+   background: rgba(60, 60, 60, 1);
    box-shadow: 10px 10px 10px rgba(0,0,0,.4);
    border-radius: 6pt;
+   border-style: solid;
+   border-width: 1px;
+   border-color: #ffffff;
    z-index: 200;
    line-height: 125%;
    visibility: hidden;
-   opacity: .0001;
+   opacity: 0.0001;
    transition: .3s;
    -o-transition: .3s;
    -ms-transition: .3s;
