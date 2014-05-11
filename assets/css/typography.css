@@ -13,6 +13,9 @@ body {padding-top: 40px;}
 .self-pic {margin-bottom: 0.5cm;}
 .sec-header {margin-bottom: 0cm; padding-bottom: 0cm;}
 .sec-div {margin-top: 0.0cm;}
+.footer-div {margin-top: 0.8cm; margin-bottom: 0.1cm;}
+.footer {color: #666666;}
+.footer-row {margin-top: 1cm;}
 
 
 /* Abstract and bibtex code CSS code shamelessly lifted from Wenzel Jakob & Keenan Crane's pages .. */
