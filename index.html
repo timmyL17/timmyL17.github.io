@@ -32,6 +32,29 @@
           ga('send', 'pageview');
 
         </script>
+
+        <!-- Fix hover events on iOS -->
+        <script type="text/javascript">
+        $(document).ready(function() {
+            if ( (navigator.userAgent.match(/iPhone/i))
+            || (navigator.userAgent.match(/iPod/i))
+            || (navigator.userAgent.match(/iPad/i))) {
+                $('.abstractBox, .bibtexBox')
+                    .css('opacity', '')
+                    .css('transition', '')
+                    .css('-webkit-transition', '')
+                    .css('-ms-transition', '')
+                    .css('-o-transition', '')
+                    .css('-moz-transition', '')
+                    .bind('mouseenter', function(e) {
+                        $(this).find('.bibtex, .abstract').show();
+                    })
+                    .bind('mouseleave', function(e) {
+                        $(this).find('.bibtex, .abstract').hide();
+                    });
+            }
+        });
+        </script>
     </head>
 
 
