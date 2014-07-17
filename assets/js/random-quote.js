@@ -492,6 +492,9 @@ A[124] = "John Muir";
 Q[125] = "There is not problem so bad that you cannot make it worse.";
 A[125] = "Chris Hadfield";
 
+Q[126] = "To live is the rarest thing in the world. Most people exist, that is all.";
+A[126] = "Oscal Wilde";
+
 // Write to the document
 var sz = Q.length;
 var ind=Math.round(Math.random()*(sz-1));
