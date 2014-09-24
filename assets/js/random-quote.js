@@ -495,6 +495,13 @@ A[125] = "Chris Hadfield";
 Q[126] = "To live is the rarest thing in the world. Most people exist, that is all.";
 A[126] = "Oscal Wilde";
 
+Q[127] = "If you can't fly, then run,<br>\
+          &nbsp if you can't run, then walk,<br>\
+          &nbsp if you can't walk, then crawl,<br>\
+          &nbsp but whatever you do,<br>\
+          &nbsp you have to keep moving forward.";
+A[127] = "Martin Luther King Jr.";
+
 // Write to the document
 var sz = Q.length;
 var ind=Math.round(Math.random()*(sz-1));
