@@ -7,7 +7,7 @@ body {padding-top: 40px;}
 .pubImg {width: 200px; border-style: solid; border-width: 1px; border-color: #ffffff}
 .teaser-column {width: 220px; vertical-align: top;}
 .pub-info {vertical-align: top;}
-.pub-title {font-weight: bold; font-size: 16pt; margin-bottom: 0.5cm;}
+.pub-title {color: #fff; font-weight: bold; font-size: 16pt; margin-bottom: 0.5cm;}
 .venue {font-style: italic; margin-bottom: 0.2cm;}
 .btn-margin {margin: 0.1cm;}
 /*margin-left: 0.1cm; margin-right: 0.1cm;}*/
@@ -18,6 +18,10 @@ body {padding-top: 40px;}
 .footer {color: #666666;}
 .footer-row {margin-top: 1cm;}
 
+/* Class to make stuff white */
+.white, .white a {
+  color: #fff;
+}
 
 /* Abstract and bibtex code CSS code shamelessly lifted from Wenzel Jakob & Keenan Crane's pages .. */
 .abstractBox {
