@@ -506,6 +506,9 @@ Q[128] = "The only way of discovering the limits of the possible is to \
           venture a little way past them into the impossible.";
 A[128] = "Arthur C. Clarke";
 
+Q[129] = "If I had asked people what they wanted, they would have said faster horses.";
+A[129] = "Henry Ford";
+
 // Write to the document
 var sz = Q.length;
 var ind=Math.round(Math.random()*(sz-1));
