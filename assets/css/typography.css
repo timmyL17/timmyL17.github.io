@@ -119,8 +119,8 @@ body {padding-top: 40px;}
 }
 
 @media only screen and (min-width: 481px) {
-    .abstractBox .abstract { width: 384px; }
-    .bibtexBox .bibtex { width: 384px; }
+    .abstractBox .abstract { width: 460px; }
+    .bibtexBox .bibtex { width: 460px; }
 }
 
 @media only screen and (min-width: 769px) {
