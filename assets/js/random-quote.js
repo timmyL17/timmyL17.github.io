@@ -509,6 +509,9 @@ A[128] = "Arthur C. Clarke";
 Q[129] = "If I had asked people what they wanted, they would have said faster horses.";
 A[129] = "Henry Ford";
 
+Q[130] = "The brave men did not kill dragons. The brave men rode them.";
+A[130] = "Viserys Targaryen";
+
 // Write to the document
 var sz = Q.length;
 var ind=Math.round(Math.random()*(sz-1));
