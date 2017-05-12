@@ -515,6 +515,9 @@ A[130] = "Viserys Targaryen";
 Q[131] = "Some people around you will not understand your journey. They don't need to; it's not for them.";
 A[131] = "Paulo Coelho";
 
+Q[132] = "Raise your words, not your voice. It is rain that grows flowers, not thunder.";
+A[132] = "Jalaluddin Rumi";
+
 // Write to the document
 var sz = Q.length;
 var ind=Math.round(Math.random()*(sz-1));
