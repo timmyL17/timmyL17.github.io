@@ -250,6 +250,64 @@
                     <hr class="sec-div">
                     <div class="row row-pad">
                         <div class="col-sm-2" align="center">
+                            <a href="https://pedro-morgado.github.io/spatialaudiogen/">
+                                <img class="pubImg img-responsive" src="publications/spatialAudioGen/teaser2.jpg" alt="Spatial Audio"/>
+                            </a>
+                        </div>
+                        <div class="col-sm-10">
+                            <div class="pub-title">Self-Supervised Generation of Spatial Audio for 360° Video</div>
+
+                            <div class="authors">
+                                Pedro Morgado, Nuno Vasconcelos, Timothy Langlois and Oliver Wang
+                            </div>
+                            <div class="venue">Neural Information Processing Systems (NIPS 2018)</div>
+
+                            <div class="abstractBox">
+                                <button type="button" class="btn btn-default btn-margin">
+                                    Abstract
+                                </button>
+                                <div class="abstract">
+                                    We introduce an approach to convert mono audio recorded by a
+                                    360° video camera into <i>spatial audio</i>, a representation of the
+                                    distribution of sound over the full viewing sphere. Spatial audio
+                                    is an important component of immersive 360° video viewing, but spatial
+                                    audio microphones are still rare in current 360° video production. Our
+                                    system consists of end-to-end trainable neural networks that
+                                    separate individual sound sources and localize them on the viewing
+                                    sphere, conditioned on multi-modal analysis of audio and 360° video
+                                    frames. We introduce several datasets, including one filmed ourselves,
+                                    and one collected in-the-wild from YouTube, consisting of 360° videos
+                                    uploaded <i>with</i> spatial audio. During training, ground-truth spatial
+                                    audio serves as self-supervision and a mixed down mono track forms
+                                    the input to our network. Using our approach, we show that it is
+                                    possible to infer the spatial location of sound sources based only
+                                    on 360° video and a mono audio track.
+                                </div>
+                            </div>
+                            <a href="https://www.svcl.ucsd.edu/~morgado/spatialaudiogen/spatialaudiogen.pdf" class="btn btn-default btn-margin">PDF</a>
+                            <a href="https://pedro-morgado.github.io/spatialaudiogen/" class="btn btn-default btn-margin">Project page</a>
+                            <div class="bibtexBox">
+                                <button type="button" class="btn btn-default btn-margin">
+                                    Bibtex
+                                </button>
+                                <div class="bibtex">
+                                    @inproceedings{morgadoNIPS18,
+                                        <br>
+                                        title = {Self-Supervised Generation of Spatial Audio for 360\deg Video},
+                                        <br>
+                                        author = {Pedro Morgado, Nuno Vasconcelos, Timothy Langlois and Oliver Wang},
+                                        <br>
+                                        booktitle = {Neural Information Processing Systems (NIPS)},
+                                        <br>
+                                        year = {2018}
+                                    }
+                                </div>
+                            </div>
+                            <a href="https://youtu.be/SXFUr2GkxS8" class="btn btn-default btn-margin">Video</a>
+                        </div>
+                    </div>
+                    <div class="row row-pad">
+                        <div class="col-sm-2" align="center">
                             <a href="https://graphics.stanford.edu/projects/wavesolver/">
                                 <img class="pubImg img-responsive" src="publications/waveSim/waves.png" alt="360 Audio"/>
                             </a>
@@ -267,27 +325,27 @@
                                     Abstract
                                 </button>
                                 <div class="abstract">
-									We explore an integrated approach to sound generation that supports a wide variety of
-									physics-based simulation models and computer-animated phenomena. Targeting high-quality
-									offline sound synthesis, we seek to resolve animation-driven sound radiation with
-									near-field scattering and diffraction effects. The core of our approach is a
-									sharp-interface
-									finite-difference time-domain (FDTD) wavesolver, with a series of supporting algorithms
-									to handle rapidly deforming and vibrating embedded interfaces arising in physics-based
-									animation sound. Once the solver rasterizes these interfaces, it must evaluate
-									acceleration boundary conditions (BCs) that involve model- and phenomena-specific
+                                    We explore an integrated approach to sound generation that supports a wide variety of
+                                    physics-based simulation models and computer-animated phenomena. Targeting high-quality
+                                    offline sound synthesis, we seek to resolve animation-driven sound radiation with
+                                    near-field scattering and diffraction effects. The core of our approach is a
+                                    sharp-interface
+                                    finite-difference time-domain (FDTD) wavesolver, with a series of supporting algorithms
+                                    to handle rapidly deforming and vibrating embedded interfaces arising in physics-based
+                                    animation sound. Once the solver rasterizes these interfaces, it must evaluate
+                                    acceleration boundary conditions (BCs) that involve model- and phenomena-specific
                                     computations. We introduce <i>acoustic shaders</i> as a mechanism to abstract away these
-									complexities, and describe a variety of implementations for computer animation:
-									near-rigid objects with ringing and acceleration noise, deformable (finite element)
-									models such as thin shells, bubble-based water, and virtual characters. Since
-									time-domain wave synthesis is expensive, we only simulate pressure waves in a small
-									region about each sound source, then estimate a far-field pressure signal. To further
+                                    complexities, and describe a variety of implementations for computer animation:
+                                    near-rigid objects with ringing and acceleration noise, deformable (finite element)
+                                    models such as thin shells, bubble-based water, and virtual characters. Since
+                                    time-domain wave synthesis is expensive, we only simulate pressure waves in a small
+                                    region about each sound source, then estimate a far-field pressure signal. To further
                                     improve scalability beyond multi-threading, we propose a fully <i>time-parallel sound
                                     synthesis</i> method that is demonstrated on commodity cloud computing resources.  In
-									addition to presenting results for multiple animation phenomena (water, rigid, shells,
-									kinematic deformers, etc.) we also propose 3D automatic dialogue replacement (3DADR) for
-									virtual characters so that pre-recorded dialogue can include character movement, and
-									near-field shadowing and scattering sound effects.
+                                    addition to presenting results for multiple animation phenomena (water, rigid, shells,
+                                    kinematic deformers, etc.) we also propose 3D automatic dialogue replacement (3DADR) for
+                                    virtual characters so that pre-recorded dialogue can include character movement, and
+                                    near-field shadowing and scattering sound effects.
                                 </div>
                             </div>
                             <a href="https://graphics.stanford.edu/projects/wavesolver/assets/wavesolver2018.pdf" class="btn btn-default btn-margin">PDF</a>
