@@ -165,7 +165,7 @@
                             <hr class="sec-div">
                             <ul>
                                 <li class="pad">
-                                    Technical paper reviewer: SIGGRAPH, SIGGRAPH Asia, ACM TON, ECCV, TVCG, IEEE VR, CGF
+                                    Technical paper reviewer: SIGGRAPH, SIGGRAPH Asia, ACM TON, ECCV, TVCG, IEEE VR, CGF, Pacific Graphics
                                 </li>
                             </ul>
                             <ul>
@@ -256,12 +256,83 @@
                     <div class="h3 sec-header">Publications</div>
                     <hr class="sec-div">
                     <div class="row row-pad">
-                        <div class="col-sm-2" align="center">
+                        <div class="col-sm-3" align="center">
+                            <a href="https://ipc-sim.github.io/">
+                                <img class="pubImg img-responsive" src="publications/ipc/ipc.png" alt="IPC"/>
+                            </a>
+                        </div>
+                        <div class="col-sm-9">
+                            <div class="pub-title">Incremental Potential Contact: Intersection- and Inversion-free, Large-Deformation Dynamics</div>
+
+                            <div class="authors">
+                                Minchen Li, Zachary Ferguson, Teseo Schneider, Timothy Langlois, Denis Zorin, Daniele Panozzo, Chenfanfu Jiang, and Danny M. Kaufman
+                            </div>
+                            <div class="venue">ACM Transactions on Graphics (SIGGRAPH 2020)</div>
+
+                            <div class="abstractBox">
+                                <button type="button" class="btn btn-default btn-margin">
+                                    Abstract
+                                </button>
+                                <div class="abstract">
+Contacts weave through every aspect of our physical world, from daily household chores to acts of nature. Modeling and predictive computation of these phenomena for solid mechanics is important to every discipline con- cerned with the motion of mechanical systems, including engineering and animation. Nevertheless, efficiently time-stepping accurate and consistent simulations of real-world contacting elastica remains an outstanding com- putational challenge. To model the complex interaction of deforming solids in contact we propose Incremental Potential Contact (IPC) – a new model and algorithm for variationally solving implicitly time-stepped nonlinear elastodynamics. IPC maintains an intersection- and inversion-free trajectory regardless of material parameters, time step sizes, impact velocities, severity of deformation, or boundary conditions enforced.
+<br><br>
+Constructed with a custom nonlinear solver, IPC enables efficient res- olution of time-stepping problems with separate, user-exposed accuracy tolerances that allow independent specification of the physical accuracy of the dynamics and the geometric accuracy of surface-to-surface conformation. This enables users to decouple, as needed per application, desired accuracies for a simulation’s dynamics and geometry.
+<br><br>
+The resulting time stepper solves contact problems that are intersection- free (and thus robust), inversion-free, efficient (at speeds comparable to or faster than available methods that lack both convergence and feasibility), and accurate (solved to user-specified accuracies). To our knowledge this is the first implicit time-stepping method, across both the engineering and graphics literature that can consistently enforce these guarantees as we vary simulation parameters.
+<br><br>
+In an extensive comparison of available simulation methods, research libraries and commercial codes we confirm that available engineering and computer graphics methods, while each succeeding admirably in custom- tuned regimes, often fail with instabilities, egregious constraint violations and/or inaccurate and implausible solutions, as we vary input materials, contact numbers and time step. We also exercise IPC across a wide range of existing and new benchmark tests and demonstrate its accurate solution over a broad sweep of reasonable time-step sizes and beyond (up to h = 2s) across challenging large-deformation, large-contact stress-test scenarios with meshes composed of up to 2.3M tetrahedra and processing up to 498K contacts per time step. For applications requiring high-accuracy we demon- strate tight convergence on all measures. While, for applications requiring lower accuracies, e.g. animation, we confirm IPC can ensure feasibility and plausibility even when specified tolerances are lowered for efficiency.
+                                </div>
+                            </div>
+                            <a href="https://ipc-sim.github.io/file/IPC-paper-fullRes.pdf" class="btn btn-default btn-margin">PDF</a>
+                            <a href="https://ipc-sim.github.io/" class="btn btn-default btn-margin">Project page</a>
+                            <div class="bibtexBox">
+                                <button type="button" class="btn btn-default btn-margin">
+                                    Bibtex
+                                </button>
+                                <div class="bibtex">
+                                    @article{Li2020IPC,
+										<br>
+										author = {Minchen Li and Zachary Ferguson and Teseo Schneider and Timothy Langlois and
+											Denis Zorin and Daniele Panozzo and Chenfanfu Jiang and Danny M. Kaufman},
+										<br>
+										title = {Incremental Potential Contact: Intersection- and Inversion-free Large Deformation Dynamics},
+										<br>
+										journal = {ACM Transactions on Graphics},
+										<br>
+										year = {2020},
+										<br>
+										volume = {39},
+										<br>
+										number = {4}
+									}
+                                    <!--@article{Cui2020stopt,-->
+                                    <!--    <br>-->
+                                    <!--    author={Cui, Qiaodong and Langlois, Timothy R and Sen, Pradeep and Kim, Theodore},-->
+                                    <!--    <br>-->
+                                    <!--    journal={Eurographics},-->
+                                    <!--    <br>-->
+                                    <!--    title={Fast and Robust Stochastic Structural Optimization},-->
+                                    <!--    <br>-->
+                                    <!--    year={2020},-->
+                                    <!--    <br>-->
+                                    <!--    volume={26},-->
+                                    <!--    <br>-->
+                                    <!--    number={5},-->
+                                    <!--    <br>-->
+                                    <!--    pages={1991-2001}-->
+                                    <!--}-->
+                                </div>
+                            </div>
+                            <a href="https://ipc-sim.github.io/file/IPC-video.mp4" class="btn btn-default btn-margin">Video</a>
+                        </div>
+                    </div>
+                    <div class="row row-pad">
+                        <div class="col-sm-3" align="center">
                             <a href="https://gamma.umd.edu/pro/sound/sceneaware">
                                 <img class="pubImg img-responsive" src="publications/stopt/stopt2.png" alt="deepAudio"/>
                             </a>
                         </div>
-                        <div class="col-sm-10">
+                        <div class="col-sm-9">
                             <div class="pub-title">Fast and Robust Stochastic Structural Optimization</div>
 
                             <div class="authors">
@@ -318,12 +389,12 @@
                     </div>
 
                     <div class="row row-pad">
-                        <div class="col-sm-2" align="center">
+                        <div class="col-sm-3" align="center">
                             <a href="https://gamma.umd.edu/pro/sound/sceneaware">
                                 <img class="pubImg img-responsive" src="publications/deepSceneAware/deepSceneAware.png" alt="deepAudio"/>
                             </a>
                         </div>
-                        <div class="col-sm-10">
+                        <div class="col-sm-9">
                             <div class="pub-title">Scene-Aware Audio Rendering via Deep Acoustic Analysis</div>
 
                             <div class="authors">
@@ -377,12 +448,12 @@
                     </div>
 
                     <div class="row row-pad">
-                        <div class="col-sm-2" align="center">
+                        <div class="col-sm-3" align="center">
                             <a href="http://dannykaufman.io/projects/DOT/DOT.html">
                                 <img class="pubImg img-responsive" src="publications/dot/DOT.jpg" alt="DOT"/>
                             </a>
                         </div>
-                        <div class="col-sm-10">
+                        <div class="col-sm-9">
                             <div class="pub-title">Decomposed Optimization Time Integrator for Large-Step Elastodynamics</div>
 
                             <div class="authors">
@@ -441,12 +512,12 @@
                     </div>
 
                     <div class="row row-pad">
-                        <div class="col-sm-2" align="center">
+                        <div class="col-sm-3" align="center">
                             <a href="http://www.dgp.toronto.edu/projects/michell/">
                                 <img class="pubImg img-responsive" src="publications/trusses/scf19_michell_truss.jpg" alt="DOT"/>
                             </a>
                         </div>
-                        <div class="col-sm-10">
+                        <div class="col-sm-9">
                             <div class="pub-title">Volumetric Michell Trusses for Parametric Design & Fabrication</div>
 
                             <div class="authors">
@@ -502,12 +573,12 @@
                     </div>
 
                     <div class="row row-pad">
-                        <div class="col-sm-2" align="center">
+                        <div class="col-sm-3" align="center">
                             <a href="https://pedro-morgado.github.io/spatialaudiogen/">
                                 <img class="pubImg img-responsive" src="publications/spatialAudioGen/teaser2.jpg" alt="Spatial Audio"/>
                             </a>
                         </div>
-                        <div class="col-sm-10">
+                        <div class="col-sm-9">
                             <div class="pub-title">Self-Supervised Generation of Spatial Audio for 360° Video</div>
 
                             <div class="authors">
@@ -560,12 +631,12 @@
                         </div>
                     </div>
                     <div class="row row-pad">
-                        <div class="col-sm-2" align="center">
+                        <div class="col-sm-3" align="center">
                             <a href="https://graphics.stanford.edu/projects/wavesolver/">
                                 <img class="pubImg img-responsive" src="publications/waveSim/waves.png" alt="360 Audio"/>
                             </a>
                         </div>
-                        <div class="col-sm-10">
+                        <div class="col-sm-9">
                             <div class="pub-title">Toward Wave-based Sound Synthesis for Computer Animation</div>
 
                             <div class="authors">
@@ -628,12 +699,12 @@
                         </div>
                     </div>
                     <div class="row row-pad">
-                        <div class="col-sm-2" align="center">
+                        <div class="col-sm-3" align="center">
                             <a href="http://www.cs.columbia.edu/cg/360audio">
                                 <img class="pubImg img-responsive" src="publications/360audio/360audio.jpg" alt="360 Audio"/>
                             </a>
                         </div>
-                        <div class="col-sm-10">
+                        <div class="col-sm-9">
                             <div class="pub-title">Scene-Aware Audio for 360° Videos</div>
 
                             <div class="authors">
@@ -685,12 +756,12 @@
                         </div>
                     </div>
                     <div class="row row-pad">
-                        <div class="col-sm-2" align="center">
+                        <div class="col-sm-3" align="center">
                             <a href="http://dl.acm.org/citation.cfm?id=2982436">
                                 <img class="pubImg img-responsive" src="publications/stopt/difprobabilityExample.png" alt="Stopt"/>
                             </a>
                         </div>
-                        <div class="col-sm-10">
+                        <div class="col-sm-9">
                             <div class="pub-title">Stochastic Structural Analysis for Context-Aware Design and Fabrication</div>
 
                             <div class="authors">
@@ -765,12 +836,12 @@
                         </div>
                     </div>
                     <div class="row row-pad">
-                        <div class="col-sm-2" align="center">
+                        <div class="col-sm-3" align="center">
                             <a href="http://www.cs.cornell.edu/projects/Sound/bubbles">
                                 <img class="pubImg img-responsive" src="publications/bubbles/thumb.png" alt="Bubbles"/>
                             </a>
                         </div>
-                        <div class="col-sm-10">
+                        <div class="col-sm-9">
                             <div class="pub-title">Toward Animating Water with Complex Acoustic Bubbles</div>
 
                             <div class="authors">
@@ -833,12 +904,12 @@
                         </div>
                     </div>
                     <div class="row row-pad">
-                        <div class="col-sm-2" align="center">
+                        <div class="col-sm-3" align="center">
                             <a href="http://www.cs.cornell.edu/projects/Sound/modec">
                                 <img class="pubImg img-responsive" src="publications/modec/thumb.png" alt="Eigenmode Compression"/>
                             </a>
                         </div>
-                        <div class="col-sm-10">
+                        <div class="col-sm-9">
                             <div class="pub-title">Eigenmode Compression for Modal Sound Models</div>
 
                             <div class="authors">
@@ -894,12 +965,12 @@
                         </div>
                     </div>
                     <div class="row row-pad">
-                        <div class="col-sm-2" align="center">
+                        <div class="col-sm-3" align="center">
                             <a href="http://www.cs.cornell.edu/projects/Sound/ifa">
                                 <img class="pubImg img-responsive" src="publications/ifa/thumb.jpg" alt="Inverse-Foley Animation"/>
                             </a>
                         </div>
-                        <div class="col-sm-10">
+                        <div class="col-sm-9">
                             <div class="pub-title">Inverse-Foley Animation: Synchronizing rigid-body motions to sound</div>
 
                             <div class="authors">
@@ -956,10 +1027,10 @@
                         </div>
                     </div>
                     <div class="row row-pad">
-                        <div class="col-sm-2" align="center">
+                        <div class="col-sm-3" align="center">
                             <img class="pubImg img-responsive" src="publications/proteins/thumb.png" alt="Receptor Arrays"/>
                         </div>
-                        <div class="col-sm-10">
+                        <div class="col-sm-9">
                             <div class="pub-title">Protein Identification using Receptor Arrays and Mass Spectrometry</div>
 
                             <div class="authors">
