@@ -260,6 +260,131 @@
                     <hr class="sec-div">
                     <div class="row row-pad">
                         <div class="col-sm-3" align="center">
+                            <a href="">
+                                <img class="pubImg img-responsive" src="publications/spiral-spectral-fluids/teaser.png" alt="spiral"/>
+                            </a>
+                        </div>
+                        <div class="col-sm-9">
+                            <div class="pub-title">Spiral-spectral fluid simulation</div>
+
+                            <div class="authors">
+                                Qiaodong Cui, Timothy Langlois, Pradeep Sen, and T. Kim
+                            </div>
+                            <div class="venue">ACM Transactions on Graphics (SIGGRAPH Asia 2021)</div>
+
+                            <div class="abstractBox">
+                                <button type="button" class="btn btn-default btn-margin">
+                                    Abstract
+                                </button>
+                                <div class="abstract">
+                                    We introduce a fast, expressive method for simulating fluids over radial domains, including discs, spheres, cylinders, ellipses, spheroids, and tori. We do this by generalizing the spectral approach of Laplacian Eigenfunctions, resulting in what we call spiral-spectral fluid simulations. Starting with a set of divergence-free analytical bases for polar and spherical coordinates, we show that their singularities can be removed by introducing a set of carefully selected enrichment functions. Orthogonality is established at minimal cost, viscosity is supported analytically, and we specifically design basis functions that support scalable FFT-based reconstructions. Additionally, we present an efficient way of computing all the necessary advection tensors. Our approach applies to both three-dimensional flows as well as their surface-based, codimensional variants. We establish the completeness of our basis representation, and compare against a variety of existing solvers.
+                                </div>
+                            </div>
+                            <a href="https://www.tkim.graphics/SPIRAL/SpiralSpectralFluids.pdf" class="btn btn-default btn-margin">PDF</a>
+                            <a href="" class="btn btn-default btn-margin">Project page</a>
+                            <div class="bibtexBox">
+                                <button type="button" class="btn btn-default btn-margin">
+                                    Bibtex
+                                </button>
+                                <div class="bibtex">
+                                </div>
+                            </div>
+                            <a href="" class="btn btn-default btn-margin">Video</a>
+                        </div>
+                    </div>
+                    <div class="row row-pad">
+                        <div class="col-sm-3" align="center">
+                            <a href="">
+                                <img class="pubImg img-responsive" src="publications/ergoboss/tvcg2021.jpg" alt="IPC"/>
+                            </a>
+                        </div>
+                        <div class="col-sm-9">
+                            <div class="pub-title">ERGOBOSS: Ergonomic Optimization of Body-Supporting Surfaces</div>
+
+                            <div class="authors">
+                                Danyong Zhao, Yijing Li, Siddhartha Chaudhuri, Timothy Langlois and Jernej Barbic
+                            </div>
+                            <div class="venue">TVCG 2021</div>
+
+                            <div class="abstractBox">
+                                <button type="button" class="btn btn-default btn-margin">
+                                    Abstract
+                                </button>
+                                <div class="abstract">
+                                    Humans routinely sit or lean against supporting surfaces and it is important to shape these surfaces to be comfortable and
+                                    ergonomic. We give a method to design the geometric shape of rigid supporting surfaces to maximize the ergonomics of physically
+                                    based contact between the surface and a deformable human. We model the soft deformable human using a layer of FEM deformable
+                                    tissue surrounding a rigid core, with measured realistic elastic material properties, and large-deformation nonlinear analysis. We define
+                                    a novel cost function to measure the ergonomics of contact between the human and the supporting surface. We give a stable and
+                                    computationally efficient contact model that is differentiable with respect to the supporting surface shape. This makes it possible to
+                                    optimize our ergonomic cost function using gradient-based optimizers. Our optimizer produces supporting surfaces superior to prior
+                                    work on ergonomic shape design. Our examples include furniture, apparel and tools. We also validate our results by scanning a real
+                                    human subject’s foot and optimizing a shoe sole shape to maximize foot contact ergonomics. We 3D-print the optimized shoe sole,
+                                    measure contact pressure using pressure sensors, and demonstrate that the real unoptimized and optimized pressure distributions
+                                    qualitatively match those predicted by our simulation.
+                                </div>
+                            </div>
+                            <a href="https://www.cse.iitb.ac.in/~sidch/docs/tvcg2021_ergoboss.pdf" class="btn btn-default btn-margin">PDF</a>
+                            <a href="" class="btn btn-default btn-margin">Project page</a>
+                            <div class="bibtexBox">
+                                <button type="button" class="btn btn-default btn-margin">
+                                    Bibtex
+                                </button>
+                                <div class="bibtex">
+                                </div>
+                            </div>
+                            <a href="" class="btn btn-default btn-margin">Video</a>
+                        </div>
+                    </div>
+                    <div class="row row-pad">
+                        <div class="col-sm-3" align="center">
+                            <a href="https://ipc-sim.github.io/rigid-ipc">
+                                <img class="pubImg img-responsive" src="publications/r-ipc/r-ipc.jpg" alt="IPC"/>
+                            </a>
+                        </div>
+                        <div class="col-sm-9">
+                            <div class="pub-title">Intersection-free Rigid Body Dynamics</div>
+
+                            <div class="authors">
+                                Zachary Ferguson, Minchen Li, Teseo Schneider, Francisca Gil-Ureta, Timothy Langlois, Chenfanfu Jiang, Denis Zorin, Danny M. Kaufman, and Daniele Panozzo
+                            </div>
+                            <div class="venue">ACM Transactions on Graphics (SIGGRAPH 2021)</div>
+
+                            <div class="abstractBox">
+                                <button type="button" class="btn btn-default btn-margin">
+                                    Abstract
+                                </button>
+                                <div class="abstract">
+                                     We introduce the first implicit time-stepping algorithm for rigid body dynamics, with contact and friction, that guarantees intersection-free configurations at every time step.
+                                     <br><br>
+                                     Our algorithm explicitly models the curved trajectories traced by rigid bodies in both collision detection and response. For collision detection, we propose a conservative narrow phase collision detection algorithm for curved trajectories, which reduces the problem to a sequence of linear CCD queries with minimal separation. For time integration and contact response, we extend the recently proposed incremental potential contact framework to reduced coordinates and rigid body dynamics.
+                                     <br><br>
+                                     We introduce a benchmark for rigid body simulation and show that our approach, while less efficient than alternatives, can robustly handle a wide array of complex scenes, which cannot be simulated with competing methods, without requiring per-scene parameter tuning.
+                                </div>
+                            </div>
+                            <a href="https://ipc-sim.github.io/rigid-ipc/assets/rigid_ipc_paper.pdf" class="btn btn-default btn-margin">PDF</a>
+                            <a href="https://ipc-sim.github.io/rigid-ipc" class="btn btn-default btn-margin">Project page</a>
+                            <div class="bibtexBox">
+                                <button type="button" class="btn btn-default btn-margin">
+                                    Bibtex
+                                </button>
+                                <div class="bibtex">
+                                    @article{Ferguson:2021:RigidIPC,<br>
+                                        title     = {Intersection-free Rigid Body Dynamics},<br>
+                                        author    = {Zachary Ferguson and Minchen Li and Teseo Schneider and Francisca Gil-Ureta and Timothy Langlois and Chenfanfu Jiang and Denis Zorin and Danny M. Kaufman and Daniele Panozzo},<br>
+                                        year      = 2021,<br>
+                                        journal   = {ACM Transactions on Graphics (SIGGRAPH)},<br>
+                                        volume    = 40,<br>
+                                        number    = 4,<br>
+                                        articleno = 183<br>
+                                    }
+                                </div>
+                            </div>
+                            <a href="https://youtu.be/J4KylEbFM8I" class="btn btn-default btn-margin">Video</a>
+                        </div>
+                    </div>
+                    <div class="row row-pad">
+                        <div class="col-sm-3" align="center">
                             <a href="https://ipc-sim.github.io/">
                                 <img class="pubImg img-responsive" src="publications/ipc/ipc.png" alt="IPC"/>
                             </a>
