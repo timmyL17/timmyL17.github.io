@@ -1,42 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <title>Timothy Langlois</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Timothy Langlois">
-        <meta name="author" content="Timothy Langlois">
 
-        <!-- Ubuntu font -->
-        <link href='https://fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+<head>
+    <meta charset="utf-8">
+    <title>Timothy Langlois</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Timothy Langlois">
+    <meta name="author" content="Timothy Langlois">
 
-        <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Ubuntu font -->
+    <link
+        href='https://fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700,700italic,900,900italic'
+        rel='stylesheet' type='text/css'>
 
-        <link href="assets/css/typography.css" rel="stylesheet">
+    <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-        <!-- javascript
+    <link href="assets/css/typography.css" rel="stylesheet">
+
+    <!-- javascript
     ================================================== -->
-        <script src="assets/js/jquery.min.js"></script>
-        <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
 
-        <!-- Google Analytics -->
-        <script>
-            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    <!-- Google Analytics -->
+    <script>
+                (function (i, s, o, g, r, a, m) {
+                    i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                        (i[r].q = i[r].q || []).push(arguments)
+                    }, i[r].l = 1 * new Date(); a = s.createElement(o),
+                        m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+                })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
 
             ga('create', 'UA-42927866-1', 'auto');
             ga('send', 'pageview');
 
-        </script>
+</script>
 
-        <!-- Fix hover events on iOS -->
-        <script type="text/javascript">
-        $(document).ready(function() {
-            if ( (navigator.userAgent.match(/iPhone/i))
-            || (navigator.userAgent.match(/iPod/i))
-            || (navigator.userAgent.match(/iPad/i))) {
+    <!-- Fix hover events on iOS -->
+    <script type="text/javascript">
+                $(document).ready(function () {
+                    if ((navigator.userAgent.match(/iPhone/i))
+                        || (navigator.userAgent.match(/iPod/i))
+                        || (navigator.userAgent.match(/iPad/i))) {
                 $('.abstractBox, .bibtexBox')
                     .css('opacity', '')
                     .css('transition', '')
@@ -44,140 +49,145 @@
                     .css('-ms-transition', '')
                     .css('-o-transition', '')
                     .css('-moz-transition', '')
-                    .bind('mouseenter', function(e) {
+                    .bind('mouseenter', function (e) {
                         $(this).find('.bibtex, .abstract').show();
                     })
-                    .bind('mouseleave', function(e) {
+                    .bind('mouseleave', function (e) {
                         $(this).find('.bibtex, .abstract').hide();
                     });
             }
         });
-        </script>
+</script>
     </head>
 
 
-        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-            <!--<div class="container-fluid">-->
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="index.html">Timothy Langlois</a>
-                </div>
-
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav navbar-nav">
-                        <li><a href="index.html">About</a></li>
-                        <li><a href="#publications">Publications</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-
-    <body>
-
-        <div class="container">
-            <div class="row">
-                <p></p>
-            </div>
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <!--<div class="container-fluid">-->
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse"
+                data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.html">Timothy Langlois</a>
         </div>
 
-        <div class="container body">
-            <div class="row" id="about">
-                <div class="col-md-3 col-md-push-9" align="center">
-                    <img class="img-responsive self-pic" src="assets/img/me.jpg" alt="Timothy Langlois"/>
-                    <div align="center" id="contact-table-div">
-                        <table class="table-condensed contact-table">
-                            <tbody>
-                                <tr>
-                                    <td><span class="glyphicon glyphicon-envelope white"></span></td>
-                                    <td class="left"><noscript>JavaScript required to view e-mail address.</noscript>
-                                                     <script>document.write(['t','ang','oi'].join("l") + '@' + ['ad', 'be.c','m'].join("o"))</script></td>
-                                </tr>
-                                <tr>
-                                    <td><span class="glyphicon glyphicon-map-marker white"></span></td>
-                                    <td class="left">Adobe<br>
-                                                     801 N 34th St.<br>
-                                                     Seattle, WA 98103</td>
-                                </tr>
-                                <tr>
-                                    <td><span class="glyphicon glyphicon-globe white"></span></td>
-                                    <td class="left"><a href="https://bitbucket.org/timmyl17">Bitbucket</a></td>
-                                </tr>
-                                <tr>
-                                    <td> <span class="glyphicon glyphicon-globe white"></span></td>
-                                    <td class="left"> <a href="https://github.com/timmyL17">Github</a></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-                <div class="col-md-9 col-md-pull-3">
-                    <div class="h3 sec-header">About me</div>
-                    <hr class="sec-div">
-                    <p>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li><a href="index.html">About</a></li>
+                <li><a href="#publications">Publications</a></li>
+            </ul>
+        </div>
+        </div>
+        </nav>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <p></p>
+        </div>
+    </div>
+
+    <div class="container body">
+        <div class="row" id="about">
+            <div class="col-md-3 col-md-push-9" align="center">
+                <img class="img-responsive self-pic" src="assets/img/me.jpg" alt="Timothy Langlois" />
+                <div align="center" id="contact-table-div">
+                    <table class="table-condensed contact-table">
+                        <tbody>
+                            <tr>
+                                <td><span class="glyphicon glyphicon-envelope white"></span></td>
+                                <td class="left"><noscript>JavaScript required to view e-mail address.</noscript>
+                                    <script>document.write(['t', 'ang', 'oi'].join("l") + '@' + ['ad', 'be.c', 'm'].join("o"))</script>
+                                    </td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="glyphicon glyphicon-map-marker white"></span></td>
+                                        <td class="left">Adobe<br>
+                                            801 N 34th St.<br>
+                                            Seattle, WA 98103</td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="glyphicon glyphicon-globe white"></span></td>
+                                        <td class="left"><a href="https://bitbucket.org/timmyl17">Bitbucket</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td> <span class="glyphicon glyphicon-globe white"></span></td>
+                                        <td class="left"> <a href="https://github.com/timmyL17">Github</a></td>
+                                    </tr>
+                                    </tbody>
+                                    </table>
+                                    </div>
+                                    </div>
+                                    <div class="col-md-9 col-md-pull-3">
+                                        <div class="h3 sec-header">About me</div>
+                                        <hr class="sec-div">
+                                        <p>
                     I'm currently a research scientist at Adobe. I received my Ph.D. from the Cornell Computer Science
                     <a href="http://rgb.cs.cornell.edu/">Graphics Lab</a> where I was advised by
-                    <a href="https://profiles.stanford.edu/doug-james">Doug James</a>.</p>
+                    <a href="https://profiles.stanford.edu/doug-james">Doug James</a>.
+                    </p>
 
-                    <p>
+                <p>
                     My research interests include physically-based animation and physical simulation,
                     with a focus on acoustics.
                     I aim to make it easier and more
                     efficient to simulate various phenomena, and also to make it easier
                     to create physically realistic animations.
-                    </p>
+                </p>
 
-                    <p>
+                <p>
                     <a href="cv.pdf">My CV (pdf)</a>
-                    </p>
+                </p>
 
-                    <p>
+                <p>
                     Internships @ Adobe Research: If you are a PhD student interested in doing a
                     research internship at Adobe and/or collaborating on a project with me, send an
                     e-mail. It will be helpful if you include a CV and a summary of your current
                     research interests.
-                    </p>
+                </p>
 
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <div class="h3 sec-header">Education</div>
-                            <hr class="sec-div">
-                            <ul>
-                                <li class="pad">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="h3 sec-header">Education</div>
+                        <hr class="sec-div">
+                        <ul>
+                            <li class="pad">
                                 Ph.D., Computer Science<br>
                                 Cornell University <br>
                                 2011-2016
-                                </li>
-                                <li class="pad">
+                            </li>
+                            <li class="pad">
                                 B.S., Computer Engineering <br>
                                 University of Massachusetts Amherst<br>
                                 2005-2009
-                                </li>
+                            </li>
                             </ul>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="h3 sec-header">Activities</div>
-                            <hr class="sec-div">
-                            <ul>
-                                <li class="pad">
-                                    Technical paper reviewer: SIGGRAPH, SIGGRAPH Asia, ACM TON, ECCV, TVCG, IEEE VR, CGF, Pacific Graphics
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="h3 sec-header">Activities</div>
+                                <hr class="sec-div">
+                                <ul>
+                                    <li class="pad">
+                                Technical paper reviewer: SIGGRAPH, SIGGRAPH Asia, ACM TON, ECCV, TVCG, IEEE VR, CGF,
+                                Pacific Graphics
                                 </li>
-                            </ul>
-                            <ul>
-                                <li class="pad">
-                                    Member of Adobe Employee Community Fund grant committee
-                                </li>
-                            </ul>
-                            <ul>
-                                <li class="pad">
-                                Cornell CS <a href="http://www.cs.cornell.edu/People/czars/student_brown_bag.php">Student Brown Bag Czar</a><br>
+                                </ul>
+                                <ul>
+                                    <li class="pad">
+                                        Member of Adobe Employee Community Fund grant committee
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li class="pad">
+                                Cornell CS <a href="http://www.cs.cornell.edu/People/czars/student_brown_bag.php">Student Brown
+                                    Bag Czar</a><br>
                                 2013-2015
-                                </li>
+                            </li>
                             </ul>
                             <ul>
                                 <li class="pad">
@@ -185,1135 +195,1394 @@
                                 <a href="http://www.expandingyourhorizons.org/">Expand Your Horizons</a><br>
                                 Helped organize an educational workshop for middle school students<br>
                                 Spring 2012
-                                </li>
+                            </li>
                             </ul>
-                        </div>
-                    </div>
-                </div>
+                            </div>
+                            </div>
+                            </div>
+                            </div>
+
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="h3 sec-header">Work</div>
+                <hr class="sec-div">
+                <ul>
+                    <li class="pad">
+                        Senior Research Scientist at Adobe Research<br>
+                        2018-Present
+                    </li>
+                    <li class="pad">
+                        Research Scientist at Adobe Research<br>
+                        2016-2018
+                    </li>
+                    <li class="pad">
+                        Research Intern at Disney Research Boston<br>
+                        2015 (summer)
+                    </li>
+                    <li class="pad">
+                        Software Engineer in the MIT Lincoln Laboratory Weather Sensing Group<br>
+                        Developed weather prediction algorithms, distributed real-time systems<br>
+                        2009-2011
+                    </li>
+                    <li class="pad">
+                        Software Engineering Intern at Raytheon<br>
+                        Summer 2008
+                    </li>
+                    <li class="pad">
+                        Software Engineering Intern at DEKA Research and Development<br>
+                        Embedded systems development on several medical devices<br>
+                        Summers and winters 2006-2008
+                        <br><br>
+                        One of the main projects running some of my code is the
+                        <a href="http://www.dekaresearch.com/deka_arm.shtml">DEKA Arm</a><br>
+                        Videos of coverage from <a href="http://www.youtube.com/watch?v=8FEkDDbmoVQ">60 Minutes</a>
+                        and <a href="http://www.youtube.com/watch?v=R0_mLumx-6Y">IEEE Spectrum</a>
+                    </li>
+                </ul>
             </div>
 
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="h3 sec-header">Work</div>
-                    <hr class="sec-div">
-                    <ul>
-                        <li class="pad">
-                            Senior Research Scientist at Adobe Research<br>
-                            2018-Present
-                        </li>
-                        <li class="pad">
-                            Research Scientist at Adobe Research<br>
-                            2016-2018
-                        </li>
-                        <li class="pad">
-                            Research Intern at Disney Research Boston<br>
-                            2015 (summer)
-                        </li>
-                        <li class="pad">
-                            Software Engineer in the MIT Lincoln Laboratory Weather Sensing Group<br>
-                            Developed weather prediction algorithms, distributed real-time systems<br>
-                            2009-2011
-                        </li>
-                        <li class="pad">
-                            Software Engineering Intern at Raytheon<br>
-                            Summer 2008
-                        </li>
-                        <li class="pad">
-                            Software Engineering Intern at DEKA Research and Development<br>
-                            Embedded systems development on several medical devices<br>
-                            Summers and winters 2006-2008
-                            <br><br>
-                            One of the main projects running some of my code is the
-                            <a href="http://www.dekaresearch.com/deka_arm.shtml">DEKA Arm</a><br>
-                            Videos of coverage from <a href="http://www.youtube.com/watch?v=8FEkDDbmoVQ">60 Minutes</a>
-                            and <a href="http://www.youtube.com/watch?v=R0_mLumx-6Y">IEEE Spectrum</a>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="col-lg-6">
-                    <div class="h3 sec-header">Tech Transfer</div>
-                    <hr class="sec-div">
-                    <ul>
-                        <li class="pad">
-                            Ambisonics in Premiere Pro
-                        </li>
-                        <li class="pad">
-                            Rigid Body Physics in Character Animator
-                        </li>
-                        <li class="pad">
-                            Colliding Particles in Character Animator
-                        </li>
-                        <li class="pad">
-                            Magnets in Character Animator
-                        </li>
-                        <li class="pad">
-                            Spatial Audio in Aero
-                        </li>
-                    </ul>
-                </div>
+            <div class="col-lg-6">
+                <div class="h3 sec-header">Tech Transfer</div>
+                <hr class="sec-div">
+                <ul>
+                    <li class="pad">
+                        Ambisonics in Premiere Pro
+                    </li>
+                    <li class="pad">
+                        Rigid Body Physics in Character Animator
+                    </li>
+                    <li class="pad">
+                        Colliding Particles in Character Animator
+                    </li>
+                    <li class="pad">
+                        Magnets in Character Animator
+                    </li>
+                    <li class="pad">
+                        Spatial Audio in Aero
+                    </li>
+                </ul>
+            </div>
             </div>
 
-            <div class="row" id="publications">
-                <div class="col-lg-12">
-                    <div class="h3 sec-header">Publications</div>
-                    <hr class="sec-div">
-                    <div class="row row-pad">
-                        <div class="col-sm-3" align="center">
-                            <a href="">
-                                <img class="pubImg img-responsive" src="publications/fluidControlLaplacianEigenfunctions/teaser.png" alt="spiral" />
-                                </a>
-                                </div>
-                                <div class="col-sm-9">
-                                    <div class="pub-title">Fluid Control with Laplacian Eigenfunctions</div>
-                                
-                                    <div class="authors">
-                                        Yixin Chen, David Levin, Timothy R. Langlois
-                                    </div>
-                                    <div class="venue">ACM Transactions on Graphics (SIGGRAPH 2024)</div>
-                                
-                                    <div class="abstractBox">
-                                        <button type="button" class="btn btn-default btn-margin">
-                                            Abstract
-                                        </button>
-                                        <div class="abstract">
-                                            Physics-based fluid control has long been a challenging problem in balancing efficiency and accuracy. We
-                                            introduce a
-                                            novel physics-based fluid control pipeline using Laplacian Eigenfluids. Utilizing the adjoint method with
-                                            our
-                                            provided
-                                            analytical gradient expressions, the derivative computation of the control problem is efficient and easy to
-                                            formulate.
-                                            We demonstrate that our method is fast enough to support real-time fluid simulation, editing, control, and
-                                            optimal
-                                            animation generation. Our pipeline naturally supports multi-resolution and frequency control of fluid
-                                            simulations. The
-                                            effectiveness and efficiency of our fluid control pipeline are validated through a variety of 2D examples
-                                            and
-                                            comparisons.
-                                        </div>
-                                    </div>
-                                    <a href="https://www.dgp.toronto.edu/projects/fluidcontrol/siggraph_24_74.pdf"
-                                        class="btn btn-default btn-margin">PDF</a>
-                                    <a href="https://www.dgp.toronto.edu/projects/fluidcontrol/" class="btn btn-default btn-margin">Project page</a>
-                                    <div class="bibtexBox">
-                                        <button type="button" class="btn btn-default btn-margin">
-                                            Bibtex
-                                        </button>
-                                        <div class="bibtex">
-                                            @inproceedings{Chen:2024:FluidControl,
-                                            author = {Chen, Yixin and Levin, David and Langlois, Timothy},
-                                            title = {Fluid Control with Laplacian Eigenfunctions},
-                                            year = {2024},
-                                            url = {https://doi.org/10.1145/3641519.3657468},
-                                            doi = {10.1145/3641519.3657468},
-                                            booktitle = {ACM SIGGRAPH 2024 Conference Papers},
-                                            articleno = {44},
-                                            numpages = {11},
-                                            location = {Denver, CO, USA},
-                                            series = {SIGGRAPH '24}
-                                            }
-                                        </div>
-                                    </div>
-                                    <a href="https://www.dgp.toronto.edu/projects/fluidcontrol/Fluid_Control.mp4"
-                                        class="btn btn-default btn-margin">Video</a>
-                                </div>
-                                </div>
-                                <div class="row row-pad">
-                                    <div class="col-sm-3" align="center">
-                                        <a href="">
-                                            <img class="pubImg img-responsive" src="publications/coupledBubbles/coupledBubbles.jpg" alt="spiral" />
-                                        </a>
-                                    </div>
-                                    <div class="col-sm-9">
-                                        <div class="pub-title">Improved Water Sound Synthesis Using Coupled Bubbles</div>
-                                
-                                        <div class="authors">
-                                            Kangrui Xue, Ryan M. Aronson, Jui-Hsien Wang, Timothy R. Langlois, Doug L. James
-                                        </div>
-                                        <div class="venue">ACM Transactions on Graphics (SIGGRAPH 2023)</div>
+        <div class="row" id="publications">
+            <div class="col-lg-12">
+                <div class="h3 sec-header">Publications</div>
+                <hr class="sec-div">
 
-                            <div class="abstractBox">
-                                <button type="button" class="btn btn-default btn-margin">
-                                    Abstract
-                                </button>
-                                <div class="abstract">
-                                    We introduce a practical framework for synthesizing bubble-based water sounds that captures the rich inter-bubble coupling effects responsible for low-frequency acoustic emissions from bubble clouds. We propose coupled bubble oscillator models with regularized singularities, and techniques to reduce the computational cost of time stepping with dense, time-varying mass matrices. Airborne acoustic emissions are estimated using finite-difference time-domain (FDTD) methods. We propose a simple, analytical surface acceleration model, and a sample-and-hold GPU wavesolver that is simple and faster than prior CPU wavesolvers. Sound synthesis results are demonstrated using bubbly flows from incompressible, two-phase simulations, as well as procedurally generated examples using single-phase FLIP fluid animations. Our results demonstrate sound simulations with hundreds of thousands of bubbles, and perceptually significant frequency transformations with fuller low-frequency content.
-                                </div>
-                            </div>
-                            <a href="https://graphics.stanford.edu/papers/coupledbubbles/assets/coupledbubbles.pdf" class="btn btn-default btn-margin">PDF</a>
-                            <a href="https://graphics.stanford.edu/papers/coupledbubbles/" class="btn btn-default btn-margin">Project page</a>
-                            <div class="bibtexBox">
-                                <button type="button" class="btn btn-default btn-margin">
-                                    Bibtex
-                                </button>
-                                <div class="bibtex">
-                                    @article{Xue:2023:Coupled,<br>
-                                        author = {Xue, Kangrui and Aronson, Ryan M and Wang, Jui-Hsien and Langlois, Timothy R and James, Doug L},<br>
-                                        title = {Improved Water Sound Synthesis using Coupled Bubbles},<br>
-                                        year = {2023},<br>
-                                        issue_date = {August 2023},<br>
-                                        publisher = {Association for Computing Machinery},<br>
-                                        address = {New York, NY, USA},<br>
-                                        volume = {42},<br>
-                                        number = {4},<br>
-                                        journal = {ACM Trans. Graph.},<br>
-                                        month = {aug},<br>
-                                    }
-                                </div>
-                            </div>
-                            <a href="https://youtu.be/fOwQcDnjs_w" class="btn btn-default btn-margin">Video</a>
-                        </div>
-                    </div>
-                    <div class="row row-pad">
-                        <div class="col-sm-3" align="center">
-                            <a href="">
-                                <img class="pubImg img-responsive" src="publications/spiral-spectral-fluids/teaser.png" alt="spiral"/>
+                <div class="row row-pad">
+                    <div class="col-sm-3" align="center">
+                        <a href="">
+                            <img class="pubImg img-responsive" src="publications/waveBlender/teaser.png" alt="spiral" />
                             </a>
+                            </div>
+                            <div class="col-sm-9">
+                        <div class="pub-title">WaveBlender: Practical Sound-Source Animation in Blended Domains
                         </div>
-                        <div class="col-sm-9">
-                            <div class="pub-title">Spiral-spectral fluid simulation</div>
-
-                            <div class="authors">
-                                Qiaodong Cui, Timothy Langlois, Pradeep Sen, and Theodore Kim
-                            </div>
-                            <div class="venue">ACM Transactions on Graphics (SIGGRAPH Asia 2021)</div>
-
-                            <div class="abstractBox">
-                                <button type="button" class="btn btn-default btn-margin">
-                                    Abstract
-                                </button>
-                                <div class="abstract">
-                                    We introduce a fast, expressive method for simulating fluids over radial domains, including discs, spheres, cylinders, ellipses, spheroids, and tori. We do this by generalizing the spectral approach of Laplacian Eigenfunctions, resulting in what we call spiral-spectral fluid simulations. Starting with a set of divergence-free analytical bases for polar and spherical coordinates, we show that their singularities can be removed by introducing a set of carefully selected enrichment functions. Orthogonality is established at minimal cost, viscosity is supported analytically, and we specifically design basis functions that support scalable FFT-based reconstructions. Additionally, we present an efficient way of computing all the necessary advection tensors. Our approach applies to both three-dimensional flows as well as their surface-based, codimensional variants. We establish the completeness of our basis representation, and compare against a variety of existing solvers.
-                                </div>
-                            </div>
-                            <a href="https://www.tkim.graphics/SPIRAL/SpiralSpectralFluids.pdf" class="btn btn-default btn-margin">PDF</a>
-                            <a href="https://dl.acm.org/doi/abs/10.1145/3478513.3480536" class="btn btn-default btn-margin">Project page</a>
-                            <div class="bibtexBox">
-                                <button type="button" class="btn btn-default btn-margin">
-                                    Bibtex
-                                </button>
-                                <div class="bibtex">
-                                    @article{Cui:2021:Spiral,<br>
-                                        author = {Cui, Qiaodong and Langlois, Timothy and Sen, Pradeep and Kim, Theodore},<br>
-                                        title = {Spiral-Spectral Fluid Simulation},<br>
-                                        year = {2021},<br>
-                                        issue_date = {December 2021},<br>
-                                        publisher = {Association for Computing Machinery},<br>
-                                        address = {New York, NY, USA},<br>
-                                        volume = {40},<br>
-                                        number = {6},<br>
-                                        journal = {ACM Trans. Graph.},<br>
-                                        month = {dec},<br>
-                                        articleno = {202},<br>
-                                        numpages = {16}<br>
-                                    }
-                                </div>
-                            </div>
-                            <a href="https://dl.acm.org/action/downloadSupplement?doi=10.1145%2F3478513.3480536&file=a202-cui.mp4" class="btn btn-default btn-margin">Video</a>
+                        <div class="authors">
+                            Kangrui Xue, Jui-Hsien Wang, Timothy R. Langlois, Doug L. James
                         </div>
+                        <div class="venue">ACM Transactions on Graphics (SIGGRAPH Asia 2024)
+                        </div>
+                        <div class="abstractBox">
+                            <button type="button" class="btn btn-default btn-margin">
+                                Abstract
+                            </button>
+                            <div class="abstract">
+                                Synthesizing sound sources for modern physics-based animation is challenging due to
+                                rapidly moving, deforming,
+                                and
+                                vibrating interfaces that produce acoustic waves within the air domain. Not only must
+                                the methods synthesize
+                                sounds that
+                                are faithful and free of digital artifacts, but, in order to be practical, the methods
+                                should be easy to
+                                implement and
+                                support fast parallel hardware. Unfortunately, no current solutions satisfy these many
+                                conflicting constraints.
+                                In this paper, we present WaveBlender, a simple and fast GPU-accelerated
+                                finite-difference time-domain (FDTD) acoustic
+                                wavesolver for simulating animation sound sources on uniform grids. To resolve
+                                continuously moving and deforming solid-
+                                or fluid-air interfaces on coarse grids, we derive a novel scheme that can temporally
+                                blend between two subsequent
+                                finite-difference discretizations. Our blending scheme requires minimal modification of
+                                the original FDTD update
+                                equations: a single new blending parameter β (defined at cell centers) and approximate
+                                velocity-level boundary
+                                conditions. Sound synthesis results are demonstrated for a variety of existing
+                                physics-based sound sources (water,
+                                modal, thin shells, kinematic deformers), along with point-like sources for tiny rigid
+                                bodies. Our solver is reliable
+                                across different resolutions, GPU-friendly by design, and can be 1000x faster than prior
+                                CPU-based wavesolvers for these
+                                animation sound problems.
+                            </div>
+                        </div>
+                        <a href="https://graphics.stanford.edu/papers/waveblender/assets/waveblender_full.pdf"
+                            class="btn btn-default btn-margin">PDF
+                        </a>
+                        <a href="https://graphics.stanford.edu/papers/waveblender/" class="btn btn-default btn-margin">Project page
+                        </a>
+                        <div class="bibtexBox">
+                            <button type="button" class="btn btn-default btn-margin">
+                                Bibtex
+                            </button>
+                            <div class="bibtex">
+                                @inproceedings{Xue:2024:WaveBlender,<br>
+                                author = {Xue, Kangrui and Wang, Jui-Hsien and Langlois, Timothy and James, Doug},<br>
+                                title = {WaveBlender: Practical Sound-Source Animation in Blended Domains},<br>
+                                year = {2024},<br>
+                                isbn = {9798400711312},<br>
+                                publisher = {Association for Computing Machinery},<br>
+                                address = {New York, NY, USA},<br>
+                                url = {https://doi.org/10.1145/3680528.3687696},<br>
+                                doi = {10.1145/3680528.3687696},<br>
+                                booktitle = {SIGGRAPH Asia 2024 Conference Papers},<br>
+                                articleno = {134},<br>
+                                numpages = {10},<br>
+                                series = {SA '24}<br>
+                                }
+                            </div>
+                        </div>
+                        <a href="https://youtu.be/wFxERIZE5WQ?si=yY65yE3RvJKpodTf" class="btn btn-default btn-margin">Video
+                        </a>
+                        </div>
+                        </div>
+
+                <div class="row row-pad">
+                    <div class="col-sm-3" align="center">
+                        <a href="">
+                            <img class="pubImg img-responsive" src="publications/fluidControlLaplacianEigenfunctions/teaser.png"
+                                alt="spiral" />
+                        </a>
                     </div>
-                    <div class="row row-pad">
-                        <div class="col-sm-3" align="center">
-                            <a href="">
-                                <img class="pubImg img-responsive" src="publications/ergoboss/tvcg2021.jpg" alt="IPC"/>
-                            </a>
+                    <div class="col-sm-9">
+                        <div class="pub-title">Fluid Control with Laplacian Eigenfunctions
                         </div>
-                        <div class="col-sm-9">
-                            <div class="pub-title">ERGOBOSS: Ergonomic Optimization of Body-Supporting Surfaces</div>
-
-                            <div class="authors">
-                                Danyong Zhao, Yijing Li, Siddhartha Chaudhuri, Timothy Langlois and Jernej Barbic
-                            </div>
-                            <div class="venue">TVCG 2022</div>
-
-                            <div class="abstractBox">
-                                <button type="button" class="btn btn-default btn-margin">
-                                    Abstract
-                                </button>
-                                <div class="abstract">
-                                    Humans routinely sit or lean against supporting surfaces and it is important to shape these surfaces to be comfortable and
-                                    ergonomic. We give a method to design the geometric shape of rigid supporting surfaces to maximize the ergonomics of physically
-                                    based contact between the surface and a deformable human. We model the soft deformable human using a layer of FEM deformable
-                                    tissue surrounding a rigid core, with measured realistic elastic material properties, and large-deformation nonlinear analysis. We define
-                                    a novel cost function to measure the ergonomics of contact between the human and the supporting surface. We give a stable and
-                                    computationally efficient contact model that is differentiable with respect to the supporting surface shape. This makes it possible to
-                                    optimize our ergonomic cost function using gradient-based optimizers. Our optimizer produces supporting surfaces superior to prior
-                                    work on ergonomic shape design. Our examples include furniture, apparel and tools. We also validate our results by scanning a real
-                                    human subject’s foot and optimizing a shoe sole shape to maximize foot contact ergonomics. We 3D-print the optimized shoe sole,
-                                    measure contact pressure using pressure sensors, and demonstrate that the real unoptimized and optimized pressure distributions
-                                    qualitatively match those predicted by our simulation.
-                                </div>
-                            </div>
-                            <a href="https://www.cse.iitb.ac.in/~sidch/docs/tvcg2021_ergoboss.pdf" class="btn btn-default btn-margin">PDF</a>
-                            <a href="" class="btn btn-default btn-margin">Project page</a>
-                            <div class="bibtexBox">
-                                <button type="button" class="btn btn-default btn-margin">
-                                    Bibtex
-                                </button>
-                                <div class="bibtex">
-                                </div>
-                            </div>
-                            <a href="" class="btn btn-default btn-margin">Video</a>
+                        <div class="authors">
+                            Yixin Chen, David Levin, Timothy R. Langlois
                         </div>
+                        <div class="venue">ACM Transactions on Graphics (SIGGRAPH 2024)
+                        </div>
+                        <div class="abstractBox">
+                            <button type="button" class="btn btn-default btn-margin">
+                                Abstract
+                            </button>
+                            <div class="abstract">
+                                Physics-based fluid control has long been a challenging problem in balancing
+                                efficiency and accuracy. We introduce a
+                                novel physics-based fluid control pipeline using Laplacian Eigenfluids. Utilizing
+                                the adjoint method with our provided
+                                analytical gradient expressions, the derivative computation of the control problem
+                                is efficient and easy to formulate.
+                                We demonstrate that our method is fast enough to support real-time fluid simulation,
+                                editing, control, and optimal
+                                animation generation. Our pipeline naturally supports multi-resolution and frequency
+                                control of fluid simulations. The
+                                effectiveness and efficiency of our fluid control pipeline are validated through a
+                                variety of 2D examples and
+                                comparisons.
+                                </div>
+                                </div>
+                                <a href="https://www.dgp.toronto.edu/projects/fluidcontrol/siggraph_24_74.pdf"
+                            class="btn btn-default btn-margin">PDF
+                        </a>
+                        <a href="https://www.dgp.toronto.edu/projects/fluidcontrol/"
+                            class="btn btn-default btn-margin">Project page
+                        </a>
+                        <div class="bibtexBox">
+                            <button type="button" class="btn btn-default btn-margin">
+                                Bibtex
+                            </button>
+                            <div class="bibtex">
+                                @inproceedings{Chen:2024:FluidControl,<br>
+                                author = {Chen, Yixin and Levin, David and Langlois, Timothy},<br>
+                                title = {Fluid Control with Laplacian Eigenfunctions},<br>
+                                year = {2024},<br>
+                                url = {https://doi.org/10.1145/3641519.3657468},<br>
+                                doi = {10.1145/3641519.3657468},<br>
+                                booktitle = {ACM SIGGRAPH 2024 Conference Papers},<br>
+                                articleno = {44},<br>
+                                numpages = {11},<br>
+                                location = {Denver, CO, USA},<br>
+                                series = {SIGGRAPH '24}<br>
+                                }
+                                </div>
+                                </div>
+                                <a href="https://www.dgp.toronto.edu/projects/fluidcontrol/Fluid_Control.mp4"
+                            class="btn btn-default btn-margin">Video
+                        </a>
                     </div>
-                    <div class="row row-pad">
-                        <div class="col-sm-3" align="center">
-                            <a href="https://ipc-sim.github.io/rigid-ipc">
-                                <img class="pubImg img-responsive" src="publications/r-ipc/r-ipc.jpg" alt="IPC"/>
-                            </a>
-                        </div>
-                        <div class="col-sm-9">
-                            <div class="pub-title">Intersection-free Rigid Body Dynamics</div>
+                </div>
 
-                            <div class="authors">
-                                Zachary Ferguson, Minchen Li, Teseo Schneider, Francisca Gil-Ureta, Timothy Langlois, Chenfanfu Jiang, Denis Zorin, Danny M. Kaufman, and Daniele Panozzo
+                <div class="row row-pad">
+                    <div class="col-sm-3" align="center">
+                        <a href="">
+                            <img class="pubImg img-responsive" src="publications/coupledBubbles/coupledBubbles.jpg" alt="spiral" />
+                        </a>
+                    </div>
+                    <div class="col-sm-9">
+                        <div class="pub-title">Improved Water Sound Synthesis Using Coupled Bubbles </div>
+                        <div class="authors">
+                            Kangrui Xue, Ryan M. Aronson, Jui-Hsien Wang, Timothy R. Langlois, Doug L. James
+                        </div>
+                        <div class="venue">
+                            ACM Transactions on Graphics (SIGGRAPH 2023)
+                        </div>
+                        <div class="abstractBox">
+                            <button type="button" class="btn btn-default btn-margin">
+                                Abstract
+                            </button>
+                            <div class="abstract">
+                                We introduce a practical framework for synthesizing bubble-based water sounds that
+                                captures
+                                the rich inter-bubble
+                                coupling effects responsible for low-frequency acoustic emissions from bubble clouds. We
+                                propose coupled bubble
+                                oscillator models with regularized singularities, and techniques to reduce the
+                                computational
+                                cost of time stepping with
+                                dense, time-varying mass matrices. Airborne acoustic emissions are estimated using
+                                finite-difference time-domain (FDTD)
+                                methods. We propose a simple, analytical surface acceleration model, and a
+                                sample-and-hold
+                                GPU wavesolver that is simple
+                                and faster than prior CPU wavesolvers. Sound synthesis results are demonstrated using
+                                bubbly
+                                flows from incompressible,
+                                two-phase simulations, as well as procedurally generated examples using single-phase
+                                FLIP
+                                fluid animations. Our results
+                                demonstrate sound simulations with hundreds of thousands of bubbles, and perceptually
+                                significant frequency
+                                transformations with fuller low-frequency content.
+                                </div>
+                                </div>
+                        <a href="https://graphics.stanford.edu/papers/coupledbubbles/assets/coupledbubbles.pdf"
+                            class="btn btn-default btn-margin">PDF
+                        </a>
+                        <a href="https://graphics.stanford.edu/papers/coupledbubbles/" class="btn btn-default btn-margin">Project page
+                        </a>
+                        <div class="bibtexBox">
+                            <button type="button" class="btn btn-default btn-margin">
+                                Bibtex
+                            </button>
+                            <div class="bibtex">
+                                @article{Xue:2023:Coupled,<br>
+                                author = {Xue, Kangrui and Aronson, Ryan M and Wang, Jui-Hsien and Langlois, Timothy R
+                                and
+                                James, Doug L},<br>
+                                title = {Improved Water Sound Synthesis using Coupled Bubbles},<br>
+                                year = {2023},<br>
+                                issue_date = {August 2023},<br>
+                                publisher = {Association for Computing Machinery},<br>
+                                address = {New York, NY, USA},<br>
+                                volume = {42},<br>
+                                number = {4},<br>
+                                journal = {ACM Trans. Graph.},<br>
+                                month = {aug},<br>
+                                }
+                                </div>
+                                </div>
+                        <a href="https://youtu.be/fOwQcDnjs_w" class="btn btn-default btn-margin">Video
+                        </a>
+                        </div>
+                        </div>
+
+                <div class="row row-pad">
+                    <div class="col-sm-3" align="center">
+                        <a href="">
+                            <img class="pubImg img-responsive" src="publications/spiral-spectral-fluids/teaser.png" alt="spiral" />
+                            </a>
+                            </div>
+                            <div class="col-sm-9">
+                        <div class="pub-title">Spiral-spectral fluid simulation
+                        </div>
+                        <div class="authors">
+                            Qiaodong Cui, Timothy Langlois, Pradeep Sen, and Theodore Kim
+                        </div>
+                        <div class="venue">ACM Transactions on Graphics (SIGGRAPH Asia 2021)
+                        </div>
+                        <div class="abstractBox">
+                            <button type="button" class="btn btn-default btn-margin">
+                                Abstract
+                            </button>
+                            <div class="abstract">
+                                We introduce a fast, expressive method for simulating fluids over radial domains,
+                                including discs, spheres, cylinders, ellipses, spheroids, and tori. We do this by
+                                generalizing the spectral approach of Laplacian Eigenfunctions, resulting in what we
+                                call spiral-spectral fluid simulations. Starting with a set of divergence-free
+                                analytical bases for polar and spherical coordinates, we show that their singularities
+                                can be removed by introducing a set of carefully selected enrichment functions.
+                                Orthogonality is established at minimal cost, viscosity is supported analytically, and
+                                we specifically design basis functions that support scalable FFT-based reconstructions.
+                                Additionally, we present an efficient way of computing all the necessary advection
+                                tensors. Our approach applies to both three-dimensional flows as well as their
+                                surface-based, codimensional variants. We establish the completeness of our basis
+                                representation, and compare against a variety of existing solvers.
+                                </div>
+                                </div>
+                        <a href="https://www.tkim.graphics/SPIRAL/SpiralSpectralFluids.pdf" class="btn btn-default btn-margin">PDF
+                        </a>
+                        <a href="https://dl.acm.org/doi/abs/10.1145/3478513.3480536" class="btn btn-default btn-margin">Project page
+                        </a>
+                        <div class="bibtexBox">
+                            <button type="button" class="btn btn-default btn-margin">
+                                Bibtex
+                            </button>
+                            <div class="bibtex">
+                                @article{Cui:2021:Spiral,<br>
+                                author = {Cui, Qiaodong and Langlois, Timothy and Sen, Pradeep and Kim, Theodore},<br>
+                                title = {Spiral-Spectral Fluid Simulation},<br>
+                                year = {2021},<br>
+                                issue_date = {December 2021},<br>
+                                publisher = {Association for Computing Machinery},<br>
+                                address = {New York, NY, USA},<br>
+                                volume = {40},<br>
+                                number = {6},<br>
+                                journal = {ACM Trans. Graph.},<br>
+                                month = {dec},<br>
+                                articleno = {202},<br>
+                                numpages = {16}<br>
+                                }
+                            </div>
+                        </div>
+                        <a href="https://dl.acm.org/action/downloadSupplement?doi=10.1145%2F3478513.3480536&file=a202-cui.mp4"
+                            class="btn btn-default btn-margin">Video</a>
+                        </div>
+                        </div>
+
+                <div class="row row-pad">
+                    <div class="col-sm-3" align="center">
+                        <a href="">
+                            <img class="pubImg img-responsive" src="publications/ergoboss/tvcg2021.jpg" alt="IPC" />
+                            </a>
+                            </div>
+                            <div class="col-sm-9">
+                                <div class="pub-title">ERGOBOSS: Ergonomic Optimization of Body-Supporting Surfaces</div>
+                        <div class="authors">
+                            Danyong Zhao, Yijing Li, Siddhartha Chaudhuri, Timothy Langlois and Jernej Barbic
+                        </div>
+                        <div class="venue">TVCG 2022</div>
+
+                        <div class="abstractBox">
+                            <button type="button" class="btn btn-default btn-margin">
+                                Abstract
+                            </button>
+                            <div class="abstract">
+                                Humans routinely sit or lean against supporting surfaces and it is important to shape
+                                these surfaces to be comfortable and
+                                ergonomic. We give a method to design the geometric shape of rigid supporting surfaces
+                                to maximize the ergonomics of physically
+                                based contact between the surface and a deformable human. We model the soft deformable
+                                human using a layer of FEM deformable
+                                tissue surrounding a rigid core, with measured realistic elastic material properties,
+                                and large-deformation nonlinear analysis. We define
+                                a novel cost function to measure the ergonomics of contact between the human and the
+                                supporting surface. We give a stable and
+                                computationally efficient contact model that is differentiable with respect to the
+                                supporting surface shape. This makes it possible to
+                                optimize our ergonomic cost function using gradient-based optimizers. Our optimizer
+                                produces supporting surfaces superior to prior
+                                work on ergonomic shape design. Our examples include furniture, apparel and tools. We
+                                also validate our results by scanning a real
+                                human subject’s foot and optimizing a shoe sole shape to maximize foot contact
+                                ergonomics. We 3D-print the optimized shoe sole,
+                                measure contact pressure using pressure sensors, and demonstrate that the real
+                                unoptimized and optimized pressure distributions
+                                qualitatively match those predicted by our simulation.
+                                </div>
+                                </div>
+                                <a href="https://www.cse.iitb.ac.in/~sidch/docs/tvcg2021_ergoboss.pdf" class="btn btn-default btn-margin">PDF</a>
+                                <a href="" class="btn btn-default btn-margin">Project page</a>
+                                <div class="bibtexBox">
+                                    <button type="button" class="btn btn-default btn-margin">
+                                        Bibtex
+                                    </button>
+                                    <div class="bibtex">
+                                    </div>
+                                </div>
+                                <a href="" class="btn btn-default btn-margin">Video</a>
+                        </div>
+                        </div>
+
+                <div class="row row-pad">
+                    <div class="col-sm-3" align="center">
+                        <a href="https://ipc-sim.github.io/rigid-ipc">
+                            <img class="pubImg img-responsive" src="publications/r-ipc/r-ipc.jpg" alt="IPC" />
+                            </a>
+                            </div>
+                            <div class="col-sm-9">
+                                <div class="pub-title">Intersection-free Rigid Body Dynamics</div>
+
+                        <div class="authors">
+                            Zachary Ferguson, Minchen Li, Teseo Schneider, Francisca Gil-Ureta, Timothy Langlois,
+                            Chenfanfu Jiang, Denis Zorin, Danny M. Kaufman, and Daniele Panozzo
                             </div>
                             <div class="venue">ACM Transactions on Graphics (SIGGRAPH 2021)</div>
 
-                            <div class="abstractBox">
-                                <button type="button" class="btn btn-default btn-margin">
-                                    Abstract
-                                </button>
-                                <div class="abstract">
-                                     We introduce the first implicit time-stepping algorithm for rigid body dynamics, with contact and friction, that guarantees intersection-free configurations at every time step.
-                                     <br><br>
-                                     Our algorithm explicitly models the curved trajectories traced by rigid bodies in both collision detection and response. For collision detection, we propose a conservative narrow phase collision detection algorithm for curved trajectories, which reduces the problem to a sequence of linear CCD queries with minimal separation. For time integration and contact response, we extend the recently proposed incremental potential contact framework to reduced coordinates and rigid body dynamics.
-                                     <br><br>
-                                     We introduce a benchmark for rigid body simulation and show that our approach, while less efficient than alternatives, can robustly handle a wide array of complex scenes, which cannot be simulated with competing methods, without requiring per-scene parameter tuning.
+                        <div class="abstractBox">
+                            <button type="button" class="btn btn-default btn-margin">
+                                Abstract
+                            </button>
+                            <div class="abstract">
+                                We introduce the first implicit time-stepping algorithm for rigid body dynamics, with
+                                contact and friction, that guarantees intersection-free configurations at every time
+                                step.
+                                <br><br>
+                                Our algorithm explicitly models the curved trajectories traced by rigid bodies in both
+                                collision detection and response. For collision detection, we propose a conservative
+                                narrow phase collision detection algorithm for curved trajectories, which reduces the
+                                problem to a sequence of linear CCD queries with minimal separation. For time
+                                integration and contact response, we extend the recently proposed incremental potential
+                                contact framework to reduced coordinates and rigid body dynamics.
+                                <br><br>
+                                We introduce a benchmark for rigid body simulation and show that our approach, while
+                                less efficient than alternatives, can robustly handle a wide array of complex scenes,
+                                which cannot be simulated with competing methods, without requiring per-scene parameter
+                                tuning.
                                 </div>
-                            </div>
-                            <a href="https://ipc-sim.github.io/rigid-ipc/assets/rigid_ipc_paper.pdf" class="btn btn-default btn-margin">PDF</a>
-                            <a href="https://ipc-sim.github.io/rigid-ipc" class="btn btn-default btn-margin">Project page</a>
-                            <div class="bibtexBox">
-                                <button type="button" class="btn btn-default btn-margin">
-                                    Bibtex
-                                </button>
-                                <div class="bibtex">
-                                    @article{Ferguson:2021:RigidIPC,<br>
-                                        title     = {Intersection-free Rigid Body Dynamics},<br>
-                                        author    = {Zachary Ferguson and Minchen Li and Teseo Schneider and Francisca Gil-Ureta and Timothy Langlois and Chenfanfu Jiang and Denis Zorin and Danny M. Kaufman and Daniele Panozzo},<br>
-                                        year      = 2021,<br>
-                                        journal   = {ACM Transactions on Graphics (SIGGRAPH)},<br>
-                                        volume    = 40,<br>
-                                        number    = 4,<br>
-                                        articleno = 183<br>
-                                    }
                                 </div>
-                            </div>
-                            <a href="https://youtu.be/J4KylEbFM8I" class="btn btn-default btn-margin">Video</a>
-                        </div>
-                    </div>
-                    <div class="row row-pad">
-                        <div class="col-sm-3" align="center">
-                            <a href="https://ipc-sim.github.io/">
-                                <img class="pubImg img-responsive" src="publications/ipc/ipc.png" alt="IPC"/>
-                            </a>
-                        </div>
-                        <div class="col-sm-9">
-                            <div class="pub-title">Incremental Potential Contact: Intersection- and Inversion-free, Large-Deformation Dynamics</div>
+                                <a href="https://ipc-sim.github.io/rigid-ipc/assets/rigid_ipc_paper.pdf" class="btn btn-default btn-margin">PDF</a>
+                        <a href="https://ipc-sim.github.io/rigid-ipc" class="btn btn-default btn-margin">Project
+                            page</a>
+                        <div class="bibtexBox">
+                            <button type="button" class="btn btn-default btn-margin">
+                                Bibtex
+                            </button>
+                            <div class="bibtex">
+                                @article{Ferguson:2021:RigidIPC,<br>
+                                title = {Intersection-free Rigid Body Dynamics},<br>
+                                author = {Zachary Ferguson and Minchen Li and Teseo Schneider and Francisca Gil-Ureta
+                                and Timothy Langlois and Chenfanfu Jiang and Denis Zorin and Danny M. Kaufman and
+                                Daniele Panozzo},<br>
+                                year = 2021,<br>
+                                journal = {ACM Transactions on Graphics (SIGGRAPH)},<br>
+                                volume = 40,<br>
+                                number = 4,<br>
+                                articleno = 183<br>
+                                }
+                                </div>
+                                </div>
+                                <a href="https://youtu.be/J4KylEbFM8I" class="btn btn-default btn-margin">Video</a>
+                                </div>
+                                </div>
 
-                            <div class="authors">
-                                Minchen Li, Zachary Ferguson, Teseo Schneider, Timothy Langlois, Denis Zorin, Daniele Panozzo, Chenfanfu Jiang, and Danny M. Kaufman
+                <div class="row row-pad">
+                    <div class="col-sm-3" align="center">
+                        <a href="https://ipc-sim.github.io/">
+                            <img class="pubImg img-responsive" src="publications/ipc/ipc.png" alt="IPC" />
+                            </a>
+                            </div>
+                            <div class="col-sm-9">
+                        <div class="pub-title">Incremental Potential Contact: Intersection- and Inversion-free,
+                            Large-Deformation Dynamics</div>
+
+                        <div class="authors">
+                            Minchen Li, Zachary Ferguson, Teseo Schneider, Timothy Langlois, Denis Zorin, Daniele
+                            Panozzo, Chenfanfu Jiang, and Danny M. Kaufman
                             </div>
                             <div class="venue">ACM Transactions on Graphics (SIGGRAPH 2020)</div>
 
-                            <div class="abstractBox">
-                                <button type="button" class="btn btn-default btn-margin">
-                                    Abstract
-                                </button>
-                                <div class="abstract">
-Contacts weave through every aspect of our physical world, from daily household chores to acts of nature. Modeling and predictive computation of these phenomena for solid mechanics is important to every discipline con- cerned with the motion of mechanical systems, including engineering and animation. Nevertheless, efficiently time-stepping accurate and consistent simulations of real-world contacting elastica remains an outstanding com- putational challenge. To model the complex interaction of deforming solids in contact we propose Incremental Potential Contact (IPC) – a new model and algorithm for variationally solving implicitly time-stepped nonlinear elastodynamics. IPC maintains an intersection- and inversion-free trajectory regardless of material parameters, time step sizes, impact velocities, severity of deformation, or boundary conditions enforced.
-<br><br>
-Constructed with a custom nonlinear solver, IPC enables efficient res- olution of time-stepping problems with separate, user-exposed accuracy tolerances that allow independent specification of the physical accuracy of the dynamics and the geometric accuracy of surface-to-surface conformation. This enables users to decouple, as needed per application, desired accuracies for a simulation’s dynamics and geometry.
-<br><br>
-The resulting time stepper solves contact problems that are intersection- free (and thus robust), inversion-free, efficient (at speeds comparable to or faster than available methods that lack both convergence and feasibility), and accurate (solved to user-specified accuracies). To our knowledge this is the first implicit time-stepping method, across both the engineering and graphics literature that can consistently enforce these guarantees as we vary simulation parameters.
-<br><br>
-In an extensive comparison of available simulation methods, research libraries and commercial codes we confirm that available engineering and computer graphics methods, while each succeeding admirably in custom- tuned regimes, often fail with instabilities, egregious constraint violations and/or inaccurate and implausible solutions, as we vary input materials, contact numbers and time step. We also exercise IPC across a wide range of existing and new benchmark tests and demonstrate its accurate solution over a broad sweep of reasonable time-step sizes and beyond (up to h = 2s) across challenging large-deformation, large-contact stress-test scenarios with meshes composed of up to 2.3M tetrahedra and processing up to 498K contacts per time step. For applications requiring high-accuracy we demon- strate tight convergence on all measures. While, for applications requiring lower accuracies, e.g. animation, we confirm IPC can ensure feasibility and plausibility even when specified tolerances are lowered for efficiency.
+                        <div class="abstractBox">
+                            <button type="button" class="btn btn-default btn-margin">
+                                Abstract
+                            </button>
+                            <div class="abstract">
+                                Contacts weave through every aspect of our physical world, from daily household chores
+                                to acts of nature. Modeling and predictive computation of these phenomena for solid
+                                mechanics is important to every discipline con- cerned with the motion of mechanical
+                                systems, including engineering and animation. Nevertheless, efficiently time-stepping
+                                accurate and consistent simulations of real-world contacting elastica remains an
+                                outstanding com- putational challenge. To model the complex interaction of deforming
+                                solids in contact we propose Incremental Potential Contact (IPC) – a new model and
+                                algorithm for variationally solving implicitly time-stepped nonlinear elastodynamics.
+                                IPC maintains an intersection- and inversion-free trajectory regardless of material
+                                parameters, time step sizes, impact velocities, severity of deformation, or boundary
+                                conditions enforced.
+                                <br><br>
+                                Constructed with a custom nonlinear solver, IPC enables efficient res- olution of
+                                time-stepping problems with separate, user-exposed accuracy tolerances that allow
+                                independent specification of the physical accuracy of the dynamics and the geometric
+                                accuracy of surface-to-surface conformation. This enables users to decouple, as needed
+                                per application, desired accuracies for a simulation’s dynamics and geometry.
+                                <br><br>
+                                The resulting time stepper solves contact problems that are intersection- free (and thus
+                                robust), inversion-free, efficient (at speeds comparable to or faster than available
+                                methods that lack both convergence and feasibility), and accurate (solved to
+                                user-specified accuracies). To our knowledge this is the first implicit time-stepping
+                                method, across both the engineering and graphics literature that can consistently
+                                enforce these guarantees as we vary simulation parameters.
+                                <br><br>
+                                In an extensive comparison of available simulation methods, research libraries and
+                                commercial codes we confirm that available engineering and computer graphics methods,
+                                while each succeeding admirably in custom- tuned regimes, often fail with instabilities,
+                                egregious constraint violations and/or inaccurate and implausible solutions, as we vary
+                                input materials, contact numbers and time step. We also exercise IPC across a wide range
+                                of existing and new benchmark tests and demonstrate its accurate solution over a broad
+                                sweep of reasonable time-step sizes and beyond (up to h = 2s) across challenging
+                                large-deformation, large-contact stress-test scenarios with meshes composed of up to
+                                2.3M tetrahedra and processing up to 498K contacts per time step. For applications
+                                requiring high-accuracy we demon- strate tight convergence on all measures. While, for
+                                applications requiring lower accuracies, e.g. animation, we confirm IPC can ensure
+                                feasibility and plausibility even when specified tolerances are lowered for efficiency.
                                 </div>
-                            </div>
-                            <a href="https://ipc-sim.github.io/file/IPC-paper-fullRes.pdf" class="btn btn-default btn-margin">PDF</a>
-                            <a href="https://ipc-sim.github.io/" class="btn btn-default btn-margin">Project page</a>
-                            <div class="bibtexBox">
-                                <button type="button" class="btn btn-default btn-margin">
-                                    Bibtex
-                                </button>
-                                <div class="bibtex">
-                                    @article{Li2020IPC,
-										<br>
-										author = {Minchen Li and Zachary Ferguson and Teseo Schneider and Timothy Langlois and
-											Denis Zorin and Daniele Panozzo and Chenfanfu Jiang and Danny M. Kaufman},
-										<br>
-										title = {Incremental Potential Contact: Intersection- and Inversion-free Large Deformation Dynamics},
-										<br>
-										journal = {ACM Transactions on Graphics},
-										<br>
-										year = {2020},
-										<br>
-										volume = {39},
-										<br>
-										number = {4}
-									}
-                                    <!--@article{Cui2020stopt,-->
-                                    <!--    <br>-->
-                                    <!--    author={Cui, Qiaodong and Langlois, Timothy R and Sen, Pradeep and Kim, Theodore},-->
-                                    <!--    <br>-->
-                                    <!--    journal={Eurographics},-->
-                                    <!--    <br>-->
-                                    <!--    title={Fast and Robust Stochastic Structural Optimization},-->
-                                    <!--    <br>-->
-                                    <!--    year={2020},-->
-                                    <!--    <br>-->
-                                    <!--    volume={26},-->
-                                    <!--    <br>-->
-                                    <!--    number={5},-->
-                                    <!--    <br>-->
-                                    <!--    pages={1991-2001}-->
-                                    <!--}-->
                                 </div>
-                            </div>
-                            <a href="https://ipc-sim.github.io/file/IPC-video.mp4" class="btn btn-default btn-margin">Video</a>
+                                <a href="https://ipc-sim.github.io/file/IPC-paper-fullRes.pdf" class="btn btn-default btn-margin">PDF</a>
+                                <a href="https://ipc-sim.github.io/" class="btn btn-default btn-margin">Project page</a>
+                                <div class="bibtexBox">
+                                    <button type="button" class="btn btn-default btn-margin">
+                                        Bibtex
+                                    </button>
+                                    <div class="bibtex">
+                                        @article{Li2020IPC,
+                                        <br>
+                                        author = {Minchen Li and Zachary Ferguson and Teseo Schneider and Timothy Langlois and
+                                        Denis Zorin and Daniele Panozzo and Chenfanfu Jiang and Danny M. Kaufman},
+                                        <br>
+                                title = {Incremental Potential Contact: Intersection- and Inversion-free Large
+                                Deformation Dynamics},
+                                <br>
+                                journal = {ACM Transactions on Graphics},
+                                <br>
+                                year = {2020},
+                                <br>
+                                volume = {39},
+                                <br>
+                                number = {4}
+                                }
+                                <!--@article{Cui2020stopt,-->
+                                <!--    <br>-->
+                                <!--    author={Cui, Qiaodong and Langlois, Timothy R and Sen, Pradeep and Kim, Theodore},-->
+                                <!--    <br>-->
+                                <!--    journal={Eurographics},-->
+                                <!--    <br>-->
+                                <!--    title={Fast and Robust Stochastic Structural Optimization},-->
+                                <!--    <br>-->
+                                <!--    year={2020},-->
+                                <!--    <br>-->
+                                <!--    volume={26},-->
+                                <!--    <br>-->
+                                <!--    number={5},-->
+                                <!--    <br>-->
+                                <!--    pages={1991-2001}-->
+                                <!--}-->
+                                </div>
+                                </div>
+                                <a href="https://ipc-sim.github.io/file/IPC-video.mp4" class="btn btn-default btn-margin">Video</a>
                         </div>
-                    </div>
-                    <div class="row row-pad">
-                        <div class="col-sm-3" align="center">
-                            <a href="https://gamma.umd.edu/pro/sound/sceneaware">
-                                <img class="pubImg img-responsive" src="publications/stopt/stopt2.png" alt="deepAudio"/>
+                        </div>
+
+                <div class="row row-pad">
+                    <div class="col-sm-3" align="center">
+                        <a href="https://gamma.umd.edu/pro/sound/sceneaware">
+                            <img class="pubImg img-responsive" src="publications/stopt/stopt2.png" alt="deepAudio" />
                             </a>
+                            </div>
+                            <div class="col-sm-9">
+                                <div class="pub-title">Fast and Robust Stochastic Structural Optimization</div>
+
+                        <div class="authors">
+                            Qiaodong Cui, Timothy Langlois, Pradeep Sen, Theodore Kim
                         </div>
-                        <div class="col-sm-9">
-                            <div class="pub-title">Fast and Robust Stochastic Structural Optimization</div>
+                        <div class="venue">Eurographics 2020</div>
 
-                            <div class="authors">
-                                Qiaodong Cui, Timothy Langlois, Pradeep Sen, Theodore Kim
-                            </div>
-                            <div class="venue">Eurographics 2020</div>
-
-                            <div class="abstractBox">
-                                <button type="button" class="btn btn-default btn-margin">
-                                    Abstract
-                                </button>
-                                <div class="abstract">
-                                    Stochastic structural analysis can assess whether a fabricated object will break under
-                                    real-world conditions. While this ap- proach is powerful, it is also quite slow, which
-                                    has previously limited its use to coarse resolutions (e.g., 26 × 34 × 28). We show that
-                                    this approach can be made asymptotically faster, which in practice reduces computation
-                                    time by two orders of magnitude, and allows the use of previously-infeasible resolutions.
-                                    We achieve this by showing that the probability gradient can be com- puted in linear
-                                    time instead of quadratic, and by using a robust new scheme that stabilizes the inertia
-                                    gradients used by the optimization. Additionally, we propose a constrained restart
-                                    method that deals with local minima, and a sheathing approach that further reduces the
-                                    weight of the shape. Together, these components enable the discovery of
-                                    previously-inaccessible designs.
+                        <div class="abstractBox">
+                            <button type="button" class="btn btn-default btn-margin">
+                                Abstract
+                            </button>
+                            <div class="abstract">
+                                Stochastic structural analysis can assess whether a fabricated object will break under
+                                real-world conditions. While this ap- proach is powerful, it is also quite slow, which
+                                has previously limited its use to coarse resolutions (e.g., 26 × 34 × 28). We show that
+                                this approach can be made asymptotically faster, which in practice reduces computation
+                                time by two orders of magnitude, and allows the use of previously-infeasible
+                                resolutions.
+                                We achieve this by showing that the probability gradient can be com- puted in linear
+                                time instead of quadratic, and by using a robust new scheme that stabilizes the inertia
+                                gradients used by the optimization. Additionally, we propose a constrained restart
+                                method that deals with local minima, and a sheathing approach that further reduces the
+                                weight of the shape. Together, these components enable the discovery of
+                                previously-inaccessible designs.
                                 </div>
-                            </div>
-                            <a href="http://w2.mat.ucsb.edu/qiaodong/ProbOpt/ProbOptEG.pdf" class="btn btn-default btn-margin">PDF</a>
-                            <a href="http://w2.mat.ucsb.edu/qiaodong/" class="btn btn-default btn-margin">Project page</a>
-                            <div class="bibtexBox">
-                                <button type="button" class="btn btn-default btn-margin">
-                                    Bibtex
-                                </button>
-                                <div class="bibtex">
-                                    Coming soon...
-                                    <!--@article{Cui2020stopt,-->
-                                    <!--    <br>-->
-                                    <!--    author={Cui, Qiaodong and Langlois, Timothy R and Sen, Pradeep and Kim, Theodore},-->
-                                    <!--    <br>-->
-                                    <!--    journal={Eurographics},-->
-                                    <!--    <br>-->
-                                    <!--    title={Fast and Robust Stochastic Structural Optimization},-->
-                                    <!--    <br>-->
-                                    <!--    year={2020},-->
-                                    <!--    <br>-->
-                                    <!--    volume={26},-->
-                                    <!--    <br>-->
-                                    <!--    number={5},-->
-                                    <!--    <br>-->
-                                    <!--    pages={1991-2001}-->
-                                    <!--}-->
                                 </div>
-                            </div>
-                            <a href="http://w2.mat.ucsb.edu/qiaodong/ProbOpt/EGcamReady.mp4" class="btn btn-default btn-margin">Video</a>
+                                <a href="http://w2.mat.ucsb.edu/qiaodong/ProbOpt/ProbOptEG.pdf" class="btn btn-default btn-margin">PDF</a>
+                                <a href="http://w2.mat.ucsb.edu/qiaodong/" class="btn btn-default btn-margin">Project page</a>
+                                <div class="bibtexBox">
+                                    <button type="button" class="btn btn-default btn-margin">
+                                        Bibtex
+                                    </button>
+                                    <div class="bibtex">
+                                        Coming soon...
+                                        <!--@article{Cui2020stopt,-->
+                                        <!--    <br>-->
+                                        <!--    author={Cui, Qiaodong and Langlois, Timothy R and Sen, Pradeep and Kim, Theodore},-->
+                                        <!--    <br>-->
+                                        <!--    journal={Eurographics},-->
+                                        <!--    <br>-->
+                                        <!--    title={Fast and Robust Stochastic Structural Optimization},-->
+                                        <!--    <br>-->
+                                        <!--    year={2020},-->
+                                        <!--    <br>-->
+                                        <!--    volume={26},-->
+                                        <!--    <br>-->
+                                        <!--    number={5},-->
+                                        <!--    <br>-->
+                                        <!--    pages={1991-2001}-->
+                                        <!--}-->
+                                    </div>
+                                </div>
+                                <a href="http://w2.mat.ucsb.edu/qiaodong/ProbOpt/EGcamReady.mp4" class="btn btn-default btn-margin">Video</a>
                         </div>
-                    </div>
+                        </div>
 
-                    <div class="row row-pad">
-                        <div class="col-sm-3" align="center">
-                            <a href="https://gamma.umd.edu/pro/sound/sceneaware">
-                                <img class="pubImg img-responsive" src="publications/deepSceneAware/deepSceneAware.png" alt="deepAudio"/>
+                <div class="row row-pad">
+                    <div class="col-sm-3" align="center">
+                        <a href="https://gamma.umd.edu/pro/sound/sceneaware">
+                            <img class="pubImg img-responsive" src="publications/deepSceneAware/deepSceneAware.png" alt="deepAudio" />
                             </a>
+                            </div>
+                            <div class="col-sm-9">
+                                <div class="pub-title">Scene-Aware Audio Rendering via Deep Acoustic Analysis</div>
+
+                        <div class="authors">
+                            Zhenyu Tang, Nicholas Bryan, Dingzeyu Li, Timothy Langlois, and Dinesh Manocha
                         </div>
-                        <div class="col-sm-9">
-                            <div class="pub-title">Scene-Aware Audio Rendering via Deep Acoustic Analysis</div>
+                        <div class="venue">IEEE VR 2020 Journal Track (TVCG)</div>
 
-                            <div class="authors">
-                                Zhenyu Tang, Nicholas Bryan, Dingzeyu Li, Timothy Langlois, and Dinesh Manocha
-                            </div>
-                            <div class="venue">IEEE VR 2020 Journal Track (TVCG)</div>
-
-                            <div class="abstractBox">
-                                <button type="button" class="btn btn-default btn-margin">
-                                    Abstract
-                                </button>
-                                <div class="abstract">
-                                    We present a new method to capture the acoustic characteristics of real-world rooms using commodity devices,
-                                    and use the captured characteristics to generate similar sounding sources with virtual models. Given the
-                                    captured audio and an approximate geometric model of a real-world room, we present a novel learning-based
-                                    method to estimate its acoustic material properties. Our approach is based on deep neural networks that estimate
-                                    the reverberation time and equalization of the room from recorded audio. These estimates are used to compute
-                                    material properties related to room reverberation using a novel material optimization objective. We use the
-                                    estimated acoustic material characteristics for audio rendering using interactive geometric sound propagation
-                                    and highlight the performance on many real-world scenarios. We also perform a user study to evaluate the
-                                    perceptual similarity between the recorded sounds and our rendered audio.
+                        <div class="abstractBox">
+                            <button type="button" class="btn btn-default btn-margin">
+                                Abstract
+                            </button>
+                            <div class="abstract">
+                                We present a new method to capture the acoustic characteristics of real-world rooms
+                                using commodity devices,
+                                and use the captured characteristics to generate similar sounding sources with virtual
+                                models. Given the
+                                captured audio and an approximate geometric model of a real-world room, we present a
+                                novel learning-based
+                                method to estimate its acoustic material properties. Our approach is based on deep
+                                neural networks that estimate
+                                the reverberation time and equalization of the room from recorded audio. These estimates
+                                are used to compute
+                                material properties related to room reverberation using a novel material optimization
+                                objective. We use the
+                                estimated acoustic material characteristics for audio rendering using interactive
+                                geometric sound propagation
+                                and highlight the performance on many real-world scenarios. We also perform a user study
+                                to evaluate the
+                                perceptual similarity between the recorded sounds and our rendered audio.
                                 </div>
-                            </div>
-                            <a href="https://arxiv.org/pdf/1911.06245.pdf" class="btn btn-default btn-margin">PDF</a>
-                            <a href="https://gamma.umd.edu/pro/sound/sceneaware" class="btn btn-default btn-margin">Project page</a>
-                            <div class="bibtexBox">
-                                <button type="button" class="btn btn-default btn-margin">
-                                    Bibtex
-                                </button>
-                                <div class="bibtex">
-                                    @article{tang2020scene,
-                                        <br>
-                                        author={Tang, Zhenyu and Bryan, Nicholas J and Li, Dingzeyu and Langlois, Timothy R and Manocha, Dinesh},
-                                        <br>
-                                        journal={IEEE Transactions on Visualization and Computer Graphics},
-                                        <br>
-                                        title={Scene-Aware Audio Rendering via Deep Acoustic Analysis},
-                                        <br>
-                                        year={2020},
-                                        <br>
-                                        volume={26},
-                                        <br>
-                                        number={5},
-                                        <br>
-                                        pages={1991-2001}
-                                    }
                                 </div>
-                            </div>
-                            <a href="https://youtu.be/0xxjG9hGEcA" class="btn btn-default btn-margin">Video</a>
-                        </div>
-                    </div>
+                                <a href="https://arxiv.org/pdf/1911.06245.pdf" class="btn btn-default btn-margin">PDF</a>
+                        <a href="https://gamma.umd.edu/pro/sound/sceneaware" class="btn btn-default btn-margin">Project
+                            page</a>
+                        <div class="bibtexBox">
+                            <button type="button" class="btn btn-default btn-margin">
+                                Bibtex
+                            </button>
+                            <div class="bibtex">
+                                @article{tang2020scene,
+                                <br>
+                                author={Tang, Zhenyu and Bryan, Nicholas J and Li, Dingzeyu and Langlois, Timothy R and
+                                Manocha, Dinesh},
+                                <br>
+                                journal={IEEE Transactions on Visualization and Computer Graphics},
+                                <br>
+                                title={Scene-Aware Audio Rendering via Deep Acoustic Analysis},
+                                <br>
+                                year={2020},
+                                <br>
+                                volume={26},
+                                <br>
+                                number={5},
+                                <br>
+                                pages={1991-2001}
+                                }
+                                </div>
+                                </div>
+                                <a href="https://youtu.be/0xxjG9hGEcA" class="btn btn-default btn-margin">Video</a>
+                                </div>
+                                </div>
 
-                    <div class="row row-pad">
-                        <div class="col-sm-3" align="center">
-                            <a href="http://dannykaufman.io/projects/DOT/DOT.html">
-                                <img class="pubImg img-responsive" src="publications/dot/DOT.jpg" alt="DOT"/>
+                <div class="row row-pad">
+                    <div class="col-sm-3" align="center">
+                        <a href="http://dannykaufman.io/projects/DOT/DOT.html">
+                            <img class="pubImg img-responsive" src="publications/dot/DOT.jpg" alt="DOT" />
                             </a>
+                            </div>
+                            <div class="col-sm-9">
+                        <div class="pub-title">Decomposed Optimization Time Integrator for Large-Step Elastodynamics
                         </div>
-                        <div class="col-sm-9">
-                            <div class="pub-title">Decomposed Optimization Time Integrator for Large-Step Elastodynamics</div>
 
-                            <div class="authors">
-                                Minchen Li, Ming Gao, Timothy Langlois, Chenfanfu Jiang, and Danny Kaufman
-                            </div>
-                            <div class="venue">ACM Transactions on Graphics (SIGGRAPH 2019)</div>
-
-                            <div class="abstractBox">
-                                <button type="button" class="btn btn-default btn-margin">
-                                    Abstract
-                                </button>
-                                <div class="abstract">
-                                    Simulation methods are rapidly advancing the accuracy, consistency and
-                                    controllability of elastodynamic modeling and animation. Critical to these
-                                    advances, we require ecient time step solvers that reliably solve all implicit
-                                    time integration problems for elastica. While available time step solvers succeed admirably in some regimes, they become impractically slow, inaccurate,
-                                    unstable, or even divergent in others — as we show here. Towards addressing these needs we present the Decomposed Optimization Time Integrator
-                                    (DOT), a new domain-decomposed optimization method for solving the per
-                                    time step, nonlinear problems of implicit numerical time integration. DOT is
-                                    especially suitable for large time step simulations of deformable bodies with
-                                    nonlinear materials and high-speed dynamics. It is ecient, automated, and
-                                    robust at large, xed-size time steps, thus ensuring stable, continued progress
-                                    of high-quality simulation output. Across a broad range of extreme and mild
-                                    deformation dynamics, using frame-rate size time steps with widely varying
-                                    object shapes and mesh resolutions, we show that DOT always converges
-                                    to user-set tolerances, generally well-exceeding and always close to the best
-                                    wall-clock times across all previous nonlinear time step solvers, irrespective
-                                    of the deformation applied.
-                                </div>
-                            </div>
-                            <a href="https://www.seas.upenn.edu/~cffjiang/research/li2019dot/li2019dot.pdf" class="btn btn-default btn-margin">PDF</a>
-                            <a href="http://dannykaufman.io/projects/DOT/DOT.html" class="btn btn-default btn-margin">Project page</a>
-                            <div class="bibtexBox">
-                                <button type="button" class="btn btn-default btn-margin">
-                                    Bibtex
-                                </button>
-                                <div class="bibtex">
-                                    @article{Li:2019:DOT,
-                                        <br>
-                                        title = {Decomposed Optimization Time Integrator for Large-Step Elastodynamics},
-                                        <br>
-                                        author = {Li, Minchen and Gao, Ming and Langlois, Timothy R. and Jiang, Chenfanfu and Kaufman, Danny M.},
-                                        <br>
-                                        journal = {ACM Transactions on Graphics},
-                                        <br>
-                                        volume = {38},
-                                        <br>
-                                        number = {4},
-                                        <br>
-                                        year = {2019}
-                                    }
-                                </div>
-                            </div>
-                            <a href="https://youtu.be/AIlYF8e_aqU" class="btn btn-default btn-margin">Video</a>
+                        <div class="authors">
+                            Minchen Li, Ming Gao, Timothy Langlois, Chenfanfu Jiang, and Danny Kaufman
                         </div>
-                    </div>
+                        <div class="venue">ACM Transactions on Graphics (SIGGRAPH 2019)</div>
 
-                    <div class="row row-pad">
-                        <div class="col-sm-3" align="center">
-                            <a href="http://www.dgp.toronto.edu/projects/michell/">
-                                <img class="pubImg img-responsive" src="publications/trusses/scf19_michell_truss.jpg" alt="DOT"/>
+                        <div class="abstractBox">
+                            <button type="button" class="btn btn-default btn-margin">
+                                Abstract
+                            </button>
+                            <div class="abstract">
+                                Simulation methods are rapidly advancing the accuracy, consistency and
+                                controllability of elastodynamic modeling and animation. Critical to these
+                                advances, we require ecient time step solvers that reliably solve all implicit
+                                time integration problems for elastica. While available time step solvers succeed
+                                admirably in some regimes, they become impractically slow, inaccurate,
+                                unstable, or even divergent in others — as we show here. Towards addressing these needs
+                                we present the Decomposed Optimization Time Integrator
+                                (DOT), a new domain-decomposed optimization method for solving the per
+                                time step, nonlinear problems of implicit numerical time integration. DOT is
+                                especially suitable for large time step simulations of deformable bodies with
+                                nonlinear materials and high-speed dynamics. It is ecient, automated, and
+                                robust at large, xed-size time steps, thus ensuring stable, continued progress
+                                of high-quality simulation output. Across a broad range of extreme and mild
+                                deformation dynamics, using frame-rate size time steps with widely varying
+                                object shapes and mesh resolutions, we show that DOT always converges
+                                to user-set tolerances, generally well-exceeding and always close to the best
+                                wall-clock times across all previous nonlinear time step solvers, irrespective
+                                of the deformation applied.
+                                </div>
+                                </div>
+                        <a href="https://www.seas.upenn.edu/~cffjiang/research/li2019dot/li2019dot.pdf"
+                            class="btn btn-default btn-margin">PDF</a>
+                        <a href="http://dannykaufman.io/projects/DOT/DOT.html" class="btn btn-default btn-margin">Project
+                            page</a>
+                        <div class="bibtexBox">
+                            <button type="button" class="btn btn-default btn-margin">
+                                Bibtex
+                            </button>
+                            <div class="bibtex">
+                                @article{Li:2019:DOT,
+                                <br>
+                                title = {Decomposed Optimization Time Integrator for Large-Step Elastodynamics},
+                                <br>
+                                author = {Li, Minchen and Gao, Ming and Langlois, Timothy R. and Jiang, Chenfanfu and
+                                Kaufman, Danny M.},
+                                <br>
+                                journal = {ACM Transactions on Graphics},
+                                <br>
+                                volume = {38},
+                                <br>
+                                number = {4},
+                                <br>
+                                year = {2019}
+                                }
+                                </div>
+                                </div>
+                                <a href="https://youtu.be/AIlYF8e_aqU" class="btn btn-default btn-margin">Video</a>
+                                </div>
+                                </div>
+
+                <div class="row row-pad">
+                    <div class="col-sm-3" align="center">
+                        <a href="http://www.dgp.toronto.edu/projects/michell/">
+                            <img class="pubImg img-responsive" src="publications/trusses/scf19_michell_truss.jpg" alt="DOT" />
                             </a>
+                            </div>
+                            <div class="col-sm-9">
+                                <div class="pub-title">Volumetric Michell Trusses for Parametric Design & Fabrication</div>
+
+                        <div class="authors">
+                            Rahul Arora, Alec Jacobson, Timothy R. Langlois, Yijiang Huang, Caitlin Mueller, Wojciech
+                            Matusik, Ariel Shamir, Karan Singh, and David I.W. Levin
+                            </div>
+                        <div class="venue">Proceedings of the 3rd ACM Symposium on Computational Fabrication (SCF) 2019
                         </div>
-                        <div class="col-sm-9">
-                            <div class="pub-title">Volumetric Michell Trusses for Parametric Design & Fabrication</div>
 
-                            <div class="authors">
-                                Rahul Arora, Alec Jacobson, Timothy R. Langlois, Yijiang Huang, Caitlin Mueller, Wojciech Matusik, Ariel Shamir, Karan Singh, and David I.W. Levin
-                            </div>
-                            <div class="venue">Proceedings of the 3rd ACM Symposium on Computational Fabrication (SCF) 2019</div>
-
-                            <div class="abstractBox">
-                                <button type="button" class="btn btn-default btn-margin">
-                                    Abstract
-                                </button>
-                                <div class="abstract">
-                                    We present the first algorithm for designing volumetric Michell Trusses. Our method uses a parametrization-based
-                                    approach to generate trusses made of structural elements aligned with the primary direction of an object’s
-                                    stress field. Such trusses exhibit high strength-to-weight ratio while also being parametrically editable
-                                    which can be easily integrated with parametric editing tools such as Autodesk Fusion. We show a number
-                                    of examples that demonstrate that the output of our algorithm produces truss structures that are aligned with
-                                    an object’s underlying stress tensor field, are structurally sound and that their global parametrization
-                                    facilitates the creation of unique structures in a number of domains.
+                        <div class="abstractBox">
+                            <button type="button" class="btn btn-default btn-margin">
+                                Abstract
+                            </button>
+                            <div class="abstract">
+                                We present the first algorithm for designing volumetric Michell Trusses. Our method uses
+                                a parametrization-based
+                                approach to generate trusses made of structural elements aligned with the primary
+                                direction of an object’s
+                                stress field. Such trusses exhibit high strength-to-weight ratio while also being
+                                parametrically editable
+                                which can be easily integrated with parametric editing tools such as Autodesk Fusion. We
+                                show a number
+                                of examples that demonstrate that the output of our algorithm produces truss structures
+                                that are aligned with
+                                an object’s underlying stress tensor field, are structurally sound and that their global
+                                parametrization
+                                facilitates the creation of unique structures in a number of domains.
                                 </div>
-                            </div>
-                            <a href="https://www.dropbox.com/s/2jcr5ghloljifua/scf19_michell_truss.pdf?raw=1" class="btn btn-default btn-margin">PDF</a>
-                            <a href="http://www.dgp.toronto.edu/projects/michell/" class="btn btn-default btn-margin">Project page</a>
-                            <div class="bibtexBox">
-                                <button type="button" class="btn btn-default btn-margin">
-                                    Bibtex
-                                </button>
-                                <div class="bibtex">
-                                    @misc{Arora:michell:scf:2019,
-                                    <br>
-                                    author = {Arora, Rahul and Jacobson, Alec and Langlois, Timothy R. and Huang, Yijiang and Mueller, Caitlin and Matusik, Wojciech and Shamir,  Ariel and Singh, Karan and Levin, David I.W.},
-                                    <br>
-                                    title = {Volumetric Michell Trusses for Parametric Design \& Fabrication},
-                                    <br>
-                                    booktitle = {Proceedings of the 3rd ACM Symposium on Computation Fabrication},
-                                    <br>
-                                    series = {SCF '19},
-                                    <br>
-                                    year = {2019},
-                                    <br>
-                                    location = {Pittsburgh, PA, USA},
-                                    <br>
-                                    numpages = {12},
-                                    <br>
-                                    publisher = {ACM},
-                                    <br>
-                                    address = {New York, NY, USA}
-                                    }
                                 </div>
-                            </div>
-                            <a href="https://youtu.be/C2nm4PcXNK0" class="btn btn-default btn-margin">Video</a>
-                        </div>
-                    </div>
+                        <a href="https://www.dropbox.com/s/2jcr5ghloljifua/scf19_michell_truss.pdf?raw=1"
+                            class="btn btn-default btn-margin">PDF</a>
+                        <a href="http://www.dgp.toronto.edu/projects/michell/" class="btn btn-default btn-margin">Project
+                            page</a>
+                        <div class="bibtexBox">
+                            <button type="button" class="btn btn-default btn-margin">
+                                Bibtex
+                            </button>
+                            <div class="bibtex">
+                                @misc{Arora:michell:scf:2019,
+                                <br>
+                                author = {Arora, Rahul and Jacobson, Alec and Langlois, Timothy R. and Huang, Yijiang
+                                and Mueller, Caitlin and Matusik, Wojciech and Shamir, Ariel and Singh, Karan and Levin,
+                                David I.W.},
+                                <br>
+                                title = {Volumetric Michell Trusses for Parametric Design \& Fabrication},
+                                <br>
+                                booktitle = {Proceedings of the 3rd ACM Symposium on Computation Fabrication},
+                                <br>
+                                series = {SCF '19},
+                                <br>
+                                year = {2019},
+                                <br>
+                                location = {Pittsburgh, PA, USA},
+                                <br>
+                                numpages = {12},
+                                <br>
+                                publisher = {ACM},
+                                <br>
+                                address = {New York, NY, USA}
+                                }
+                                </div>
+                                </div>
+                                <a href="https://youtu.be/C2nm4PcXNK0" class="btn btn-default btn-margin">Video</a>
+                                </div>
+                                </div>
 
-                    <div class="row row-pad">
-                        <div class="col-sm-3" align="center">
-                            <a href="https://pedro-morgado.github.io/spatialaudiogen/">
-                                <img class="pubImg img-responsive" src="publications/spatialAudioGen/teaser2.jpg" alt="Spatial Audio"/>
+                <div class="row row-pad">
+                    <div class="col-sm-3" align="center">
+                        <a href="https://pedro-morgado.github.io/spatialaudiogen/">
+                            <img class="pubImg img-responsive" src="publications/spatialAudioGen/teaser2.jpg" alt="Spatial Audio" />
                             </a>
-                        </div>
-                        <div class="col-sm-9">
-                            <div class="pub-title">Self-Supervised Generation of Spatial Audio for 360° Video</div>
+                            </div>
+                            <div class="col-sm-9">
+                                <div class="pub-title">Self-Supervised Generation of Spatial Audio for 360° Video</div>
 
-                            <div class="authors">
-                                Pedro Morgado, Nuno Vasconcelos, Timothy R. Langlois and Oliver Wang
-                            </div>
-                            <div class="venue">Neural Information Processing Systems (NIPS 2018)</div>
-
-                            <div class="abstractBox">
-                                <button type="button" class="btn btn-default btn-margin">
-                                    Abstract
-                                </button>
-                                <div class="abstract">
-                                    We introduce an approach to convert mono audio recorded by a
-                                    360° video camera into <i>spatial audio</i>, a representation of the
-                                    distribution of sound over the full viewing sphere. Spatial audio
-                                    is an important component of immersive 360° video viewing, but spatial
-                                    audio microphones are still rare in current 360° video production. Our
-                                    system consists of end-to-end trainable neural networks that
-                                    separate individual sound sources and localize them on the viewing
-                                    sphere, conditioned on multi-modal analysis of audio and 360° video
-                                    frames. We introduce several datasets, including one filmed ourselves,
-                                    and one collected in-the-wild from YouTube, consisting of 360° videos
-                                    uploaded <i>with</i> spatial audio. During training, ground-truth spatial
-                                    audio serves as self-supervision and a mixed down mono track forms
-                                    the input to our network. Using our approach, we show that it is
-                                    possible to infer the spatial location of sound sources based only
-                                    on 360° video and a mono audio track.
-                                </div>
-                            </div>
-                            <a href="https://www.svcl.ucsd.edu/~morgado/spatialaudiogen/spatialaudiogen.pdf" class="btn btn-default btn-margin">PDF</a>
-                            <a href="https://pedro-morgado.github.io/spatialaudiogen/" class="btn btn-default btn-margin">Project page</a>
-                            <div class="bibtexBox">
-                                <button type="button" class="btn btn-default btn-margin">
-                                    Bibtex
-                                </button>
-                                <div class="bibtex">
-                                    @inproceedings{morgadoNIPS18,
-                                        <br>
-                                        title = {Self-Supervised Generation of Spatial Audio for 360\deg Video},
-                                        <br>
-                                        author = {Pedro Morgado, Nuno Vasconcelos, Timothy Langlois and Oliver Wang},
-                                        <br>
-                                        booktitle = {Neural Information Processing Systems (NIPS)},
-                                        <br>
-                                        year = {2018}
-                                    }
-                                </div>
-                            </div>
-                            <a href="https://youtu.be/SXFUr2GkxS8" class="btn btn-default btn-margin">Video</a>
+                        <div class="authors">
+                            Pedro Morgado, Nuno Vasconcelos, Timothy R. Langlois and Oliver Wang
                         </div>
-                    </div>
-                    <div class="row row-pad">
-                        <div class="col-sm-3" align="center">
-                            <a href="https://graphics.stanford.edu/projects/wavesolver/">
-                                <img class="pubImg img-responsive" src="publications/waveSim/waves.png" alt="360 Audio"/>
+                        <div class="venue">Neural Information Processing Systems (NIPS 2018)</div>
+
+                        <div class="abstractBox">
+                            <button type="button" class="btn btn-default btn-margin">
+                                Abstract
+                            </button>
+                            <div class="abstract">
+                                We introduce an approach to convert mono audio recorded by a
+                                360° video camera into <i>spatial audio</i>, a representation of the
+                                distribution of sound over the full viewing sphere. Spatial audio
+                                is an important component of immersive 360° video viewing, but spatial
+                                audio microphones are still rare in current 360° video production. Our
+                                system consists of end-to-end trainable neural networks that
+                                separate individual sound sources and localize them on the viewing
+                                sphere, conditioned on multi-modal analysis of audio and 360° video
+                                frames. We introduce several datasets, including one filmed ourselves,
+                                and one collected in-the-wild from YouTube, consisting of 360° videos
+                                uploaded <i>with</i> spatial audio. During training, ground-truth spatial
+                                audio serves as self-supervision and a mixed down mono track forms
+                                the input to our network. Using our approach, we show that it is
+                                possible to infer the spatial location of sound sources based only
+                                on 360° video and a mono audio track.
+                            </div>
+                        </div>
+                        <a href="https://www.svcl.ucsd.edu/~morgado/spatialaudiogen/spatialaudiogen.pdf"
+                            class="btn btn-default btn-margin">PDF</a>
+                        <a href="https://pedro-morgado.github.io/spatialaudiogen/" class="btn btn-default btn-margin">Project page</a>
+                        <div class="bibtexBox">
+                            <button type="button" class="btn btn-default btn-margin">
+                                Bibtex
+                            </button>
+                            <div class="bibtex">
+                                @inproceedings{morgadoNIPS18,
+                                <br>
+                                title = {Self-Supervised Generation of Spatial Audio for 360\deg Video},
+                                <br>
+                                author = {Pedro Morgado, Nuno Vasconcelos, Timothy Langlois and Oliver Wang},
+                                <br>
+                                booktitle = {Neural Information Processing Systems (NIPS)},
+                                <br>
+                                year = {2018}
+                                }
+                            </div>
+                        </div>
+                        <a href="https://youtu.be/SXFUr2GkxS8" class="btn btn-default btn-margin">Video</a>
+                        </div>
+                        </div>
+                        <div class="row row-pad">
+                            <div class="col-sm-3" align="center">
+                                <a href="https://graphics.stanford.edu/projects/wavesolver/">
+                            <img class="pubImg img-responsive" src="publications/waveSim/waves.png" alt="360 Audio" />
                             </a>
-                        </div>
-                        <div class="col-sm-9">
-                            <div class="pub-title">Toward Wave-based Sound Synthesis for Computer Animation</div>
-
-                            <div class="authors">
-                                Jui-Hsien Wang, Ante Qu, Timothy R. Langlois, and Doug L. James
                             </div>
-                            <div class="venue">ACM Transactions on Graphics (SIGGRAPH 2018)</div>
+                            <div class="col-sm-9">
+                                <div class="pub-title">Toward Wave-based Sound Synthesis for Computer Animation</div>
 
-                            <div class="abstractBox">
-                                <button type="button" class="btn btn-default btn-margin">
-                                    Abstract
-                                </button>
-                                <div class="abstract">
-                                    We explore an integrated approach to sound generation that supports a wide variety of
-                                    physics-based simulation models and computer-animated phenomena. Targeting high-quality
-                                    offline sound synthesis, we seek to resolve animation-driven sound radiation with
-                                    near-field scattering and diffraction effects. The core of our approach is a
-                                    sharp-interface
-                                    finite-difference time-domain (FDTD) wavesolver, with a series of supporting algorithms
-                                    to handle rapidly deforming and vibrating embedded interfaces arising in physics-based
-                                    animation sound. Once the solver rasterizes these interfaces, it must evaluate
-                                    acceleration boundary conditions (BCs) that involve model- and phenomena-specific
-                                    computations. We introduce <i>acoustic shaders</i> as a mechanism to abstract away these
-                                    complexities, and describe a variety of implementations for computer animation:
-                                    near-rigid objects with ringing and acceleration noise, deformable (finite element)
-                                    models such as thin shells, bubble-based water, and virtual characters. Since
-                                    time-domain wave synthesis is expensive, we only simulate pressure waves in a small
-                                    region about each sound source, then estimate a far-field pressure signal. To further
-                                    improve scalability beyond multi-threading, we propose a fully <i>time-parallel sound
-                                    synthesis</i> method that is demonstrated on commodity cloud computing resources.  In
+                        <div class="authors">
+                            Jui-Hsien Wang, Ante Qu, Timothy R. Langlois, and Doug L. James
+                        </div>
+                        <div class="venue">ACM Transactions on Graphics (SIGGRAPH 2018)</div>
+
+                        <div class="abstractBox">
+                            <button type="button" class="btn btn-default btn-margin">
+                                Abstract
+                            </button>
+                            <div class="abstract">
+                                We explore an integrated approach to sound generation that supports a wide variety of
+                                physics-based simulation models and computer-animated phenomena. Targeting high-quality
+                                offline sound synthesis, we seek to resolve animation-driven sound radiation with
+                                near-field scattering and diffraction effects. The core of our approach is a
+                                sharp-interface
+                                finite-difference time-domain (FDTD) wavesolver, with a series of supporting algorithms
+                                to handle rapidly deforming and vibrating embedded interfaces arising in physics-based
+                                animation sound. Once the solver rasterizes these interfaces, it must evaluate
+                                acceleration boundary conditions (BCs) that involve model- and phenomena-specific
+                                computations. We introduce <i>acoustic shaders</i> as a mechanism to abstract away these
+                                complexities, and describe a variety of implementations for computer animation:
+                                near-rigid objects with ringing and acceleration noise, deformable (finite element)
+                                models such as thin shells, bubble-based water, and virtual characters. Since
+                                time-domain wave synthesis is expensive, we only simulate pressure waves in a small
+                                region about each sound source, then estimate a far-field pressure signal. To further
+                                improve scalability beyond multi-threading, we propose a fully <i>time-parallel sound
+                                    synthesis</i> method that is demonstrated on commodity cloud computing resources. In
                                     addition to presenting results for multiple animation phenomena (water, rigid, shells,
                                     kinematic deformers, etc.) we also propose 3D automatic dialogue replacement (3DADR) for
                                     virtual characters so that pre-recorded dialogue can include character movement, and
                                     near-field shadowing and scattering sound effects.
-                                </div>
+                                    </div>
+                                    </div>
+                        <a href="https://graphics.stanford.edu/projects/wavesolver/assets/wavesolver2018.pdf"
+                            class="btn btn-default btn-margin">PDF</a>
+                        <a href="https://graphics.stanford.edu/projects/wavesolver/" class="btn btn-default btn-margin">Project page</a>
+                        <div class="bibtexBox">
+                            <button type="button" class="btn btn-default btn-margin">
+                                Bibtex
+                            </button>
+                            <div class="bibtex">
+                                @article{Wang:2018:WaveSim,
+                                <br>
+                                title = {Toward Wave-based Sound Synthesis for Computer Animation},
+                                <br>
+                                author = {Wang, Jui-Hsien and Qu, Ante and Langlois, Timothy R. and James, Doug L.},
+                                <br>
+                                journal = {ACM Trans. Graph.},
+                                <br>
+                                volume = {37},
+                                <br>
+                                number = {4},
+                                <br>
+                                year = {2018},
+                                }
                             </div>
-                            <a href="https://graphics.stanford.edu/projects/wavesolver/assets/wavesolver2018.pdf" class="btn btn-default btn-margin">PDF</a>
-                            <a href="https://graphics.stanford.edu/projects/wavesolver/" class="btn btn-default btn-margin">Project page</a>
-                            <div class="bibtexBox">
-                                <button type="button" class="btn btn-default btn-margin">
-                                    Bibtex
-                                </button>
-                                <div class="bibtex">
-                                    @article{Wang:2018:WaveSim,
-                                        <br>
-                                        title = {Toward Wave-based Sound Synthesis for Computer Animation},
-                                        <br>
-                                        author = {Wang, Jui-Hsien and Qu, Ante and Langlois, Timothy R. and James, Doug L.},
-                                        <br>
-                                        journal = {ACM Trans. Graph.},
-                                        <br>
-                                        volume = {37},
-                                        <br>
-                                        number = {4},
-                                        <br>
-                                        year = {2018},
-                                    }
-                                </div>
-                            </div>
-                            <a href="https://youtu.be/su6z9snjU-U" class="btn btn-default btn-margin">Video</a>
                         </div>
-                    </div>
-                    <div class="row row-pad">
-                        <div class="col-sm-3" align="center">
-                            <a href="http://www.cs.columbia.edu/cg/360audio">
-                                <img class="pubImg img-responsive" src="publications/360audio/360audio.jpg" alt="360 Audio"/>
+                        <a href="https://youtu.be/su6z9snjU-U" class="btn btn-default btn-margin">Video</a>
+                        </div>
+                        </div>
+                        <div class="row row-pad">
+                            <div class="col-sm-3" align="center">
+                                <a href="http://www.cs.columbia.edu/cg/360audio">
+                            <img class="pubImg img-responsive" src="publications/360audio/360audio.jpg" alt="360 Audio" />
                             </a>
-                        </div>
-                        <div class="col-sm-9">
-                            <div class="pub-title">Scene-Aware Audio for 360° Videos</div>
+                            </div>
+                            <div class="col-sm-9">
+                                <div class="pub-title">Scene-Aware Audio for 360° Videos</div>
 
-                            <div class="authors">
-                                Dingzeyu Li, Timothy R. Langlois, and Changxi Zheng
-                            </div>
-                            <div class="venue">ACM Transactions on Graphics (SIGGRAPH 2018)</div>
-
-                            <div class="abstractBox">
-                                <button type="button" class="btn btn-default btn-margin">
-                                    Abstract
-                                </button>
-                                <div class="abstract">
-                                    Although 360° cameras ease the capture of panoramic footage, it remains challenging to add realistic 360° audio that
-                                    blends into the captured scene and is synchronized with the camera motion. We present a method for adding scene-aware
-                                    spatial audio to 360° videos in typical indoor scenes, using only a conventional mono-channel microphone and a speaker.
-                                    We observe that the late reverberation of a room's impulse response is usually diffuse spatially and directionally. Exploiting
-                                    this fact, we propose a method that synthesizes the directional impulse response between any source and listening locations
-                                    by combining a synthesized early reverberation part and a measured late reverberation tail. The early reverberation is
-                                    simulated using a geometric acoustic simulation and then enhanced using a frequency modulation method to capture room resonances.
-                                    The late reverberation is extracted from a recorded impulse response, with a carefully chosen time duration that separates out
-                                    the late reverberation from the early reverberation. In our validations, we show that our synthesized spatial audio matches closely
-                                    with recordings using ambisonic microphones. Lastly, we demonstrate the strength of our method in several applications.
-                                </div>
-                            </div>
-                            <a href="http://www.cs.columbia.edu/cg/360audio/scene-aware-360-audio-siggraph-2018-Li-et-al.pdf" class="btn btn-default btn-margin">PDF</a>
-                            <a href="http://www.cs.columbia.edu/cg/360audio/" class="btn btn-default btn-margin">Project page</a>
-                            <div class="bibtexBox">
-                                <button type="button" class="btn btn-default btn-margin">
-                                    Bibtex
-                                </button>
-                                <div class="bibtex">
-                                    @article{Li:2018:360audio,
-                                        <br>
-                                        title = {Scene-Aware Audio for 360\textdegree{} Videos},
-                                        <br>
-                                        author = {Li, Dingzeyu and Langlois, Timothy R. and Zheng, Changxi},
-                                        <br>
-                                        journal = {ACM Trans. Graph.},
-                                        <br>
-                                        volume = {37},
-                                        <br>
-                                        number = {4},
-                                        <br>
-                                        year = {2018},
-                                    }
-                                </div>
-                            </div>
-                            <a href="https://youtu.be/qNfjAGVZWs8" class="btn btn-default btn-margin">Video</a>
+                        <div class="authors">
+                            Dingzeyu Li, Timothy R. Langlois, and Changxi Zheng
                         </div>
-                    </div>
-                    <div class="row row-pad">
-                        <div class="col-sm-3" align="center">
-                            <a href="http://dl.acm.org/citation.cfm?id=2982436">
-                                <img class="pubImg img-responsive" src="publications/stopt/difprobabilityExample.png" alt="Stopt"/>
+                        <div class="venue">ACM Transactions on Graphics (SIGGRAPH 2018)</div>
+
+                        <div class="abstractBox">
+                            <button type="button" class="btn btn-default btn-margin">
+                                Abstract
+                            </button>
+                            <div class="abstract">
+                                Although 360° cameras ease the capture of panoramic footage, it remains challenging to
+                                add realistic 360° audio that
+                                blends into the captured scene and is synchronized with the camera motion. We present a
+                                method for adding scene-aware
+                                spatial audio to 360° videos in typical indoor scenes, using only a conventional
+                                mono-channel microphone and a speaker.
+                                We observe that the late reverberation of a room's impulse response is usually diffuse
+                                spatially and directionally. Exploiting
+                                this fact, we propose a method that synthesizes the directional impulse response between
+                                any source and listening locations
+                                by combining a synthesized early reverberation part and a measured late reverberation
+                                tail. The early reverberation is
+                                simulated using a geometric acoustic simulation and then enhanced using a frequency
+                                modulation method to capture room resonances.
+                                The late reverberation is extracted from a recorded impulse response, with a carefully
+                                chosen time duration that separates out
+                                the late reverberation from the early reverberation. In our validations, we show that
+                                our synthesized spatial audio matches closely
+                                with recordings using ambisonic microphones. Lastly, we demonstrate the strength of our
+                                method in several applications.
+                                </div>
+                                </div>
+                        <a href="http://www.cs.columbia.edu/cg/360audio/scene-aware-360-audio-siggraph-2018-Li-et-al.pdf"
+                            class="btn btn-default btn-margin">PDF</a>
+                        <a href="http://www.cs.columbia.edu/cg/360audio/" class="btn btn-default btn-margin">Project
+                            page</a>
+                        <div class="bibtexBox">
+                            <button type="button" class="btn btn-default btn-margin">
+                                Bibtex
+                            </button>
+                            <div class="bibtex">
+                                @article{Li:2018:360audio,
+                                <br>
+                                title = {Scene-Aware Audio for 360\textdegree{} Videos},
+                                <br>
+                                author = {Li, Dingzeyu and Langlois, Timothy R. and Zheng, Changxi},
+                                <br>
+                                journal = {ACM Trans. Graph.},
+                                <br>
+                                volume = {37},
+                                <br>
+                                number = {4},
+                                <br>
+                                year = {2018},
+                                }
+                            </div>
+                        </div>
+                        <a href="https://youtu.be/qNfjAGVZWs8" class="btn btn-default btn-margin">Video</a>
+                        </div>
+                        </div>
+                        <div class="row row-pad">
+                            <div class="col-sm-3" align="center">
+                                <a href="http://dl.acm.org/citation.cfm?id=2982436">
+                            <img class="pubImg img-responsive" src="publications/stopt/difprobabilityExample.png" alt="Stopt" />
                             </a>
+                            </div>
+                            <div class="col-sm-9">
+                        <div class="pub-title">Stochastic Structural Analysis for Context-Aware Design and Fabrication
                         </div>
-                        <div class="col-sm-9">
-                            <div class="pub-title">Stochastic Structural Analysis for Context-Aware Design and Fabrication</div>
 
-                            <div class="authors">
-                                Timothy R. Langlois, Ariel Shamir, Daniel Dror, Wojciech Matusik, and David I.W. Levin
-                            </div>
-                            <div class="venue">ACM Transactions on Graphics (SIGGRAPH Asia 2016)</div>
-
-                            <div class="abstractBox">
-                                <button type="button" class="btn btn-default btn-margin">
-                                    Abstract
-                                </button>
-                                <div class="abstract">
-                                    In this paper we propose  failure probabilities as a semantically and mechanically meaningful measure of object fragility.
-                                    We present a stochastic finite element method which exploits fast rigid body simulation and reduced-space approaches to
-                                    compute spatially varying failure probabilities. We use an explicit rigid body simulation to emulate the
-                                    real-world loading conditions an object might experience, including persistent and transient frictional contact,
-                                    while allowing us to combine several such scenarios together. Thus, our
-                                    estimates better reflect real-world failure modes than previous methods. We validate our results using a series of
-                                    real-world tests. Finally, we show how to embed failure probabilities into a stress constrained topology optimization
-                                    which we use to design objects such as weight bearing brackets and robust 3D printable objects.
-                                </div>
-                            </div>
-                            <a href="http://dl.acm.org/authorize?N27932" class="btn btn-default btn-margin">PDF</a>
-                            <a href="http://dl.acm.org/citation.cfm?id=2982436" class="btn btn-default btn-margin">Project page</a>
-                            <div class="bibtexBox">
-                                <button type="button" class="btn btn-default btn-margin">
-                                    Bibtex
-                                </button>
-                                <div class="bibtex">
-                                    @article{Langlois:2016:Stopt,
-                                        <br>
-                                        author = {Langlois, Timothy and Shamir, Ariel and Dror, Daniel and Matusik, Wojciech and Levin, David I. W.},
-                                        <br>
-                                        title = {Stochastic Structural Analysis for Context-aware Design and Fabrication},
-                                        <br>
-                                        journal = {ACM Trans. Graph.},
-                                        <br>
-                                        issue_date = {November 2016},
-                                        <br>
-                                        volume = {35},
-                                        <br>
-                                        number = {6},
-                                        <br>
-                                        month = nov,
-                                        <br>
-                                        year = {2016},
-                                        <br>
-                                        issn = {0730-0301},
-                                        <br>
-                                        pages = {226:1--226:13},
-                                        <br>
-                                        articleno = {226},
-                                        <br>
-                                        numpages = {13},
-                                        <br>
-                                        url = {http://doi.acm.org/10.1145/2980179.2982436},
-                                        <br>
-                                        doi = {10.1145/2980179.2982436},
-                                        <br>
-                                        acmid = {2982436},
-                                        <br>
-                                        publisher = {ACM},
-                                        <br>
-                                        address = {New York, NY, USA},
-                                        <br>
-                                        keywords = {FEM, computational design, structural analysis},
-                                    }
-                                </div>
-                            </div>
-                            <a href="https://youtu.be/xTJ7Ha6Q1Tw" class="btn btn-default btn-margin">Video</a>
-                            <!--<a href="publications/stopt/supplemental.pdf" class="btn btn-default btn-margin">Supplemental</a>-->
+                        <div class="authors">
+                            Timothy R. Langlois, Ariel Shamir, Daniel Dror, Wojciech Matusik, and David I.W. Levin
                         </div>
-                    </div>
-                    <div class="row row-pad">
-                        <div class="col-sm-3" align="center">
-                            <a href="http://www.cs.cornell.edu/projects/Sound/bubbles">
-                                <img class="pubImg img-responsive" src="publications/bubbles/thumb.png" alt="Bubbles"/>
+                        <div class="venue">ACM Transactions on Graphics (SIGGRAPH Asia 2016)</div>
+
+                        <div class="abstractBox">
+                            <button type="button" class="btn btn-default btn-margin">
+                                Abstract
+                            </button>
+                            <div class="abstract">
+                                In this paper we propose failure probabilities as a semantically and mechanically
+                                meaningful measure of object fragility.
+                                We present a stochastic finite element method which exploits fast rigid body simulation
+                                and reduced-space approaches to
+                                compute spatially varying failure probabilities. We use an explicit rigid body
+                                simulation to emulate the
+                                real-world loading conditions an object might experience, including persistent and
+                                transient frictional contact,
+                                while allowing us to combine several such scenarios together. Thus, our
+                                estimates better reflect real-world failure modes than previous methods. We validate our
+                                results using a series of
+                                real-world tests. Finally, we show how to embed failure probabilities into a stress
+                                constrained topology optimization
+                                which we use to design objects such as weight bearing brackets and robust 3D printable
+                                objects.
+                                </div>
+                                </div>
+                                <a href="http://dl.acm.org/authorize?N27932" class="btn btn-default btn-margin">PDF</a>
+                        <a href="http://dl.acm.org/citation.cfm?id=2982436" class="btn btn-default btn-margin">Project
+                            page</a>
+                        <div class="bibtexBox">
+                            <button type="button" class="btn btn-default btn-margin">
+                                Bibtex
+                            </button>
+                            <div class="bibtex">
+                                @article{Langlois:2016:Stopt,
+                                <br>
+                                author = {Langlois, Timothy and Shamir, Ariel and Dror, Daniel and Matusik, Wojciech and
+                                Levin, David I. W.},
+                                <br>
+                                title = {Stochastic Structural Analysis for Context-aware Design and Fabrication},
+                                <br>
+                                journal = {ACM Trans. Graph.},
+                                <br>
+                                issue_date = {November 2016},
+                                <br>
+                                volume = {35},
+                                <br>
+                                number = {6},
+                                <br>
+                                month = nov,
+                                <br>
+                                year = {2016},
+                                <br>
+                                issn = {0730-0301},
+                                <br>
+                                pages = {226:1--226:13},
+                                <br>
+                                articleno = {226},
+                                <br>
+                                numpages = {13},
+                                <br>
+                                url = {http://doi.acm.org/10.1145/2980179.2982436},
+                                <br>
+                                doi = {10.1145/2980179.2982436},
+                                <br>
+                                acmid = {2982436},
+                                <br>
+                                publisher = {ACM},
+                                <br>
+                                address = {New York, NY, USA},
+                                <br>
+                                keywords = {FEM, computational design, structural analysis},
+                                }
+                                </div>
+                                </div>
+                                <a href="https://youtu.be/xTJ7Ha6Q1Tw" class="btn btn-default btn-margin">Video</a>
+                                <!--<a href="publications/stopt/supplemental.pdf" class="btn btn-default btn-margin">Supplemental</a>-->
+                                </div>
+                                </div>
+                                <div class="row row-pad">
+                                    <div class="col-sm-3" align="center">
+                                        <a href="http://www.cs.cornell.edu/projects/Sound/bubbles">
+                            <img class="pubImg img-responsive" src="publications/bubbles/thumb.png" alt="Bubbles" />
                             </a>
+                            </div>
+                            <div class="col-sm-9">
+                                <div class="pub-title">Toward Animating Water with Complex Acoustic Bubbles</div>
+
+                        <div class="authors">
+                            Timothy R. Langlois, Changxi Zheng, and Doug L. James
                         </div>
-                        <div class="col-sm-9">
-                            <div class="pub-title">Toward Animating Water with Complex Acoustic Bubbles</div>
+                        <div class="venue">ACM Transactions on Graphics (SIGGRAPH 2016)</div>
 
-                            <div class="authors">
-                                Timothy R. Langlois, Changxi Zheng, and Doug L. James
-                            </div>
-                            <div class="venue">ACM Transactions on Graphics (SIGGRAPH 2016)</div>
-
-                            <div class="abstractBox">
-                                <button type="button" class="btn btn-default btn-margin">
-                                    Abstract
-                                </button>
-                                <div class="abstract">
-                                    This paper explores methods for synthesizing physics-based bubble sounds directly from
-                                    two-phase incompressible simulations of bubbly water flows. By tracking fluid-air
-                                    interface geometry, we identify bubble geometry and topological changes due to
-                                    splitting, merging and popping. A novel capacitance-based method is proposed that can
-                                    estimate volume-mode bubble frequency changes due to bubble size, shape, and proximity
-                                    to solid and air interfaces.  Our acoustic transfer model is able to capture cavity
-                                    resonance effects due to near-field geometry, and we also propose a fast precomputed
-                                    bubble-plane model for cheap transfer evaluation. In addition, we consider a
-                                    bubble forcing model that better accounts for bubble entrainment, splitting, and merging events, as well as a
-                                    Helmholtz resonator model for bubble popping sounds. To overcome frequency bandwidth
-                                    limitations associated with coarse resolution fluid grids, we simulate micro-bubbles in
-                                    the audio domain using a power-law model of bubble populations. Finally, we present
-                                    several detailed examples of audiovisual water simulations and physical
-                                    experiments to validate our frequency model.
+                        <div class="abstractBox">
+                            <button type="button" class="btn btn-default btn-margin">
+                                Abstract
+                            </button>
+                            <div class="abstract">
+                                This paper explores methods for synthesizing physics-based bubble sounds directly from
+                                two-phase incompressible simulations of bubbly water flows. By tracking fluid-air
+                                interface geometry, we identify bubble geometry and topological changes due to
+                                splitting, merging and popping. A novel capacitance-based method is proposed that can
+                                estimate volume-mode bubble frequency changes due to bubble size, shape, and proximity
+                                to solid and air interfaces. Our acoustic transfer model is able to capture cavity
+                                resonance effects due to near-field geometry, and we also propose a fast precomputed
+                                bubble-plane model for cheap transfer evaluation. In addition, we consider a
+                                bubble forcing model that better accounts for bubble entrainment, splitting, and merging
+                                events, as well as a
+                                Helmholtz resonator model for bubble popping sounds. To overcome frequency bandwidth
+                                limitations associated with coarse resolution fluid grids, we simulate micro-bubbles in
+                                the audio domain using a power-law model of bubble populations. Finally, we present
+                                several detailed examples of audiovisual water simulations and physical
+                                experiments to validate our frequency model.
                                 </div>
-                            </div>
-                            <a href="http://dl.acm.org/authorize?N27127" class="btn btn-default btn-margin">PDF</a>
-                            <a href="http://www.cs.cornell.edu/projects/Sound/bubbles" class="btn btn-default btn-margin">Project page</a>
-                            <div class="bibtexBox">
-                                <button type="button" class="btn btn-default btn-margin">
-                                    Bibtex
-                                </button>
-                                <div class="bibtex">
-                                    @article{Langlois:2016:Bubbles,
-                                    <br>
+                                </div>
+                                <a href="http://dl.acm.org/authorize?N27127" class="btn btn-default btn-margin">PDF</a>
+                                <a href="http://www.cs.cornell.edu/projects/Sound/bubbles" class="btn btn-default btn-margin">Project page</a>
+                                <div class="bibtexBox">
+                                    <button type="button" class="btn btn-default btn-margin">
+                                        Bibtex
+                                    </button>
+                                    <div class="bibtex">
+                                        @article{Langlois:2016:Bubbles,
+                                        <br>
                                         author = {Timothy R. Langlois and Changxi Zheng and Doug L. James},
                                         <br>
-                                        title  = {Toward Animating Water with Complex Acoustic Bubbles},
-                                        <br>
-                                        journal = {ACM Transactions on Graphics (Proceedings of SIGGRAPH 2016)},
-                                        <br>
-                                        year = {2016},
-                                        <br>
-                                        volume = {35},
-                                        <br>
-                                        number = {4},
-                                        <br>
-                                        month  = Jul,
-                                        <br>
-                                        doi = {10.1145/2897824.2925904}
-                                        <br>
-                                        url = {http://www.cs.cornell.edu/projects/Sound/bubbles}
-                                        <br>
-                                    }
+                                title = {Toward Animating Water with Complex Acoustic Bubbles},
+                                <br>
+                                journal = {ACM Transactions on Graphics (Proceedings of SIGGRAPH 2016)},
+                                <br>
+                                year = {2016},
+                                <br>
+                                volume = {35},
+                                <br>
+                                number = {4},
+                                <br>
+                                month = Jul,
+                                <br>
+                                doi = {10.1145/2897824.2925904}
+                                <br>
+                                url = {http://www.cs.cornell.edu/projects/Sound/bubbles}
+                                <br>
+                                }
                                 </div>
-                            </div>
-                            <a href="https://youtu.be/WFkaCYXLq3A" class="btn btn-default btn-margin">Video</a>
-                        </div>
-                    </div>
-                    <div class="row row-pad">
-                        <div class="col-sm-3" align="center">
-                            <a href="http://www.cs.cornell.edu/projects/Sound/modec">
-                                <img class="pubImg img-responsive" src="publications/modec/thumb.png" alt="Eigenmode Compression"/>
+                                </div>
+                                <a href="https://youtu.be/WFkaCYXLq3A" class="btn btn-default btn-margin">Video</a>
+                                </div>
+                                </div>
+                                <div class="row row-pad">
+                                    <div class="col-sm-3" align="center">
+                                        <a href="http://www.cs.cornell.edu/projects/Sound/modec">
+                            <img class="pubImg img-responsive" src="publications/modec/thumb.png" alt="Eigenmode Compression" />
                             </a>
-                        </div>
-                        <div class="col-sm-9">
-                            <div class="pub-title">Eigenmode Compression for Modal Sound Models</div>
+                            </div>
+                            <div class="col-sm-9">
+                                <div class="pub-title">Eigenmode Compression for Modal Sound Models</div>
 
-                            <div class="authors">
-                                Timothy R. Langlois, Steven S. An, Kelvin K. Jin, and Doug L. James
-                            </div>
-                            <div class="venue">ACM Transactions on Graphics (SIGGRAPH 2014)</div>
-
-                            <div class="abstractBox">
-                                <button type="button" class="btn btn-default btn-margin">
-                                    Abstract
-                                </button>
-                                <div class="abstract">
-                                    We propose and evaluate a method for significantly compressing modal sound models, thereby making them far more practical for audiovisual applications.
-                                    The dense eigenmode matrix, needed to compute the sound model's response to contact forces, can consume tens to thousands of megabytes
-                                    depending on mesh resolution and mode count. Our eigenmode compression pipeline is based on nonlinear optimization of Moving
-                                    Least Squares (MLS) approximations. Enhanced compression is achieved by exploiting symmetry both within and between eigenmodes,
-                                    and by adaptively assigning per-mode error levels based on human perception of the far-field pressure amplitudes. Our method provides
-                                    smooth eigenmode approximations, and efficient random access. We demonstrate that, in many cases, hundredfold compression ratios can
-                                    be achieved without audible degradation of the rendered sound.
-                                </div>
-                            </div>
-                            <a href="http://www.cs.cornell.edu/projects/Sound/modec/modec.pdf" class="btn btn-default btn-margin">PDF</a>
-                            <a href="http://www.cs.cornell.edu/projects/Sound/modec" class="btn btn-default btn-margin">Project page</a>
-                            <div class="bibtexBox">
-                                <button type="button" class="btn btn-default btn-margin">
-                                    Bibtex
-                                </button>
-                                <div class="bibtex">
-                                    @article{Langlois:2014:EMC,
-                                    <br>
-                                        author = {Timothy R. Langlois and Steven S. An and Kelvin K. Jin and Doug L. James},
-                                        <br>
-                                        title  = {Eigenmode Compression for Modal Sound Models},
-                                        <br>
-                                        journal = {ACM Transactions on Graphics (Proceedings of SIGGRAPH 2014)},
-                                        <br>
-                                        year = {2014},
-                                        <br>
-                                        volume = {33},
-                                        <br>
-                                        number = {4},
-                                        <br>
-                                        month  = Aug,
-                                        <br>
-                                        doi = {10.1145/2601097.2601177}
-                                        <br>
-                                        url = {http://www.cs.cornell.edu/projects/Sound/modec}
-                                        <br>
-                                    }
-                                </div>
-                            </div>
-                            <a href="https://youtu.be/5pif-WUpXqE" class="btn btn-default btn-margin">Video</a>
+                        <div class="authors">
+                            Timothy R. Langlois, Steven S. An, Kelvin K. Jin, and Doug L. James
                         </div>
-                    </div>
-                    <div class="row row-pad">
-                        <div class="col-sm-3" align="center">
-                            <a href="http://www.cs.cornell.edu/projects/Sound/ifa">
-                                <img class="pubImg img-responsive" src="publications/ifa/thumb.jpg" alt="Inverse-Foley Animation"/>
+                        <div class="venue">ACM Transactions on Graphics (SIGGRAPH 2014)</div>
+
+                        <div class="abstractBox">
+                            <button type="button" class="btn btn-default btn-margin">
+                                Abstract
+                            </button>
+                            <div class="abstract">
+                                We propose and evaluate a method for significantly compressing modal sound models,
+                                thereby making them far more practical for audiovisual applications.
+                                The dense eigenmode matrix, needed to compute the sound model's response to contact
+                                forces, can consume tens to thousands of megabytes
+                                depending on mesh resolution and mode count. Our eigenmode compression pipeline is based
+                                on nonlinear optimization of Moving
+                                Least Squares (MLS) approximations. Enhanced compression is achieved by exploiting
+                                symmetry both within and between eigenmodes,
+                                and by adaptively assigning per-mode error levels based on human perception of the
+                                far-field pressure amplitudes. Our method provides
+                                smooth eigenmode approximations, and efficient random access. We demonstrate that, in
+                                many cases, hundredfold compression ratios can
+                                be achieved without audible degradation of the rendered sound.
+                                </div>
+                                </div>
+                                <a href="http://www.cs.cornell.edu/projects/Sound/modec/modec.pdf" class="btn btn-default btn-margin">PDF</a>
+                        <a href="http://www.cs.cornell.edu/projects/Sound/modec" class="btn btn-default btn-margin">Project
+                            page</a>
+                        <div class="bibtexBox">
+                            <button type="button" class="btn btn-default btn-margin">
+                                Bibtex
+                            </button>
+                            <div class="bibtex">
+                                @article{Langlois:2014:EMC,
+                                <br>
+                                author = {Timothy R. Langlois and Steven S. An and Kelvin K. Jin and Doug L. James},
+                                <br>
+                                title = {Eigenmode Compression for Modal Sound Models},
+                                <br>
+                                journal = {ACM Transactions on Graphics (Proceedings of SIGGRAPH 2014)},
+                                <br>
+                                year = {2014},
+                                <br>
+                                volume = {33},
+                                <br>
+                                number = {4},
+                                <br>
+                                month = Aug,
+                                <br>
+                                doi = {10.1145/2601097.2601177}
+                                <br>
+                                url = {http://www.cs.cornell.edu/projects/Sound/modec}
+                                <br>
+                                }
+                                </div>
+                                </div>
+                                <a href="https://youtu.be/5pif-WUpXqE" class="btn btn-default btn-margin">Video</a>
+                                </div>
+                                </div>
+                                <div class="row row-pad">
+                                    <div class="col-sm-3" align="center">
+                                        <a href="http://www.cs.cornell.edu/projects/Sound/ifa">
+                            <img class="pubImg img-responsive" src="publications/ifa/thumb.jpg" alt="Inverse-Foley Animation" />
                             </a>
-                        </div>
-                        <div class="col-sm-9">
-                            <div class="pub-title">Inverse-Foley Animation: Synchronizing rigid-body motions to sound</div>
+                            </div>
+                            <div class="col-sm-9">
+                                <div class="pub-title">Inverse-Foley Animation: Synchronizing rigid-body motions to sound</div>
 
-                            <div class="authors">
-                                Timothy R. Langlois and Doug L. James
-                            </div>
-                            <div class="venue">ACM Transactions on Graphics (SIGGRAPH 2014)</div>
-
-                            <div class="abstractBox">
-                                <button type="button" class="btn btn-default btn-margin">
-                                    Abstract
-                                </button>
-                                <div class="abstract">
-                                    In this paper, we introduce Inverse-Foley Animation, a technique for optimizing rigid-body animations so that contact
-                                    events are synchronized with input sound events. A precomputed database of randomly sampled rigid-body contact events
-                                    is used to build a contact-event graph, which can be searched to determine a plausible sequence of contact events synchronized
-                                    with the input sound's events. To more easily find motions with matching contact times, we allow transitions between simulated
-                                    contact events using a motion blending formulation based on modified contact impulses. We fine tune synchronization
-                                    by slightly retiming ballistic motions. Given a sound, our system can synthesize synchronized motions using graphs
-                                    built with hundreds of thousands of precomputed motions, and millions of contact events. Our system is easy to use, and
-                                    has been used to plan motions for hundreds of sounds, and dozens of rigid-body models.
-                                </div>
-                            </div>
-                            <a href="http://www.cs.cornell.edu/projects/Sound/ifa/ifa.pdf" class="btn btn-default btn-margin">PDF</a>
-                            <a href="http://www.cs.cornell.edu/projects/Sound/ifa" class="btn btn-default btn-margin">Project page</a>
-                            <div class="bibtexBox">
-                                <button type="button" class="btn btn-default btn-margin">
-                                    Bibtex
-                                </button>
-                                <div class="bibtex">
-                                    @article{Langlois:2014:IFA,
-                                    <br>
-                                        author = {Timothy R. Langlois and Doug L. James},
-                                        <br>
-                                        title  = {Inverse-Foley Animation: Synchronizing rigid-body motions to sound},
-                                        <br>
-                                        journal = {ACM Transactions on Graphics (Proceedings of SIGGRAPH 2014)},
-                                        <br>
-                                        year = {2014},
-                                        <br>
-                                        volume = {33},
-                                        <br>
-                                        number = {4},
-                                        <br>
-                                        month  = Aug,
-                                        <br>
-                                        doi = {10.1145/2601097.2601178}
-                                        <br>
-                                        url = {http://www.cs.cornell.edu/projects/Sound/ifa}
-                                        <br>
-                                    }
-                                </div>
-                            </div>
-                            <a href="https://youtu.be/EGkQkdCKztM" class="btn btn-default btn-margin">Video</a>
+                        <div class="authors">
+                            Timothy R. Langlois and Doug L. James
                         </div>
-                    </div>
-                    <div class="row row-pad">
-                        <div class="col-sm-3" align="center">
-                            <img class="pubImg img-responsive" src="publications/proteins/thumb.png" alt="Receptor Arrays"/>
+                        <div class="venue">ACM Transactions on Graphics (SIGGRAPH 2014)</div>
+
+                        <div class="abstractBox">
+                            <button type="button" class="btn btn-default btn-margin">
+                                Abstract
+                            </button>
+                            <div class="abstract">
+                                In this paper, we introduce Inverse-Foley Animation, a technique for optimizing
+                                rigid-body animations so that contact
+                                events are synchronized with input sound events. A precomputed database of randomly
+                                sampled rigid-body contact events
+                                is used to build a contact-event graph, which can be searched to determine a plausible
+                                sequence of contact events synchronized
+                                with the input sound's events. To more easily find motions with matching contact times,
+                                we allow transitions between simulated
+                                contact events using a motion blending formulation based on modified contact impulses.
+                                We fine tune synchronization
+                                by slightly retiming ballistic motions. Given a sound, our system can synthesize
+                                synchronized motions using graphs
+                                built with hundreds of thousands of precomputed motions, and millions of contact events.
+                                Our system is easy to use, and
+                                has been used to plan motions for hundreds of sounds, and dozens of rigid-body models.
+                                </div>
+                                </div>
+                                <a href="http://www.cs.cornell.edu/projects/Sound/ifa/ifa.pdf" class="btn btn-default btn-margin">PDF</a>
+                        <a href="http://www.cs.cornell.edu/projects/Sound/ifa" class="btn btn-default btn-margin">Project
+                            page</a>
+                        <div class="bibtexBox">
+                            <button type="button" class="btn btn-default btn-margin">
+                                Bibtex
+                            </button>
+                            <div class="bibtex">
+                                @article{Langlois:2014:IFA,
+                                <br>
+                                author = {Timothy R. Langlois and Doug L. James},
+                                <br>
+                                title = {Inverse-Foley Animation: Synchronizing rigid-body motions to sound},
+                                <br>
+                                journal = {ACM Transactions on Graphics (Proceedings of SIGGRAPH 2014)},
+                                <br>
+                                year = {2014},
+                                <br>
+                                volume = {33},
+                                <br>
+                                number = {4},
+                                <br>
+                                month = Aug,
+                                <br>
+                                doi = {10.1145/2601097.2601178}
+                                <br>
+                                url = {http://www.cs.cornell.edu/projects/Sound/ifa}
+                                <br>
+                                }
+                                </div>
+                                </div>
+                                <a href="https://youtu.be/EGkQkdCKztM" class="btn btn-default btn-margin">Video</a>
+                                </div>
+                                </div>
+                                <div class="row row-pad">
+                                    <div class="col-sm-3" align="center">
+                        <img class="pubImg img-responsive" src="publications/proteins/thumb.png" alt="Receptor Arrays" />
                         </div>
                         <div class="col-sm-9">
                             <div class="pub-title">Protein Identification using Receptor Arrays and Mass Spectrometry</div>
 
-                            <div class="authors">
-                                Timothy R. Langlois, Ramgopal R. Mettu, and Richard W. Vachet
-                            </div>
-                            <div class="venue">Advances in Computational Biology (2010)</div>
+                        <div class="authors">
+                            Timothy R. Langlois, Ramgopal R. Mettu, and Richard W. Vachet
+                        </div>
+                        <div class="venue">Advances in Computational Biology (2010)</div>
 
-                            <div class="abstractBox">
-                                <button type="button" class="btn btn-default btn-margin">
-                                    Abstract
-                                </button>
-                                <div class="abstract">
-                                    Mass spectrometry is one of the main tools for protein identification in
-                                    complex mixtures. When the sequence of the protein is known, we can check to see
-                                    if the known mass distribution of peptides for a given protein is present in the recorded
-                                    mass distribution of the mixture being analyzed. Unfortunately, this general approach
-                                    suffers from high false-positive rates, since in a complex mixture, the likelihood that
-                                    we will observe any particular mass distribution is high, whether or not the protein
-                                    of interest is in the mixture. In this paper, we propose a scoring methodology
-                                    and algorithm for protein identification that make use of a new experimental tech-
-                                    nique, which we call <em>receptor arrays</em>, for separating a mixture based on another
-                                    differentiating property of peptides called <em>isoelectric point (pI)</em>. We perform extensive
-                                    simulation experiments on several genomes and show that additional information
-                                    about peptides can achieve an average 30% reduction in false-positive rates over
-                                    existing methods, while achieving very high true-positive identification rates.
+                        <div class="abstractBox">
+                            <button type="button" class="btn btn-default btn-margin">
+                                Abstract
+                            </button>
+                            <div class="abstract">
+                                Mass spectrometry is one of the main tools for protein identification in
+                                complex mixtures. When the sequence of the protein is known, we can check to see
+                                if the known mass distribution of peptides for a given protein is present in the
+                                recorded
+                                mass distribution of the mixture being analyzed. Unfortunately, this general approach
+                                suffers from high false-positive rates, since in a complex mixture, the likelihood that
+                                we will observe any particular mass distribution is high, whether or not the protein
+                                of interest is in the mixture. In this paper, we propose a scoring methodology
+                                and algorithm for protein identification that make use of a new experimental tech-
+                                nique, which we call <em>receptor arrays</em>, for separating a mixture based on another
+                                differentiating property of peptides called <em>isoelectric point (pI)</em>. We perform
+                                extensive
+                                simulation experiments on several genomes and show that additional information
+                                about peptides can achieve an average 30% reduction in false-positive rates over
+                                existing methods, while achieving very high true-positive identification rates.
                                 </div>
-                            </div>
-                            <div class="bibtexBox">
-                                <button type="button" class="btn btn-default btn-margin">
-                                    Bibtex
-                                </button>
-                                <div class="bibtex">
-                                    @incollection{Langlois:2010:IEP,
-                                    <br>
+                                </div>
+                                <div class="bibtexBox">
+                                    <button type="button" class="btn btn-default btn-margin">
+                                        Bibtex
+                                    </button>
+                                    <div class="bibtex">
+                                        @incollection{Langlois:2010:IEP,
+                                        <br>
                                         year={2010},
                                         <br>
                                         isbn={978-1-4419-5912-6},
@@ -1334,46 +1603,49 @@ In an extensive comparison of available simulation methods, research libraries a
                                         <br>
                                         publisher={Springer New York},
                                         <br>
-                                        keywords={Receptor; Array; Mass; Spectrometry; Protein; Identification; Isoelectric; Point},
-                                        <br>
-                                        author={Langlois, Timothy R. and Vachet, Richard W. and Mettu, Ramgopal R.},
-                                        <br>
-                                        pages={343-351},
-                                        <br>
-                                        language={English}
-                                        <br>
-                                    }
+                                keywords={Receptor; Array; Mass; Spectrometry; Protein; Identification; Isoelectric;
+                                Point},
+                                <br>
+                                author={Langlois, Timothy R. and Vachet, Richard W. and Mettu, Ramgopal R.},
+                                <br>
+                                pages={343-351},
+                                <br>
+                                language={English}
+                                <br>
+                                }
                                 </div>
-                            </div>
-                            <a href="http://dx.doi.org/10.1007/978-1-4419-5913-3_39" class="btn btn-default btn-margin">Project page</a>
+                                </div>
+                        <a href="http://dx.doi.org/10.1007/978-1-4419-5913-3_39" class="btn btn-default btn-margin">Project
+                            page</a>
                         </div>
-                    </div>
-                </div>
-            </div>
+                        </div>
+                        </div>
+                        </div>
 
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="h3 sec-header">Projects</div>
-                    <hr class="sec-div">
-                    <h4>Pool Table Analyzer</h4>
-                    <p>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="h3 sec-header">Projects</div>
+                <hr class="sec-div">
+                <h4>Pool Table Analyzer</h4>
+                <p>
                     My group's Senior Design Project at UMass. We designed and built a system
                     which watched a game of pool using webcams, suggested the best shot to the player,
                     and assisted them with aiming the cue stick, all in realtime. More details
                     <a href="http://www.ecs.umass.edu/ece/sdp/sdp09/mettu/">here</a>.
-                    </p>
+                </p>
                 </div>
-            </div>
+                </div>
 
-            <div class="row">
-                <div class="col-lg-12 footer-row">
-                    <footer class="footer">
-                        <noscript>&lt;--JavaScript here--&gt;<br></noscript>
-                        <script src="assets/js/random-quote.js"></script>
-                        Created with Twitter Bootstrap
-                    </footer>
-                </div>
+        <div class="row">
+            <div class="col-lg-12 footer-row">
+                <footer class="footer">
+                    <noscript>&lt;--JavaScript here--&gt;<br></noscript>
+                    <script src="assets/js/random-quote.js"></script>
+                    Created with Twitter Bootstrap
+                </footer>
             </div>
+        </div>
         </div><!--/.container-->
-    </body>
+        </body>
+
 </html>
