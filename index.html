@@ -273,6 +273,53 @@
                 <div class="row row-pad">
                     <div class="col-sm-3" align="center">
                         <a href="">
+                            <img class="pubImg img-responsive" src="publications/diffusionRigging/diffusionCharacterRigging.png" alt="spiral" />
+                            </a>
+                            </div>
+                            <div class="col-sm-9">
+                        <div class="pub-title">Automatic Diffusion-Based Rigging for Characters with Diverse Topologies
+                        </div>
+                        <div class="authors">
+                            Zeqi Gu, Difan Liu, Timothy Langlois, Matthew Fisher, Abe Davis
+                        </div>
+                        <div class="venue">Eurographics 2025
+                        </div>
+                        <div class="abstractBox">
+                            <button type="button" class="btn btn-default btn-margin">
+                                Abstract
+                            </button>
+                            <div class="abstract">
+                                Recent diffusion-based methods have achieved impressive results on animating images of human subjects. However, most of that success has built on human-specific body pose representations and extensive training with labeled real videos. In this work, we extend the ability of such models to animate images of characters with more diverse skeletal topologies. Given a small number (3-5) of example frames showing the character in different poses with corresponding skeletal information, our model quickly infers a rig for that character that can generate images corresponding to new skeleton poses. We propose a procedural data generation pipeline that efficiently samples training data with diverse topologies on the fly. We use it, along with a novel skeleton representation, to train our model on articulated shapes spanning a large space of textures and topologies. Then during fine-tuning, our model rapidly adapts to unseen target characters and generalizes well to rendering new poses, both for realistic and more stylized cartoon appearances. To better evaluate performance on this novel and challenging task, we create the first 2D video dataset that contains both humanoid and non-humanoid subjects with per-frame keypoint annotations. With extensive experiments, we demonstrate the superior quality of our results.
+                            </div>
+                        </div>
+                        <a href="https://traindragondiffusion.github.io/paper.pdf" class="btn btn-default btn-margin">PDF
+                        </a>
+                        <a href="https://traindragondiffusion.github.io/" class="btn btn-default btn-margin">Project page
+                        </a>
+                        <div class="bibtexBox">
+                            <button type="button" class="btn btn-default btn-margin">
+                                Bibtex
+                            </button>
+                            <div class="bibtex">
+                                @article{Gu:2025:DiffusionRigging,<br>
+                                journal = {Computer Graphics Forum},<br>
+                                title = {{How to Train Your Dragon: Automatic Diffusion-Based Rigging for Characters with Diverse Topologies}},<br>
+                                author = {Gu, Zeqi and Liu, Difan and Langlois, Timothy and Fisher, Matthew and Davis, Abe},<br>
+                                year = {2025},<br>
+                                publisher = {The Eurographics Association and John Wiley <span>&#38;</span> Sons Ltd.},<br>
+                                ISSN = {1467-8659},<br>
+                                DOI = {10.1111/cgf.70016}<br>
+                                }
+                            </div>
+                        </div>
+                        <!--<a href="https://youtu.be/Jo9opkMH7iY" class="btn btn-default btn-margin">Video-->
+                        <!--</a>-->
+                    </div>
+                </div>
+
+                <div class="row row-pad">
+                    <div class="col-sm-3" align="center">
+                        <a href="">
                             <img class="pubImg img-responsive" src="publications/logoMotion/cat1.gif" alt="spiral" />
                             </a>
                             </div>
@@ -302,7 +349,7 @@
                                 Bibtex
                             </button>
                             <div class="bibtex">
-                                @inproceedings{10.1145/3706598.3714155,<br>
+                                @inproceedings{Liu:2025:LogoMotion,<br>
                                 author = {Liu, Vivian and Kazi, Rubaiat Habib and Wei, Li-Yi and Fisher, Matthew and Langlois, Timothy and Walker, Seth and Chilton, Lydia},<br>
                                 title = {LogoMotion: Visually-Grounded Code Synthesis for Creating and Editing Animation},<br>
                                 year = {2025},<br>
