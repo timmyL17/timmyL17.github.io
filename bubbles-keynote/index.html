@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Modeling Liquid Sounds — Graphyz keynote</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="vendor/reveal/reveal.css">
+<link rel="stylesheet" href="vendor/katex/katex.min.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="reveal"><div class="slides">
+
+<!-- =============================================================== 1. TITLE -->
+<section class="slide center" id="s-title" data-time="0:00">
+  <canvas id="title-canvas" class="title-bg"></canvas>
+  <div class="title-content" style="margin:auto">
+    <h1 style="font-size:120px">Modeling Liquid Sounds</h1>
+    <p style="margin-top:70px; font-size:36px">Timothy R. Langlois</p>
+    <p class="tiny">Adobe · Graphyz keynote</p>
+  </div>
+  <aside class="notes">
+    <p>Thanks for having me. Today: bubbles. Why they matter well beyond graphics, how a bubble makes sound, and then a walk up a "ladder" of acoustic models — from models that get the <em>statistics</em> right to models good enough to make audio you'd want to listen to.</p>
+    <p>Theme to keep in mind: those are very different bars.</p>
+  </aside>
+</section>
+
+<!-- =============================================================== 2. GAS EXCHANGE -->
+<section class="slide" id="s-gas" data-time="0:30">
+  <h2>Bubbles help the ocean breathe<span class="sub">Breaking waves inject gas into the sea and spray into the air</span></h2>
+  <div class="row">
+    <figure>
+      <img src="assets/img/plunging-wave.png" alt="Bubble plume under a plunging breaking wave">
+      <figcaption>Bubble plume under a breaking wave, 1 s after impact [Deane &amp; Stokes 2002]</figcaption>
+    </figure>
+    <div class="col" style="justify-content:center">
+      <ul>
+        <li>Breaking waves drive clouds of bubbles metres below the surface</li>
+        <li>Hydrostatic pressure + surface tension squeeze the gas into solution
+          <ul><li>Bubble-mediated transfer: a significant share of air–sea CO₂ flux, growing with wind speed [Reichl &amp; Deike 2020]</li></ul>
+        </li>
+        <li>Bursting bubbles launch sea-spray aerosol → cloud condensation nuclei</li>
+        <li>Climate models need <span class="accent2">how many bubbles, of what size, how deep</span> — statistics</li>
+      </ul>
+    </div>
+  </div>
+  <aside class="notes">
+    <p>Start big: the ocean absorbs roughly a quarter of the CO₂ we emit, and the air–sea interface is where that happens. When waves break they entrain huge plumes of bubbles. The extra pressure at depth plus surface tension pushes gas into solution, so bubbles act like a pump — estimates put bubble-mediated transfer at a large fraction (~40% in Reichl &amp; Deike) of the CO₂ flux, more at high winds.</p>
+    <p>When they come back up and burst, they throw droplets into the air that become sea-spray aerosol and seed clouds.</p>
+    <p>Notice what these models need: populations, distributions, averages. Keep that in mind.</p>
+  </aside>
+</section>
+
+<!-- =============================================================== 3. SENSING -->
+<section class="slide" id="s-sensing" data-time="1:30">
+  <h2>Hard to see, easy to hear<span class="sub">Bubbles as acoustic sensors — and acoustic targets</span></h2>
+  <div class="cards" style="margin-top:40px">
+    <div class="card">
+      <h3>Passive listening</h3>
+      <p>Each bubble rings at a pitch set by its size.</p>
+      <p class="muted small">Sound spectrum → bubble census: breaking waves, surf zones, methane seeps on the seafloor [Deane 1997; Leighton &amp; White 2012].</p>
+    </div>
+    <div class="card">
+      <h3>Rain gauges</h3>
+      <p>Small raindrops trap bubbles that ring near 15 kHz.</p>
+      <p class="muted small">Underwater microphones measure rainfall and drop sizes over the open ocean [Medwin et al. 1992; Nystuen 2001].</p>
+    </div>
+    <div class="card">
+      <h3>Active sonar &amp; medicine</h3>
+      <p>A resonant bubble scatters sound far beyond its physical size.</p>
+      <p class="muted small">Ship wakes, fish swim bladders, and ultrasound contrast agents (1–10 µm microbubbles, MHz) [Trevorrow et al. 1994; Love 1978; Stride &amp; Saffari 2003].</p>
+    </div>
+  </div>
+  <p class="takeaway" style="margin-top:80px">Almost all of this works by <span class="accent2">inverting averages</span>: spectra, scattering strength, attenuation.</p>
+  <aside class="notes">
+    <p>Bubbles are hard to see — try counting them in that plume — but they're loud. Because a bubble's pitch is set by its size, the spectrum of underwater noise is effectively a census of the bubbles. Oceanographers use this for breaking waves and to quantify gas seeps.</p>
+    <p>Rain on the ocean has a distinctive peak around 15 kHz from small drops entraining tiny bubbles — that's how you measure rainfall in the middle of the ocean.</p>
+    <p>Actively: a bubble at resonance is an enormous scatterer, hundreds of times its geometric cross-section. That's why fish swim bladders show up on sonar, and why microbubbles are used as ultrasound contrast agents.</p>
+  </aside>
+</section>
+
+<!-- =============================================================== 4. HOW DOES WATER MAKE SOUND -->
+<section class="slide" id="s-howsound" data-time="2:30">
+  <h2>How does water make sound?<span class="sub">Mostly bubbles — and mostly when they are <em>born</em>, not when they pop</span></h2>
+  <div class="row">
+    <figure>
+      <video poster="assets/video/posters/real-bubble-slowmo.jpg" data-src="assets/video/real-bubble-slowmo.mp4" controls preload="auto"></video>
+      <figcaption>Real bubble: slow-motion video, sound at real speed</figcaption>
+    </figure>
+    <div class="col" style="justify-content:center">
+      <figure style="flex:0 0 auto"><img src="assets/img/spec-real-bubble.png" alt="Waveform and spectrogram of a bubble"><figcaption>One bubble ≈ one decaying sinusoid with a small upward chirp</figcaption></figure>
+      <ul class="small" style="margin-top:30px">
+        <li>Pinch-off forces the bubble into volume oscillation</li>
+        <li>It rings like a damped oscillator for a few ms</li>
+        <li>Pitch depends on size, shape, and position</li>
+      </ul>
+    </div>
+  </div>
+  <aside class="notes">
+    <p>Here's a single real bubble. Video slowed down, audio at real speed. What surprises most people: the sound is made when the bubble forms, not when it pops. Pinch-off kicks the bubble into volume oscillations and it rings like a damped oscillator. In the spectrogram: one main frequency, with a slight rise as it approaches the surface.</p>
+  </aside>
+</section>
+
+<!-- =============================================================== 5. MINNAERT -->
+<section class="slide" id="s-minnaert" data-time="3:30">
+  <h2>A bubble is a mass on a spring<span class="sub">Minnaert, “On musical air-bubbles and the sounds of running water” (1933)</span></h2>
+  <div class="row">
+    <div class="col w2"><canvas id="minnaert-canvas" class="demo"></canvas></div>
+    <div class="col" style="justify-content:center">
+      <div class="eq" style="font-size:40px">$$f_0 = \frac{1}{2\pi R}\sqrt{\frac{3\gamma P_0}{\rho}} \;\approx\; \frac{3.3\,\text{m}\cdot\text{Hz}}{R}$$</div>
+      <ul class="small">
+        <li><span class="accent2">Spring</span>: compressed gas (\(\gamma P_0\))</li>
+        <li><span class="accent">Mass</span>: water sloshing around it (\(\rho\))</li>
+        <li>Damping: radiation, thermal, viscous</li>
+        <li>Sound wavelength ≫ bubble → water is locally incompressible</li>
+      </ul>
+      <div class="demo-controls" style="margin-top:30px">
+        <!-- log10 of radius in mm: 0.1 mm (33 kHz) to 16 mm (205 Hz) -->
+        <label>radius <span class="slider-stack"><input type="range" id="minnaert-r" min="-1" max="1.215" step="0.005" value="0"><span class="readout" id="minnaert-rv"></span></span></label>
+        <span>f₀ = <span class="readout" id="minnaert-f"></span></span>
+        <span>decay = <span class="readout" id="minnaert-d"></span></span>
+        <button class="orange" id="minnaert-play">▶ ping</button>
+      </div>
+    </div>
+  </div>
+  <aside class="notes">
+    <p>The classic model: Minnaert 1933. The gas is the spring, the water around it is the mass. A 1 mm radius bubble rings at about 3.3 kHz; frequency is inversely proportional to radius. [Play a few sizes: 3 mm, 1 mm, 0.3 mm.]</p>
+    <p>Key fact: at 3 kHz the wavelength in water is ~45 cm, the bubble is 2 mm — so near the bubble the flow is incompressible. That's what makes everything that follows tractable.</p>
+  </aside>
+</section>
+
+<!-- =============================================================== 6. FORCING -->
+<section class="slide" id="s-forcing" data-time="5:00">
+  <h2>What rings the bell?<span class="sub">The forcing sets amplitude and attack — and is the hardest part to model</span></h2>
+  <div class="row">
+    <figure>
+      <img src="assets/img/neck-collapse.png" alt="Bubble neck collapse at pinch-off">
+      <figcaption>Pinch-off: the collapsing neck jets into the bubble [Deane &amp; Czerski 2008]</figcaption>
+    </figure>
+    <div class="col" style="justify-content:center">
+      <h3>Birth, splitting, merging</h3>
+      <p class="small">High curvature at the neck → surface tension drives a rapid volume change → the bubble starts ringing.</p>
+      <p class="small muted">Splitting and merging excite both bubbles [Czerski &amp; Deane 2011].</p>
+      <h3 style="margin-top:30px">Popping</h3>
+      <p class="small">At the surface the cap film ruptures and the cavity rings as a Helmholtz resonator — quieter, higher-frequency content.</p>
+    </div>
+    <figure>
+      <img src="assets/img/bubble-bursting.png" alt="Bubble bursting at the surface">
+      <figcaption>Popping: cap-film rupture</figcaption>
+    </figure>
+  </div>
+  <aside class="notes">
+    <p>The Minnaert model tells you the pitch, but not how loud or how the bubble is struck. The most widely used entrainment model is neck collapse: the neck at pinch-off has extreme curvature, surface tension fires it into the bubble, and that rapid volume change excites the oscillation. Splitting and merging do similar things. Popping makes a little sound too — the cavity rings like blowing over a bottle.</p>
+  </aside>
+</section>
+
+<!-- =============================================================== 7. TANK -->
+<section class="slide" id="s-tank" data-time="5:45">
+  <h2>Pitch depends on surroundings<span class="sub">Same bubble, different place → different note</span></h2>
+  <div class="row">
+    <div class="col w2"><canvas id="tank-canvas" class="demo" style="cursor:pointer" data-prevent-swipe></canvas></div>
+    <div class="col" style="justify-content:center">
+      <p class="small"><b>Drag the bubble</b> (hold to listen).</p>
+      <ul class="small">
+        <li><span style="color:var(--bad)">Near the free surface</span>: less water to push → pitch rises</li>
+        <li><span class="accent">Near rigid walls</span>: more effective mass → pitch drops</li>
+        <li>Shape matters too: an ellipsoid relaxing to a sphere drops ~15% in 13 ms</li>
+      </ul>
+      <p class="small muted" style="margin-top:12px">Method of images (one wall at distance \(d\)):</p>
+      <div class="eq-small">$$f \approx \frac{f_0}{\sqrt{1 \mp R/2d}}$$</div>
+      <div class="demo-controls" style="margin-top:20px">
+        <label>radius <input type="range" id="tank-r" min="0.5" max="4" step="0.05" value="2"></label>
+        <span>f = <span class="readout" id="tank-f"></span></span>
+        <span class="muted">(free space <span id="tank-f0"></span>)</span>
+        <button class="orange" id="tank-bloop">▶ rise to surface</button>
+      </div>
+    </div>
+  </div>
+  <aside class="notes">
+    <p>The environment changes the effective mass. Near the free surface there's less water to push, so pitch rises — that's the classic upward "bloop" chirp. Near a rigid wall it drops. Shape matters too. In real scenes the bubble is never in free space, so if you want a specific splash to sound right, you need to know where each bubble is and what shape it is.</p>
+  </aside>
+</section>
+
+<!-- =============================================================== 8. TWO QUESTIONS -->
+<section class="slide" id="s-questions" data-time="6:45">
+  <h2>Different Questions</h2>
+  <div class="cards">
+    <div class="card">
+      <h3>“How many bubbles are there?”</h3>
+      <p class="muted small">Oceanography, sensing, engineering</p>
+      <ul class="small">
+        <li>Needs averages: spectra, size distributions, sound speed, attenuation</li>
+        <li>Individual errors average out</li>
+        <li>Success = the right numbers</li>
+      </ul>
+    </div>
+    <div class="card" style="border-color:var(--accent2)">
+      <h3 class="accent2">“What does <em>this</em> splash sound like?”</h3>
+      <p class="muted small">Graphics, games, VR, film</p>
+      <ul class="small">
+        <li>Needs a waveform: every onset, pitch glide, amplitude, and the timing between them</li>
+        <li>Synchronized with what you see</li>
+        <li>Success = it sounds right to a listener</li>
+      </ul>
+    </div>
+  </div>
+  <p class="takeaway">The ear is unforgiving: it hears clicks, wrong rhythms, missing low end, and anything that “sounds synthetic.”</p>
+  <aside class="notes">
+    <p>This is the core tension of the talk. Most of acoustics research on bubbles asks the first question and needs averaged quantities; individual errors wash out. In graphics we're asking the second question: give me a waveform for this particular splash, in sync with the picture. That is a much higher bar — the ear is a ruthless critic.</p>
+  </aside>
+</section>
+
+<!-- =============================================================== 9. STATISTICAL MODELS -->
+<section class="slide" id="s-stats" data-time="7:45" data-ladder="0">
+  <h2>Getting the statistics right<span class="sub">Models that describe the crowd, not the individual</span></h2>
+  <div class="row">
+    <div class="col">
+      <h3>Bubble size distributions</h3>
+      <div class="eq-small">$$N(R) \propto \begin{cases} R^{-3/2} & R &lt; R_H \\ R^{-10/3} & R &gt; R_H \end{cases}\quad R_H\!\approx\! 1\,\text{mm}$$</div>
+      <p class="small muted">Breaking waves [Deane &amp; Stokes 2002]: a sharp change at the Hinze scale.</p>
+      <h3 style="margin-top:20px">Ambient-noise spectra</h3>
+      <p class="small muted">Spectral level ↔ bubbles born per second ↔ wind speed and rain rate.</p>
+    </div>
+    <div class="col">
+      <h3>Effective-medium models</h3>
+      <div class="eq-small">$$\frac{1}{\rho_m c_m^2} = \frac{\beta}{\rho_g c_g^2} + \frac{1-\beta}{\rho_w c_w^2}$$</div>
+      <p class="small muted">Wood (1930): with just 1% air, the speed of sound drops from 1480 m/s to ~100 m/s.</p>
+      <h3 style="margin-top:20px">Collective cloud oscillations</h3>
+      <p class="small muted">Bubble clouds as a single resonator → low-frequency ocean noise [Prosperetti 1988; Carey &amp; Browning].</p>
+    </div>
+  </div>
+  <p class="takeaway">Excellent for measurement and inversion. But not great for <span class="accent2">auralization</span>.</p>
+  <aside class="notes">
+    <p>The "statistics" rung. Size distributions with a famous −10/3 power law above about a millimetre. Ambient-noise spectra that map to wind speed and rain rate. Effective-medium theory: treat bubbly water as a new fluid — with only 1% air the speed of sound drops to about 100 m/s, slower than in air. And cloud-scale resonances that explain low-frequency ocean noise.</p>
+    <p>These are excellent models. They're also all averages. So: if I get the spectrum exactly right, do I get the sound right?</p>
+  </aside>
+</section>
+
+<!-- =============================================================== 10. SAME SPECTRUM -->
+<section class="slide" id="s-samespec" data-time="8:45" data-ladder="0">
+  <h2>Same statistics ≠ same sound<span class="sub">Both clips have an identical long-time power spectrum</span></h2>
+  <div class="row">
+    <div class="col w3"><canvas id="ss-canvas" class="demo"></canvas></div>
+    <div class="col" style="justify-content:center; gap:26px">
+      <button id="ss-a">▶ A: bubbles</button>
+      <button class="orange" id="ss-b">▶ B: same spectrum</button>
+      <p class="small muted">B = A with every Fourier phase randomized.</p>
+      <p class="small">The spectrum throws away <em>when</em> things happen. Your ear doesn't.</p>
+    </div>
+  </div>
+  <aside class="notes">
+    <p>A is a stream of synthetic bubbles. B has exactly the same magnitude spectrum — I just randomized the phases. Same power at every frequency, same loudness. [Play both.] A sounds like water; B sounds like a hiss / a waterfall heard from far away. Every statistical measurement on the left would call these the same. The difference is all in timing and phase: individual events.</p>
+  </aside>
+</section>
+
+<!-- =============================================================== 11. VAN DEN DOEL -->
+<section class="slide" id="s-vdd" data-time="9:45" data-ladder="1">
+  <h2>Purely synthetic bubbles<span class="sub">van den Doel, “Physically based models for liquid sounds,” ACM TAP 2005</span></h2>
+  <div class="row">
+    <div class="col">
+      <p class="small" style="margin-bottom:0">Each bubble is a damped, chirping sinusoid:</p>
+      <div class="eq-small" style="font-size:30px">$$p(t) = a\,\sin\!\Big(2\pi\!\int_0^t\! f(\tau)\,d\tau\Big)\,e^{-d t}$$</div>
+      <div class="eq-small" style="font-size:30px">$$f(t) = f_0(1+\xi d\, t),\quad f_0 = \tfrac{3}{r},\quad d = \tfrac{0.13}{r} + \tfrac{0.0072}{r^{3/2}}$$</div>
+      <p class="small">Events: Poisson rate \(\lambda\), radii \(p(r)\propto r^{-\beta}\)</p>
+      <p class="small" style="margin:0"><span style="color:var(--good)">✓</span> Real-time, tiny, tunable, “watery”<br>
+      <span style="color:var(--bad)">✗</span> Not tied to any animation; tuned by ear</p>
+    </div>
+    <div class="col w2" style="gap:16px">
+      <canvas id="vdd-canvas" class="demo grow"></canvas>
+      <div class="demo-controls">
+        <button data-vdd="drip">drip</button><button data-vdd="stream">stream</button><button data-vdd="rain">rain</button><button data-vdd="pour">pour</button>
+        <button class="orange" id="vdd-play">▶ regenerate</button><button id="vdd-stop">■</button>
+      </div>
+      <div class="demo-controls small" style="font-size:24px">
+        <label>λ <input type="range" id="vdd-rate" min="1" max="1500" step="1" value="120" style="width:200px"><span id="vdd-rate-v" class="readout" style="min-width:60px"></span>/s</label>
+        <label>r<sub>min</sub> <input type="range" id="vdd-rmin" min="0.1" max="5" step="0.05" value="0.5" style="width:160px"><span id="vdd-rmin-v" class="readout" style="min-width:50px"></span>mm</label>
+        <label>r<sub>max</sub> <input type="range" id="vdd-rmax" min="0.2" max="10" step="0.1" value="6" style="width:160px"><span id="vdd-rmax-v" class="readout" style="min-width:50px"></span>mm</label>
+        <label>β <input type="range" id="vdd-beta" min="0" max="4" step="0.1" value="2" style="width:140px"><span id="vdd-beta-v" class="readout" style="min-width:40px"></span></label>
+        <label>ξ <input type="range" id="vdd-xi" min="0" max="0.5" step="0.01" value="0.1" style="width:140px"><span id="vdd-xi-v" class="readout" style="min-width:50px"></span></label>
+      </div>
+    </div>
+  </div>
+  <aside class="notes">
+    <p>First rung where you can actually listen: Kees van den Doel's 2005 model. Every bubble is a damped sinusoid with Minnaert frequency, an empirical damping, and a small linear upward chirp to mimic rising toward the surface. Then you sprinkle bubbles in time with a random process and a power-law size distribution.</p>
+    <p>[Click presets: drip, stream, rain, pour.] It's real-time and surprisingly convincing. Each dot is one bubble — this model is really just a list of events. But there's no connection to a particular animation: the parameters are chosen by ear and nothing knows where the water is.</p>
+  </aside>
+</section>
+
+<!-- =============================================================== 12. FLUID-DRIVEN -->
+<section class="slide" id="s-fluid" data-time="11:15" data-ladder="2">
+  <h2>Driving bubbles with fluid simulation<span class="sub">Spherical bubbles + Minnaert frequency, placed by the simulation</span></h2>
+  <div class="row">
+    <figure>
+      <video poster="assets/video/posters/harmonic-fluids.jpg" data-src="assets/video/harmonic-fluids.mp4" controls preload="metadata"></video>
+      <figcaption>Harmonic Fluids [Zheng &amp; James 2009]</figcaption>
+    </figure>
+    <figure>
+      <video poster="assets/video/posters/sounding-liquids.jpg" data-src="assets/video/sounding-liquids.mp4" controls preload="metadata"></video>
+      <figcaption>Sounding Liquids [Moss et al. 2010]</figcaption>
+    </figure>
+  </div>
+  <p class="small muted" style="margin-top:20px">Now synchronized with the picture — but bubble creation was hand-tuned or unrealistic, and shape/coupling ignored.</p>
+  <aside class="notes">
+    <p>Graphics then connected these oscillators to fluid simulations: Harmonic Fluids added radiation through the fluid and air; Sounding Liquids drove bubbles from a shallow-water style sim. Now the sound lines up with the picture — but bubbles were still spheres, creation needed hand-tuning, and the physics of each bubble was still Minnaert.</p>
+  </aside>
+</section>
+
+<!-- =============================================================== 13. 2016 PIPELINE -->
+<section class="slide" id="s-2016" data-time="11:45" data-ladder="3">
+  <h2 class="long">Toward Animating Water with Complex Acoustic Bubbles</h2>
+  <p class="paper"><b>Langlois</b>, Zheng &amp; James · SIGGRAPH 2016</p>
+  <div class="pipeline">
+    <div class="step"><b>Two-phase fluid</b>air + water, VOF</div>
+    <div class="step"><b>Track bubbles</b>birth, split, merge, pop</div>
+    <div class="step"><b>Frequency</b>from shape &amp; position</div>
+    <div class="step"><b>Forcing</b>neck collapse, merging</div>
+    <div class="step"><b>Radiation</b>Helmholtz BEM, per bubble</div>
+    <div class="step"><b>Sum</b>oscillators → audio</div>
+  </div>
+  <div class="eq" style="text-align:center;margin:-6px 0 14px">$$\ddot v + 2\beta\dot v + \omega^2 v = \frac{p(t)}{m}, \qquad \omega^2 = \frac{\kappa}{m}$$</div>
+  <div class="cards">
+    <div class="card">
+      <h3>Stiffness \(\kappa\): the gas</h3>
+      <div class="eq eq-small">$$\kappa = -\frac{dp}{dv} = \frac{\gamma P_0}{V_0}$$</div>
+      <p class="small muted">Polytropic gas, \(P_0V_0^\gamma = PV^\gamma\). Set by the gas alone: no dependence on shape or surroundings.</p>
+    </div>
+    <div class="card" style="flex:1.7">
+      <h3>Mass \(m\): the liquid <span class="accent2" style="font-weight:400">· the interesting term</span></h3>
+      <p class="small">Equate the oscillator's kinetic energy with the liquid's, the work \(W_f\) the bubble does on the fluid. Bubbles are acoustically compact <span style="white-space:nowrap">(\(kR \approx 0.01\))</span>, so the liquid moves incompressibly and irrotationally: \(\nabla^2\phi = 0\).</p>
+      <div class="eq eq-small">$$\tfrac12 m\dot v^2 = W_f = \frac{\rho}{2}\int_\Omega |\nabla\phi|^2\,d\Omega \quad\Longrightarrow\quad m = \frac{2W_f}{\dot v^2}$$</div>
+    </div>
+  </div>
+  <aside class="notes">
+    <p>Our 2016 paper: stop guessing bubbles, simulate them. Run an incompressible two-phase fluid sim that resolves the air. Track every bubble through birth, splits, merges, pops. For each one, compute its frequency from its actual shape and surroundings, apply a forcing model, compute how it radiates into the air with a Helmholtz boundary-element solve, then sum.</p>
+    <p>The frequency comes from the same mass-spring oscillator as Minnaert, written in terms of the volume change v. The stiffness is the gas: minus dp/dv, which for a polytropic gas is γP₀/V₀. That depends only on the gas, so it can't explain why a bubble's pitch changes as it nears the surface. The mass is where the physics is: it's the liquid the bubble has to push around.</p>
+    <p>To get it, equate the oscillator's kinetic energy with the kinetic energy of the surrounding liquid. At 1 kHz a millimetre bubble is tiny compared to the wavelength, so locally the liquid is incompressible and irrotational: a potential flow, Laplace's equation. Then the mass is just twice that energy over v-dot squared.</p>
+  </aside>
+</section>
+
+<!-- =============================================================== 14. 2016 CAPACITANCE -->
+<section class="slide" id="s-2016-capacitance" data-time="12:30" data-ladder="3">
+  <h2>The effective mass as a surface integral</h2>
+  <div class="row" style="flex:none;height:380px;gap:40px">
+    <div class="col" style="flex:820;justify-content:center">
+      <div class="eq eq-small" style="margin:0 0 10px">$$m = -\frac{\rho}{\dot v^2}\oint_{\partial\Omega}\phi\,\partial_n\phi\,dS = \frac{\rho}{4\pi C}$$</div>
+      <div class="eq eq-small" style="margin:0 0 18px">$$\omega^2 = \frac{\kappa}{m} = \frac{4\pi\gamma P_0}{\rho V_0}\,C$$</div>
+      <p class="small muted" style="margin:0">Green's identity: only the bubble surface contributes, and \(\phi\) is constant there, so \(m\) depends on the bubble's electrostatic capacitance \(C\). Sphere: \(C = R\) → Minnaert.</p>
+    </div>
+    <figure style="flex:470"><img src="assets/img/2016-fig5-bvp.png" alt="Laplace boundary value problem: bubble at potential 1, free surface at 0, walls insulating"><figcaption>Fig. 5 · Bubble \(\phi=1\), free surface \(\phi=0\), walls \(\partial_n\phi=0\)</figcaption></figure>
+    <figure style="flex:420"><img src="assets/img/2016-fig4-position.png" alt="Frequency map of a 3 mm bubble in an 8 cm tank"><figcaption>Fig. 4 · 3 mm bubble, 8 cm tank: 700+ Hz shift with position</figcaption></figure>
+  </div>
+  <div class="row" style="margin-top:30px;gap:40px">
+    <figure style="flex:855"><img src="assets/img/2016-fig6-rising.png" alt="Rising bubble flattening under the surface"><figcaption>Fig. 6 · Bubble flattens under the surface: \(C\) and \(\omega\) rise</figcaption></figure>
+    <figure style="flex:727"><img src="assets/img/2016-fig7-shape.png" alt="Bubble changing shape over 13 ms"><figcaption>Fig. 7 · Shape alone shifts pitch by semitones in ~10 ms</figcaption></figure>
+  </div>
+  <aside class="notes">
+    <p>Green's first identity turns that volume integral into a surface integral over the boundary of the liquid. Set up the boundary conditions: free surface φ = 0 (pressure release), rigid walls ∂ₙφ = 0. Both terms vanish, so only the bubble surface contributes, and φ is constant on it.</p>
+    <p>That's exactly an electrostatics problem: the bubble is a conductor held at unit potential, the free surface is grounded, walls are insulators. The mass is ρ over 4π times the capacitance. For a sphere in open water C = R and you get Minnaert back.</p>
+    <p>Now the frequency depends on where the bubble is: in this 8 cm tank a 3 mm bubble shifts by over 700 Hz, dropping near walls and rising sharply near the surface. A bubble flattening under the surface is a thinning plate capacitor, hence the rising chirp. And shape changes alone move pitch by semitones in milliseconds. One shared factorization per time step amortizes the solves over all bubbles: 3–12× faster.</p>
+  </aside>
+</section>
+
+<!-- =============================================================== 15. 2016 RESULTS -->
+<section class="slide" id="s-2016-results" data-time="13:00" data-ladder="3">
+  <h2>2016: validation and results</h2>
+  <div class="row">
+    <div class="col">
+      <figure style="flex:1"><img src="assets/img/tank-bubble-real.png" alt="Real bubble released from a tube"><figcaption>Bubbles released from a tube, recorded in a tank</figcaption></figure>
+      <div style="margin-top:20px">
+        <div class="audio-row"><span class="lbl">Single bubble</span><button data-audio="assets/audio/singleBubbleRec.wav">▶ recorded</button><button class="orange" data-audio="assets/audio/singleBubbleSim.wav">▶ simulated</button></div>
+        <div class="audio-row"><span class="lbl">Underwater release</span><button data-audio="assets/audio/underwaterBubbleRecorded.wav">▶ recorded</button><button class="orange" data-audio="assets/audio/underwaterBubbleSim.wav">▶ simulated</button></div>
+      </div>
+    </div>
+    <figure class="w2">
+      <video poster="assets/video/posters/2016-pouring-faucet.jpg" data-src="assets/video/2016-pouring-faucet.mp4" controls preload="auto"></video>
+      <figcaption>Pouring faucet — resonance changes as the glass fills</figcaption>
+    </figure>
+  </div>
+  <p class="small muted" style="margin-top:16px">Cost: tens of thousands of core-hours per example (680 cores). Limits: independent bubbles, idealized forcing, frequency-domain radiation.</p>
+  <aside class="notes">
+    <p>We validated against single bubbles in a tank. [Play recorded/simulated pairs.] Then full scenes — a glass filling; listen to the resonance of the glass change.</p>
+    <p>But: tens of thousands of core-hours per example. And three big approximations I'd flagged as future work: bubbles act independently, forcing is idealized, and per-bubble frequency-domain radiation misses time-varying effects of a moving surface.</p>
+  </aside>
+</section>
+
+<!-- =============================================================== 16. 2018 -->
+<section class="slide" id="s-2018" data-time="14:00" data-ladder="4">
+  <h2 class="long">Toward Wave-based Sound Synthesis for Computer Animation</h2>
+  <p class="paper">Wang, Qu, <b>Langlois</b> &amp; James · SIGGRAPH 2018</p>
+  <div class="row">
+    <figure class="w2">
+      <video poster="assets/video/posters/2018-freq-vs-time-domain.jpg" data-src="assets/video/2018-freq-vs-time-domain.mp4" controls preload="auto"></video>
+      <figcaption>Frequency-domain vs. time-domain radiation for bubble-based water</figcaption>
+    </figure>
+    <div class="col" style="justify-content:center">
+      <ul class="small">
+        <li>Solve the <span class="accent">wave equation in time</span> (FDTD) around the sources</li>
+        <li>Sharp interfaces that move and deform every step</li>
+        <li><span class="accent2">Acoustic shaders</span>: one solver for water, rigid bodies, shells, characters</li>
+        <li>Near-field scattering &amp; diffraction for free</li>
+        <li>Time-parallel synthesis on the cloud</li>
+      </ul>
+      <div class="card" style="margin-top:20px; padding:20px 26px">
+        <div class="stat">55 hours</div>
+        <p class="small muted" style="margin:0">2016 pouring faucet, single machine</p>
+      </div>
+    </div>
+  </div>
+  <aside class="notes">
+    <p>2018: rather than solve a Helmholtz problem per bubble per frequency, simulate the actual pressure waves in time around the sound source. The water surface moves and vibrates, and the solver sees that directly. Acoustic shaders let one solver handle water, rigid objects, thin shells, even characters. More physically faithful — and much more expensive: the 2016 faucet took about 55 hours on one machine.</p>
+  </aside>
+</section>
+
+<!-- =============================================================== 17. 2023 COUPLED -->
+<section class="slide" id="s-coupled-demo" data-time="15:00" data-ladder="5">
+  <h2>Bubbles don't sing alone<span class="sub">Improved Water Sound Synthesis using Coupled Bubbles</span></h2>
+  <p class="paper">Xue, Aronson, Wang, <b>Langlois</b> &amp; James · SIGGRAPH 2023</p>
+  <div class="row">
+    <div class="col w2" style="gap:14px">
+      <canvas id="coupled-canvas" class="demo grow"></canvas>
+      <div class="demo-controls" style="font-size:26px">
+        <label>bubbles <input type="range" id="cl-n" min="2" max="60" step="1" value="21" style="width:220px"><span id="cl-n-v" class="readout" style="min-width:50px"></span></label>
+        <label>cloud radius <input type="range" id="cl-spread" min="3" max="40" step="1" value="27" style="width:220px"><span id="cl-spread-v" class="readout" style="min-width:90px"></span></label>
+        <label>bubble radius <span class="dual-range" data-prevent-swipe><input type="range" id="cl-rmin" min="0.2" max="5" step="0.1" value="0.7" aria-label="smallest bubble radius"><input type="range" id="cl-rmax" min="0.2" max="5" step="0.1" value="3.3" aria-label="largest bubble radius"></span><span id="cl-r-v" class="readout" style="min-width:150px"></span></label>
+      </div>
+    </div>
+    <div class="col" style="justify-content:center">
+      <div class="eq-small" style="font-size:30px">$$\mathbf M(t)\,\ddot{\mathbf v} + \mathbf C\,\dot{\mathbf v} + \mathbf K\,\mathbf v = \mathbf f(t)$$</div>
+      <div class="eq-small" style="font-size:30px">$$M_{ii} = \frac{\rho}{4\pi R_i},\qquad M_{ij} = \frac{\rho}{4\pi d_{ij}}$$</div>
+      <ul class="small">
+        <li>Every bubble pushes on every other: dense, time-varying mass matrix</li>
+        <li>Clouds develop collective low-frequency modes</li>
+        <li>Matches the modes measured for a 53-bubble cloud [Leroy et al. 2005]</li>
+      </ul>
+    </div>
+  </div>
+  <aside class="notes">
+    <p>2023, with Kangrui Xue: the biggest approximation in 2016 was treating bubbles independently. But every bubble's volume change pushes water on all its neighbours — a 1/distance coupling — so the mass matrix is dense. [Demo: start with 2 bubbles; then slide up to 40–60 bubbles in a tight cloud.] Watch the lowest mode drop about an octave below any individual bubble. That's the roar of the surf.</p>
+    <p>Practical issues: the matrix changes every step and has singularities as bubbles touch — the paper regularizes those and makes time stepping cheap.</p>
+  </aside>
+</section>
+
+<!-- =============================================================== 18. 2023 RESULTS -->
+<section class="slide" id="s-2023-results" data-time="16:15" data-ladder="5">
+  <h2>Coupling restores the low end</h2>
+  <div class="row">
+    <figure>
+      <video poster="assets/video/posters/2023-coupled-glass.jpg" data-src="assets/video/2023-coupled-glass.mp4" controls preload="auto"></video>
+      <figcaption>Filling a glass: uncoupled vs. coupled</figcaption>
+    </figure>
+    <figure>
+      <video poster="assets/video/posters/2023-wave-crash-uncoupled-vs-coupled.jpg" data-src="assets/video/2023-wave-crash-uncoupled-vs-coupled.mp4" controls preload="auto"></video>
+      <figcaption>Wave crash: uncoupled vs. coupled</figcaption>
+    </figure>
+  </div>
+  <p class="small muted" style="margin-top:16px">Hundreds of thousands of bubbles · works with FLIP animations too · GPU sample-and-hold wavesolver</p>
+  <aside class="notes">
+    <p>Results: listen for the fuller low-frequency content once coupling is on. It also scales to hundreds of thousands of bubbles, including procedurally generated bubbles in ordinary single-phase FLIP animations — you don't need the expensive two-phase sim.</p>
+  </aside>
+</section>
+
+<!-- =============================================================== 19. 2024 WAVEBLENDER -->
+<section class="slide" id="s-2024" data-time="17:00" data-ladder="6">
+  <h2 class="long" style="font-size:50px">WaveBlender: Practical Sound-Source Animation in Blended Domains</h2>
+  <p class="paper">Xue, Wang, <b>Langlois</b> &amp; James · SIGGRAPH Asia 2024</p>
+  <div class="row">
+    <div class="col">
+      <figure style="flex:1"><video poster="assets/video/posters/2024-blending-idea.jpg" data-src="assets/video/2024-blending-idea.mp4" controls preload="metadata"></video><figcaption>Blending two discretizations in time</figcaption></figure>
+      <ul class="small" style="margin-top:16px">
+        <li>Moving interfaces on a coarse grid: blend between consecutive discretizations with one parameter <span class="accent">β</span> per cell</li>
+        <li>Minimal change to FDTD; GPU-friendly by design</li>
+      </ul>
+    </div>
+    <div class="col w2">
+      <figure style="flex:1"><video poster="assets/video/posters/2024-compare-2016-pour.jpg" data-src="assets/video/2024-compare-2016-pour.mp4" controls preload="auto"></video><figcaption>The 2016 pouring faucet, re-synthesized</figcaption></figure>
+      <div class="cards" style="margin-top:16px">
+        <div class="card" style="padding:16px 22px"><div class="stat">55 h → 2.5 min</div><p class="small muted" style="margin:0">same scene, ~1000× faster</p></div>
+        <div class="card" style="padding:16px 22px"><div class="stat">~9×</div><p class="small muted" style="margin:0">from real time</p></div>
+      </div>
+    </div>
+  </div>
+  <aside class="notes">
+    <p>2024: WaveBlender. Wave solvers struggle when interfaces move continuously across a discrete grid — you get artifacts or need very fine grids. The idea: blend between two consecutive discretizations over time with a single β per cell. Tiny change to the update equations, runs great on GPUs.</p>
+    <p>Same 2016 faucet scene: 55 hours → about 2.5 minutes. About 9× from real time for that example. That's the arc: from physically right to physically right <em>and</em> practical.</p>
+  </aside>
+</section>
+
+<!-- =============================================================== 20. RECAP -->
+<section class="slide" id="s-recap" data-time="18:15">
+  <h2>The ladder of bubble models</h2>
+  <table class="models">
+    <tr><th>Model</th><th>Captures</th><th>Cost</th><th>Listenable?</th></tr>
+    <tr><td>Ocean statistics<br><span class="tiny">spectra, size distributions, Wood</span></td><td>averages over many bubbles</td><td class="y">trivial</td><td class="n">no — great for measurement</td></tr>
+    <tr><td>van den Doel 2005</td><td>per-bubble chirps from a random process</td><td class="y">real-time</td><td class="m">plausible, not tied to visuals</td></tr>
+    <tr><td>Langlois et al. 2016</td><td>each simulated bubble: shape, position, forcing</td><td class="n">10⁴ core-hours</td><td class="y">synchronized</td></tr>
+    <tr><td>Wang et al. 2018</td><td>time-domain waves, moving interfaces</td><td class="n">~55 h / scene</td><td class="y">+ scattering, diffraction</td></tr>
+    <tr><td>Xue et al. 2023</td><td>bubble–bubble coupling, cloud modes</td><td class="m">GPU</td><td class="y">+ fuller low end</td></tr>
+    <tr><td>Xue et al. 2024</td><td>robust blended-domain wavesolver</td><td class="y">minutes</td><td class="y">practical</td></tr>
+  </table>
+  <aside class="notes">
+    <p>Stepping back: each rung adds a piece of physics the ear turned out to care about — events, then real geometry, then wave effects, then coupling — and then the last step makes it cheap enough to use.</p>
+  </aside>
+</section>
+
+<!-- =============================================================== 21. WHALES -->
+<section class="slide" id="s-whale" data-time="18:45">
+  <h2>Nature got there first<span class="sub">Humpback whale bubble-net feeding</span></h2>
+  <div class="row">
+    <figure class="w2">
+      <img src="assets/img/whale-bubble-net.png" alt="Humpback whales lunge-feeding through a bubble net">
+      <figcaption>Humpback whales surfacing through a bubble net (image via Wikipedia, “Humpback whale”)</figcaption>
+    </figure>
+    <div class="col" style="justify-content:center">
+      <ul class="small">
+        <li>Whales spiral upward, exhaling a curtain of bubbles around a school of fish</li>
+        <li>Fish won't cross the wall — bubbly water is visually and acoustically opaque</li>
+        <li>Hypothesis: the net is an <span class="accent2">acoustic trap</span> — calls inside a ring of bubbly water form a “wall of sound” [Leighton et al. 2004, 2007]</li>
+      </ul>
+      <p class="big-quote" style="margin-top:50px; font-size:56px">Thank you!</p>
+      <p class="credits">Changxi Zheng · Doug L. James · Jui-Hsien Wang · Ante Qu · Kangrui Xue · Ryan M. Aronson</p>
+    </div>
+  </div>
+  <aside class="notes">
+    <p>To close: humpback whales have been using bubble acoustics for a long time. They spiral up beneath a school of fish, blowing a ring of bubbles. Fish won't cross the curtain. Tim Leighton and colleagues proposed that the net also works acoustically: bubbly water slows and reflects sound so strongly that the whales' calls get trapped inside the ring — a wall of sound. Whether or not that's exactly right, it's a lovely reminder that the statistics of bubbles and the sound of individual bubbles both matter. Thank you.</p>
+  </aside>
+</section>
+
+</div></div>
+
+<div id="notes"></div>
+
+<script>
+// Inject the "ladder of models" bar on slides that have data-ladder.
+(function () {
+  const steps = ['Ocean statistics', 'van den Doel ’05', 'Fluid-driven ’09–’10', 'Langlois ’16', 'Wang ’18', 'Xue ’23 coupled', 'Xue ’24 WaveBlender'];
+  document.querySelectorAll('.slide[data-ladder]').forEach(sl => {
+    const k = +sl.dataset.ladder;
+    const d = document.createElement('div'); d.className = 'ladder';
+    d.innerHTML = steps.map((s, i) => `<span class="${i === k ? 'on' : ''}">${s}</span>`).join('');
+    const ax = document.createElement('div'); ax.className = 'ladder-axis';
+    ax.innerHTML = '<span>← describes the crowd</span><span>sounds like this splash →</span>';
+    sl.insertBefore(ax, sl.querySelector('aside.notes'));
+    sl.insertBefore(d, ax);
+  });
+})();
+</script>
+<script src="vendor/reveal/reveal.js"></script>
+<script src="vendor/reveal/plugin/notes/notes.js"></script>
+<script src="vendor/katex/katex.min.js"></script>
+<script src="vendor/katex/contrib/auto-render.min.js"></script>
+<script src="js/deck.js"></script>
+<script src="js/demos.js"></script>
+</body>
+</html>
