@@ -21,13 +21,35 @@
     <p class="tiny">Adobe · Graphyz keynote</p>
   </div>
   <aside class="notes">
-    <p>Thanks for having me. Today: bubbles. Why they matter well beyond graphics, how a bubble makes sound, and then a walk up a "ladder" of acoustic models — from models that get the <em>statistics</em> right to models good enough to make audio you'd want to listen to.</p>
+    <p>Thanks for having me. Today: bubbles. How a bubble makes sound, why that matters well beyond graphics, and then a walk up a "ladder" of acoustic models — from models that get the <em>statistics</em> right to models good enough to make audio you'd want to listen to.</p>
     <p>Theme to keep in mind: those are very different bars.</p>
   </aside>
 </section>
 
-<!-- =============================================================== 2. GAS EXCHANGE -->
-<section class="slide" id="s-gas" data-time="0:30">
+<!-- =============================================================== 2. HOW DOES WATER MAKE SOUND -->
+<section class="slide" id="s-howsound" data-time="0:30">
+  <h2>How does water make sound?<span class="sub">Mostly bubbles — and mostly when they are <em>born</em>, not when they pop</span></h2>
+  <div class="row">
+    <figure>
+      <video poster="assets/video/posters/real-bubble-slowmo.jpg" data-src="assets/video/real-bubble-slowmo.mp4" controls preload="auto"></video>
+      <figcaption>Real bubble: slow-motion video, sound at real speed</figcaption>
+    </figure>
+    <div class="col" style="justify-content:center">
+      <figure style="flex:0 0 auto"><img src="assets/img/spec-real-bubble.png" alt="Waveform and spectrogram of a bubble"><figcaption>One bubble ≈ one decaying sinusoid with a small upward chirp</figcaption></figure>
+      <ul class="small" style="margin-top:30px">
+        <li>Pinch-off forces the bubble into volume oscillation</li>
+        <li>It rings like a damped oscillator for a few ms</li>
+        <li>Pitch depends on size, shape, and position</li>
+      </ul>
+    </div>
+  </div>
+  <aside class="notes">
+    <p>Here's a single real bubble. Video slowed down, audio at real speed. What surprises most people: the sound is made when the bubble forms, not when it pops. Pinch-off kicks the bubble into volume oscillations and it rings like a damped oscillator. In the spectrogram: one main frequency, with a slight rise as it approaches the surface.</p>
+  </aside>
+</section>
+
+<!-- =============================================================== 3. GAS EXCHANGE -->
+<section class="slide" id="s-gas" data-time="1:30">
   <h2>Bubbles help the ocean breathe<span class="sub">Breaking waves inject gas into the sea and spray into the air</span></h2>
   <div class="row">
     <figure>
@@ -46,14 +68,14 @@
     </div>
   </div>
   <aside class="notes">
-    <p>Start big: the ocean absorbs roughly a quarter of the CO₂ we emit, and the air–sea interface is where that happens. When waves break they entrain huge plumes of bubbles. The extra pressure at depth plus surface tension pushes gas into solution, so bubbles act like a pump — estimates put bubble-mediated transfer at a large fraction (~40% in Reichl &amp; Deike) of the CO₂ flux, more at high winds.</p>
+    <p>Now zoom out from one bubble to billions: the ocean absorbs roughly a quarter of the CO₂ we emit, and the air–sea interface is where that happens. When waves break they entrain huge plumes of bubbles. The extra pressure at depth plus surface tension pushes gas into solution, so bubbles act like a pump — estimates put bubble-mediated transfer at a large fraction (~40% in Reichl &amp; Deike) of the CO₂ flux, more at high winds.</p>
     <p>When they come back up and burst, they throw droplets into the air that become sea-spray aerosol and seed clouds.</p>
     <p>Notice what these models need: populations, distributions, averages. Keep that in mind.</p>
   </aside>
 </section>
 
-<!-- =============================================================== 3. SENSING -->
-<section class="slide" id="s-sensing" data-time="1:30">
+<!-- =============================================================== 4. SENSING -->
+<section class="slide" id="s-sensing" data-time="2:30">
   <h2>Hard to see, easy to hear<span class="sub">Bubbles as acoustic sensors — and acoustic targets</span></h2>
   <div class="cards" style="margin-top:40px">
     <div class="card">
@@ -77,28 +99,6 @@
     <p>Bubbles are hard to see — try counting them in that plume — but they're loud. Because a bubble's pitch is set by its size, the spectrum of underwater noise is effectively a census of the bubbles. Oceanographers use this for breaking waves and to quantify gas seeps.</p>
     <p>Rain on the ocean has a distinctive peak around 15 kHz from small drops entraining tiny bubbles — that's how you measure rainfall in the middle of the ocean.</p>
     <p>Actively: a bubble at resonance is an enormous scatterer, hundreds of times its geometric cross-section. That's why fish swim bladders show up on sonar, and why microbubbles are used as ultrasound contrast agents.</p>
-  </aside>
-</section>
-
-<!-- =============================================================== 4. HOW DOES WATER MAKE SOUND -->
-<section class="slide" id="s-howsound" data-time="2:30">
-  <h2>How does water make sound?<span class="sub">Mostly bubbles — and mostly when they are <em>born</em>, not when they pop</span></h2>
-  <div class="row">
-    <figure>
-      <video poster="assets/video/posters/real-bubble-slowmo.jpg" data-src="assets/video/real-bubble-slowmo.mp4" controls preload="auto"></video>
-      <figcaption>Real bubble: slow-motion video, sound at real speed</figcaption>
-    </figure>
-    <div class="col" style="justify-content:center">
-      <figure style="flex:0 0 auto"><img src="assets/img/spec-real-bubble.png" alt="Waveform and spectrogram of a bubble"><figcaption>One bubble ≈ one decaying sinusoid with a small upward chirp</figcaption></figure>
-      <ul class="small" style="margin-top:30px">
-        <li>Pinch-off forces the bubble into volume oscillation</li>
-        <li>It rings like a damped oscillator for a few ms</li>
-        <li>Pitch depends on size, shape, and position</li>
-      </ul>
-    </div>
-  </div>
-  <aside class="notes">
-    <p>Here's a single real bubble. Video slowed down, audio at real speed. What surprises most people: the sound is made when the bubble forms, not when it pops. Pinch-off kicks the bubble into volume oscillations and it rings like a damped oscillator. In the spectrogram: one main frequency, with a slight rise as it approaches the surface.</p>
   </aside>
 </section>
 
