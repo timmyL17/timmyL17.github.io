@@ -18,7 +18,7 @@
   <div class="title-content" style="margin:auto">
     <h1 style="font-size:120px">Modeling Liquid Sounds</h1>
     <p style="margin-top:70px; font-size:36px">Timothy R. Langlois</p>
-    <p class="tiny">Adobe · Graphyz keynote</p>
+    <p class="tiny">Adobe | Graphyz 3</p>
   </div>
   <aside class="notes">
     <p>Thanks for having me. Today: bubbles. How a bubble makes sound, why that matters well beyond graphics, and then a walk up a "ladder" of acoustic models — from models that get the <em>statistics</em> right to models good enough to make audio you'd want to listen to.</p>
@@ -426,8 +426,8 @@
       </div>
     </div>
     <div class="col" style="justify-content:center">
-      <div class="eq-small" style="font-size:30px">$$\mathbf M(t)\,\ddot{\mathbf v} + \mathbf C\,\dot{\mathbf v} + \mathbf K\,\mathbf v = \mathbf f(t)$$</div>
-      <div class="eq-small" style="font-size:30px">$$M_{ii} = \frac{\rho}{4\pi R_i},\qquad M_{ij} = \frac{\rho}{4\pi d_{ij}}$$</div>
+      <div class="eq-small" style="font-size:40px">$$\mathbf M(t)\,\ddot{\mathbf v} + \mathbf C\,\dot{\mathbf v} + \mathbf K\,\mathbf v = \mathbf f(t)$$</div>
+      <div class="eq-small" style="font-size:40px">$$M_{ii} = \frac{\rho}{4\pi R_i},\qquad M_{ij} = \frac{\rho}{4\pi d_{ij}}$$</div>
       <ul class="small">
         <li>Every bubble pushes on every other: dense, time-varying mass matrix</li>
         <li>Clouds develop collective low-frequency modes</li>
@@ -454,7 +454,7 @@
       <figcaption>Wave crash: uncoupled vs. coupled</figcaption>
     </figure>
   </div>
-  <p class="small muted" style="margin-top:16px">Hundreds of thousands of bubbles · works with FLIP animations too · GPU sample-and-hold wavesolver</p>
+  <p class="small muted" style="margin-top:16px">Hundreds of thousands of bubbles · works with FLIP animations too</p>
   <aside class="notes">
     <p>Results: listen for the fuller low-frequency content once coupling is on. It also scales to hundreds of thousands of bubbles, including procedurally generated bubbles in ordinary single-phase FLIP animations — you don't need the expensive two-phase sim.</p>
   </aside>
@@ -486,25 +486,35 @@
   </aside>
 </section>
 
-<!-- =============================================================== 20. RECAP -->
-<section class="slide" id="s-recap" data-time="18:15">
-  <h2>The ladder of bubble models</h2>
-  <table class="models">
-    <tr><th>Model</th><th>Captures</th><th>Cost</th><th>Listenable?</th></tr>
-    <tr><td>Ocean statistics<br><span class="tiny">spectra, size distributions, Wood</span></td><td>averages over many bubbles</td><td class="y">trivial</td><td class="n">no — great for measurement</td></tr>
-    <tr><td>van den Doel 2005</td><td>per-bubble chirps from a random process</td><td class="y">real-time</td><td class="m">plausible, not tied to visuals</td></tr>
-    <tr><td>Langlois et al. 2016</td><td>each simulated bubble: shape, position, forcing</td><td class="n">10⁴ core-hours</td><td class="y">synchronized</td></tr>
-    <tr><td>Wang et al. 2018</td><td>time-domain waves, moving interfaces</td><td class="n">~55 h / scene</td><td class="y">+ scattering, diffraction</td></tr>
-    <tr><td>Xue et al. 2023</td><td>bubble–bubble coupling, cloud modes</td><td class="m">GPU</td><td class="y">+ fuller low end</td></tr>
-    <tr><td>Xue et al. 2024</td><td>robust blended-domain wavesolver</td><td class="y">minutes</td><td class="y">practical</td></tr>
-  </table>
+<!-- =============================================================== 20. BUBBLES AT WORK -->
+<section class="slide" id="s-applications" data-time="18:15">
+  <h2>Bubbles at work<span class="sub">Engineering with bubble acoustics</span></h2>
+  <div class="row">
+    <div class="col" style="gap:24px">
+      <figure style="flex:1">
+        <img style="object-fit:cover" src="assets/img/ultrasonic-cleaning.jpg" alt="Dirt streaming off a metal part in an ultrasonic cleaning bath">
+        <figcaption>Thomas Kraft · CC BY-SA 2.5 · Wikimedia Commons</figcaption>
+      </figure>
+      <h3>Ultrasonic cleaning</h3>
+      <p class="small">Transducers drive the bath at ~20–40 kHz. Cavitation bubbles grow over many cycles, then collapse violently; the micro-jets and shock waves scrub dirt off surfaces and out of crevices.</p>
+    </div>
+    <div class="col" style="gap:24px">
+      <figure style="flex:1">
+        <img style="object-fit:cover" src="assets/img/bubble-curtain.jpg" alt="Ring of bubbles at the sea surface around an offshore pile-driving rig">
+        <figcaption>Hero Lang, Hydrotechnik Lübeck · CC BY-SA 3.0 DE · Wikimedia Commons</figcaption>
+      </figure>
+      <h3>Bubble curtains</h3>
+      <p class="small">A perforated hose on the seabed rings an offshore wind-turbine pile with rising air. The bubbly wall scatters and absorbs pile-driving noise, cutting it by ~10–15 dB to protect porpoises and seals [Bellmann et al.].</p>
+    </div>
+  </div>
   <aside class="notes">
-    <p>Stepping back: each rung adds a piece of physics the ear turned out to care about — events, then real geometry, then wave effects, then coupling — and then the last step makes it cheap enough to use.</p>
+    <p>Two places engineers put bubble acoustics to work. Left: an ultrasonic cleaner. The bath is driven at tens of kilohertz, which grows tiny cavitation bubbles that then collapse violently. The jets and shock waves from those collapses are what scrub the part. In the photo you can see the dirt streaming off.</p>
+    <p>Right: a big bubble curtain at the Borkum West II offshore wind farm in the North Sea. Hammering a turbine pile into the seabed is extremely loud underwater. A hose laid in a ring around the pile releases air, and the bubbly water acts as an acoustic barrier — the same physics as Wood's equation and resonant scattering from earlier. A single curtain cuts the noise by about 10–15 dB, and it's now standard practice in German waters.</p>
   </aside>
 </section>
 
 <!-- =============================================================== 21. WHALES -->
-<section class="slide" id="s-whale" data-time="18:45">
+<section class="slide" id="s-whale" data-time="19:15">
   <h2>Nature got there first<span class="sub">Humpback whale bubble-net feeding</span></h2>
   <div class="row">
     <figure class="w2">
